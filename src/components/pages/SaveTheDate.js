@@ -4,14 +4,18 @@ import Img from "gatsby-image";
 import Helmet from "react-helmet";
 
 const SaveTheDate = props => {
+  const title = `Save the Date | Lunara & Hugo`;
+  const description = `Dear friends, we are very much looking forward to have you in our special day! May 2nd, 2020! Save the date and join us! ❤️`;
   return (
     <MainContainer>
-      <Helmet defaultTitle={`Save the Date | Lunara & Hugo`}>
+      <Helmet defaultTitle={title}>
         <meta name="author" content={`Hugo Nogueira`} />
-        <meta
-          name="description"
-          content={`Dear friends, we are very looking forward to have you in our special day, May 2nd, 2020!`}
-        />
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://www.luehugo.us`} />
+        <meta property="og:image" content={`https://www.luehugo.us/favicon.png`} />
       </Helmet>
       <Envelope>
         <CardContainer align="center">
