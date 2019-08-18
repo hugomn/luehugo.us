@@ -8,7 +8,7 @@ export const pageQuery = graphql`
   query {
     file(relativePath: { eq: "images/card_pt.png" }) {
       childImageSharp {
-        sizes(maxWidth: 1200) {
+        sizes(maxWidth: 1200, quality: 90) {
           ...GatsbyImageSharpSizes
         }
       }
