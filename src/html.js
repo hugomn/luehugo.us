@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 export default class Html extends React.PureComponent {
   static propTypes = {
@@ -33,7 +33,7 @@ export default class Html extends React.PureComponent {
             id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
             style={{
-              height: '100%'
+              height: "100%"
             }}
           />
           {this.props.postBodyComponents}
