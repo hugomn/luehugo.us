@@ -49,7 +49,7 @@ const Envelope = styled.div`
 const MainContainer = styled.div`
   min-height: 100vh;
   background-image: url("/img/background.jpeg");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
 `;
 
