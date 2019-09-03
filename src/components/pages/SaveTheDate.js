@@ -5,7 +5,7 @@ import Helmet from "react-helmet";
 
 const SaveTheDate = props => {
   const title = `Save the Date | Lunara & Hugo`;
-  const description = `Dear friends, we are very much looking forward to have you in our special day! May 2nd, 2020! Save the date and join us! ❤️`;
+  const description = `Queridos amigos! Esperamos vocês no nosso dia especial: 2 de maio de 2020! Reserve essa data e venha comemorar conosco! ❤️`;
   return (
     <MainContainer>
       <Helmet defaultTitle={title}>
