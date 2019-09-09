@@ -5,43 +5,39 @@ import Footer from "../components/Footer";
 import FixedContainer from "../components/FixedContainer";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import { StaticQuery, graphql, withPrefix } from "gatsby";
-import { IntlProvider, FormattedMessage } from "react-intl";
+import { addLocaleData, IntlProvider, FormattedMessage } from "react-intl";
 import en from "../data/messages/en";
 import pt from "../data/messages/pt";
+import enData from "react-intl/locale-data/en";
+import ptData from "react-intl/locale-data/pt";
 import theme from "../themes/theme";
 import { getLangs, getUrlForLang, getCurrentLangKey, isHomePage } from "ptz-i18n";
 import Helmet from "react-helmet";
 
 const messages = { en, pt };
 
-const Container = styled(FixedContainer)`
-  padding: ${props => props.theme.padding};
-  margin: ${props => props.theme.margin};
-`;
+addLocaleData([...enData, ...ptData]);
 
 const Layout = props => {
   const { children, location } = props;
   const url = location.pathname;
-  const isHome = isHomePage(url);
   const { langs, defaultLangKey } = props.data.site.siteMetadata.languages;
   const langKey = getCurrentLangKey(langs, defaultLangKey, url);
-  const homeLink = `/${langKey !== "en" ? langKey : ""}`;
-  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)).map(item => ({ ...item, link: item.link.replace(`/${defaultLangKey}/`, "/") }));
+  const homeLink = `/${langKey !== "pt" ? langKey : ""}`;
+  const isHome = homeLink === url;
+  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)).map(item => ({
+    ...item,
+    link: item.link.replace(`/${defaultLangKey}/`, "/")
+  }));
   const { menu, author, sourceCodeLink, siteUrl, description } = props.data.site.siteMetadata;
 
   return (
     <ThemeProvider theme={theme}>
-      <IntlProvider
-        locale={langKey}
-        messages={messages[langKey]}
-      >
+      <IntlProvider locale={langKey} messages={messages[langKey]}>
         <BodyContainer>
           <FormattedMessage id="title">
             {txt => (
-              <Helmet
-                defaultTitle={txt}
-                titleTemplate={`%s | ${txt}`}
-              >
+              <Helmet defaultTitle={txt} titleTemplate={`%s | ${txt}`}>
                 <meta name="author" content={author.name} />
                 <meta name="description" content={description} />
                 <meta property="og:title" content={txt} />
@@ -58,22 +54,11 @@ const Layout = props => {
               </Helmet>
             )}
           </FormattedMessage>
-          <Header
-            isHome={isHome}
-            homeLink={homeLink}
-            url={url}
-            menu={menu}
-          />
+          <Header isHome={isHome} url={url} menu={menu} />
           <Container>
-            <main>
-              {children}
-            </main>
+            <main>{children}</main>
           </Container>
-          <Footer
-            author={author}
-            langs={langsMenu}
-            sourceCodeLink={sourceCodeLink}
-          />
+          <Footer author={author} langs={langsMenu} sourceCodeLink={sourceCodeLink} />
           <GlobalStyle />
         </BodyContainer>
       </IntlProvider>
@@ -94,8 +79,11 @@ const GlobalStyle = createGlobalStyle`
   b, strong {
     font-weight: bold;
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: ${props => props.theme.fonts.SansSerif};
+  h1, h2 {
+    font-family: ${props => props.theme.fonts.Allura};
+  }
+  h3, h4, h5, h6 {
+    font-family: ${props => props.theme.fonts.Poppins};
   }
   h1{
     margin:${props => props.theme.h1.margin};
@@ -113,6 +101,7 @@ const GlobalStyle = createGlobalStyle`
     margin:${props => props.theme.h3.margin};
     padding:${props => props.theme.h3.padding};
     font-size:${props => props.theme.h3.fontSize};
+    font-weight: 500;
     line-height: 1.4;
   }
   h4{
@@ -159,17 +148,24 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const Container = styled(FixedContainer)`
+  padding: ${props => props.theme.padding};
+  margin: ${props => props.theme.margin};
+`;
+
 const BodyContainer = styled.div`
-  font-family: ${props => props.theme.fonts.System};
-  color: ${props => props.theme.color};
   background-color: ${props => props.theme.bg};
-  top: 0;
-  right: 0;
-  left: 0;
   bottom: 0;
+  color: ${props => props.theme.color};
+  font-family: ${props => props.theme.fonts.Poppins};
+  font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
+  font-weight: 300;
+  left: 0;
+  line-height: ${props => props.theme.lineHeight};
   min-height: 100%;
   overflow-x: hidden;
-  font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
+  right: 0;
+  top: 0;
 `;
 
 export default props => (
@@ -209,7 +205,5 @@ export default props => (
 Layout.propTypes = {
   children: PropTypes.object.isRequired,
   data: PropTypes.object.isRequired,
-  location: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired
 };
-
-

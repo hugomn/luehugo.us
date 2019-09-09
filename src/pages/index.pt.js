@@ -1,18 +1,80 @@
 import React from "react";
-import SaveTheDate from "../components/pages/SaveTheDate";
+import Index from "../components/pages/Index";
 import { graphql } from "gatsby";
 
-export default props => <SaveTheDate {...props} />;
+export default props => <Index {...props} />;
 
 export const pageQuery = graphql`
-  query {
-    file(relativePath: { eq: "images/card_pt.png" }) {
-      childImageSharp {
-        sizes(maxWidth: 1200, quality: 90) {
-          ...GatsbyImageSharpSizes
+  query IndexPtQuery {
+    site {
+      siteMetadata {
+        author {
+          name
+          homeCity
+          email
+          bio
+          defaultLink
         }
       }
-      publicURL
+    },
+    all: allMarkdownRemark(
+      limit: 3
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {
+        frontmatter: { draft: { ne: true }, featured: { ne: true} },
+        fields: { langKey: { regex: "/(pt|any)/" } }
+      },
+    ) {
+      edges {
+        node{
+          frontmatter{
+            title,
+            date,
+            image {
+              childImageSharp{
+                  sizes(maxWidth: 750) {
+                      ...GatsbyImageSharpSizes
+                  }
+              }
+            }
+          },
+          fields{
+            slug,
+            langKey
+          },
+          excerpt,
+          timeToRead
+        }
+      }
+    },
+    featured: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {
+        frontmatter: { draft: { ne: true }, featured: { eq: true} },
+        fields: { langKey: { regex: "/(pt|any)/" } }
+      },
+    ) {
+      edges {
+        node{
+          frontmatter{
+            title,
+            date,
+            image {
+              childImageSharp{
+                  sizes(maxWidth: 750) {
+                      ...GatsbyImageSharpSizes
+                  }
+              }
+            }
+          },
+          fields{
+            slug,
+            langKey
+          },
+          excerpt,
+          timeToRead
+        }
+      }
     }
   }
 `;

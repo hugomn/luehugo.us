@@ -7,7 +7,7 @@ const A = styled.a`
   display: block;
   text-align: center;
   padding: 1rem;
-  color: ${({ theme }) => theme.colors.green};
+  color: ${({ theme }) => theme.colors.brand};
   cursor: pointer;
   font-size: 1rem;
   transition: 0.3s;

@@ -27,6 +27,7 @@ export default class Html extends React.PureComponent {
           <link href="/css/reset.css" rel="stylesheet" />
           <link href="/css/font.css" rel="stylesheet" />
           <link href="/css/prism-atom-dark.css" rel="stylesheet" />
+          <link rel="stylesheet" href="https://use.typekit.net/rmn6lzz.css" />
         </head>
         <body style={{ margin: 0, padding: 0 }}>
           <div

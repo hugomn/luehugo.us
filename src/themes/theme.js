@@ -1,25 +1,25 @@
-import * as fonts from '../constants/fonts';
+import * as fonts from "../constants/fonts";
 
 const round = (x, n) => Math.round(x * (n * 10)) / (n * 10);
-const scaleN = (n) => round(Math.pow(1.2, n), 3);
+const scaleN = n => round(Math.pow(1.2, n), 3);
 const scale = n => `${scaleN(n)}rem`;
 
-const colors = {
-  white: '#FFFFFF',
-  black: '#212529', 
-  red: '#FF0000',
-  darkBlue: '#587B7F',
-  blue: '#85B9BF',
-  green: '#00ab6b',
-  darkGreen: '#038252',
-  lightGreen: '#00ab6b2e',
-  gray: '#343a40',
-  darkGray: '#1d2124',
-  lightGray: 'rgba(0, 0, 0, 0.44)',
+const brandColor = "#70A076";
+const accentColors = ["#C8664B", "#D2AB65", "#F2BE3B"];
+const darkColors = ["#333E49", "#435365", "#747474", "#B9C2CE"];
+const lightColors = ["#FFFFFF", "#FAFAFA", "#EFEFEF", "#D7D7D7"];
 
-  blackShades: [
-    '#393E41',
-  ]
+const colors = {
+  brand: brandColor,
+  accentColors,
+  white: "#FFFFFF",
+  black: "#282828",
+  darkColors,
+  lightColors
+};
+
+const settings = {
+  headerHeight: 84
 };
 
 const theme = {
@@ -28,31 +28,34 @@ const theme = {
   colors,
   fonts,
   color: colors.black,
-  bg: colors.white,
-  padding: `4rem ${scaleN(1)}rem ${scaleN(4)}rem ${scaleN(0)}rem`,
-  margin: '0 auto',
-  maxWidth: '71.25rem',
-  borderRadius: '0.2rem',
-  lineHeight: 1.5,
+  bg: colors.lightColors[1],
+  padding: `${settings.headerHeight}px ${scaleN(1)}rem ${scaleN(4)}rem ${scaleN(0)}rem`,
+  margin: "0 auto",
+  maxWidth: "71.25rem",
+  borderRadius: "0.2rem",
+  lineHeight: 1.8,
   focus: {
-    border: '0.4rem red solid'
+    border: "0.4rem red solid"
   },
   p: {
     fontSize: scale(1.25),
-    lineHeight: 1.58,
+    lineHeight: 1.58
   },
   a: {
-    color: colors.green,
-    textDecoration: 'none',
+    color: {
+      dark: colors.white,
+      light: colors.black
+    },
+    textDecoration: "none",
     hover: {
-      color: colors.darkGreen
+      color: colors.brand
     }
   },
   header: {
-    height: 64,
+    height: settings.headerHeight,
     title: {
       fontSize: scale(3),
-      textAlign: 'left',
+      textAlign: "left",
       padding: `${scale(0)} 0 0 0`,
       margin: `0 0 ${scale(6)} 0`,
       lineHeight: scaleN(0)
@@ -66,7 +69,7 @@ const theme = {
     isHome: {
       title: {
         fontSize: scale(7),
-        textAlign: 'center',
+        textAlign: "center",
         padding: `${scale(2)} 0 0 0`,
         margin: `${scale(0)} 0 ${scale(4)} 0`,
         lineHeight: scaleN(0)
@@ -83,10 +86,10 @@ const theme = {
     mobile: {
       padding: `${scale(3)} ${scale(3)}`,
       opened: {
-        bg: colors.blackShades[0]
+        bg: colors.darkColors[0]
       },
       closed: {
-        bg: 'transparent'
+        bg: "transparent"
       },
       label: {
         width: scale(3),
@@ -94,40 +97,49 @@ const theme = {
         fontSize: scale(3.2)
       },
       a: {
-        fontFamily: fonts.SansSerif,
+        fontFamily: fonts.Orator,
         fontSize: scale(1.5),
         padding: `0 0 ${scale(1)}`,
-        textAlign: 'left',
+        textAlign: "left",
         color: colors.white,
         active: {
-          color: colors.green
+          color: colors.brand
         }
       },
       ul: {
-        margin: `${scale(0.2)} 0 0 ${scale(0.2)}`,
+        margin: `${scale(0.2)} 0 0 ${scale(0.2)}`
       }
     },
     desktop: {
-      padding: `${scale(2.2)} 0`,
-      bg: 'transparent',
+      padding: `${scale(2.8)} 0`,
+      bg: "transparent",
       a: {
-        fontFamily: fonts.System,
-        fontSize: scale(-0.5),
+        fontFamily: fonts.Orator,
+        fontSize: scale(0.6),
         fontWeight: 400,
         padding: `${scale(1)} ${scale(-0.4)}`,
-        textAlign: 'left',
-        color: colors.lightGray,
+        textAlign: "left",
+        color: {
+          dark: colors.white,
+          light: colors.black
+        },
         active: {
-          color: colors.darkGreen
+          color: {
+            dark: colors.brand,
+            light: colors.brand
+          }
         },
         hover: {
-          color: colors.darkGreen
+          color: {
+            dark: colors.brand,
+            light: colors.brand
+          }
         }
       },
       ul: {
-        margin: `0 ${scale(1)} 0 auto`,
+        margin: `0 ${scale(1)} 0 auto`
       }
-    },
+    }
   },
   socialLinks: {
     margin: `0`,
@@ -138,13 +150,13 @@ const theme = {
       margin: `0 0 ${scale(0)}`,
       padding: `0`,
       hover: {
-        color: colors.green
+        color: colors.brand
       }
     }
   },
   welcome: {
     marginTop: scale(6),
-    marginBottom: scale(2),
+    marginBottom: scale(2)
   },
   h1: {
     fontSize: scale(5.8),
@@ -152,12 +164,12 @@ const theme = {
     padding: `${scale(8)} 0 0 0`
   },
   h2: {
-    fontSize: scale(3.8),
+    fontSize: scale(8.4),
     margin: 0,
-    padding: `${scale(8)} 0 0 0`
+    padding: `${scale(6)} 0 0 0`
   },
   h3: {
-    fontSize: scale(3),
+    fontSize: scale(1),
     margin: 0,
     padding: `${scale(6)} 0 0 0`
   },
@@ -182,7 +194,7 @@ const theme = {
       fontSize: scale(-0.7),
       lineHeight: scaleN(2),
       time: {
-        color: colors.lightGray
+        color: colors.darkColors[2]
       }
     },
     list: {
@@ -190,60 +202,60 @@ const theme = {
       header: {
         fontSize: scale(6),
         padding: `${scale(1)} 0 0 0`,
-        margin: `${scale(4)} 0 0 0`,
+        margin: `${scale(4)} 0 0 0`
       },
       ul: {
         padding: `0`,
-        margin: `0`,
+        margin: `0`
       },
       item: {
-        border: '1px solid rgba(0,0,0,.125);',
+        border: "1px solid rgba(0,0,0,.125);",
         padding: scale(1.2),
         hover: {
-          backgroundColor: colors.blackShades[0]
+          backgroundColor: colors.darkColors[0]
         },
         title: {
           fontFamily: fonts.SansSerif,
           fontSize: scale(1.2),
           lineHeight: scaleN(1),
           margin: `0 0 ${scale(-0.8)}`,
-          color: colors.gray,
+          color: colors.darkColors[0],
           hover: {
-            color: colors.darkGray
+            color: colors.darkColors[2]
           }
         },
         text: {
           fontFamily: fonts.System,
           fontSize: scale(-0.3),
-          color: colors.lightGray,
+          color: colors.darkColors[2],
           lineHeight: scaleN(2),
           padding: `0`,
-          margin: `0`,
-        },
+          margin: `0`
+        }
       }
     },
     post: {
-      padding: '20px',
+      padding: "20px",
       margin: `${scale(4)} auto 0`,
-      maxWidth: '46.25rem',
+      maxWidth: "46.25rem",
       header: {
         fontFamily: fonts.SansSerif,
-        fontSize: '2.6rem',
-        margin: `0 0 ${scale(4)}`,
+        fontSize: "2.6rem",
+        margin: `0 0 ${scale(4)}`
       },
       content: {
         fontFamily: fonts.Serif,
         code: {
           color: colors.white,
           fontSize: scale(1),
-          borderRadius: '0.2rem',
+          borderRadius: "0.2rem",
           margin: `0`,
           padding: `${scale(-8)} ${scale(-4)}`,
-          backgroundColor: colors.gray,
+          backgroundColor: colors.darkColors[0]
         },
         highlight: {
           backgroundColor: null,
-          borderRadius: '0.2rem',
+          borderRadius: "0.2rem",
           margin: `${scale(0)} -50rem`,
           padding: `0 50rem`,
           code: {
@@ -251,7 +263,7 @@ const theme = {
           }
         },
         a: {
-          color: colors.green
+          color: colors.brand
         },
         p: {
           fontSize: scale(1),
@@ -267,13 +279,13 @@ const theme = {
     }
   },
   page: {
-    padding: '20px',
+    padding: "20px",
     margin: `${scale(0)} auto ${scale(4)}`,
-    maxWidth: '60rem',
+    maxWidth: "60rem",
     header: {
       fontFamily: fonts.SansSerif,
-      fontSize: '2.4rem',
-      margin: `0 0 ${scale(2)}`,
+      fontSize: "2.4rem",
+      margin: `0 0 ${scale(2)}`
     },
     content: {
       fontFamily: fonts.Serif,
@@ -281,7 +293,7 @@ const theme = {
         fontSize: scale(1),
         margin: 0,
         padding: `2rem 0 0 0`
-      },
+      }
     }
   },
   i18n: {
@@ -290,9 +302,9 @@ const theme = {
         margin: `0 0 0 5px`,
         padding: `${scale(-8)} ${scale(-2)} ${scale(-5)} ${scale(-2)}`,
         fontSize: scale(3),
-        borderRadius: '0.2rem',
+        borderRadius: "0.2rem",
         selected: {
-          backgroundColor: colors.lightGreen
+          backgroundColor: colors.brand
         }
       }
     }

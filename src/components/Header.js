@@ -1,42 +1,38 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Menu from './Menu';
-import styled from 'styled-components';
-import FixedContainer from './FixedContainer';
-import throttle from 'lodash.throttle';
-
-const Wrapper = styled.header`
-  background: rgba(255, 255, 255, 0.97);
-  box-shadow: 0 4px 12px 0 rgba(0,0,0,.05) !important;
-  transition: top 0.4s ease-in-out;
-  height: 64px;
-  top: ${props => props.hidden ? '-64px' : 0};
-  box-sizing: border-box;
-  position: fixed;
-  width: 100%;
-  z-index: 9; 
-`;
+import React from "react";
+import PropTypes from "prop-types";
+import Menu from "./Menu";
+import styled from "styled-components";
+import FixedContainer from "./FixedContainer";
+import throttle from "lodash.throttle";
+import theme from "../themes/theme";
 
 const delta = 5;
-const navbarHeight = 64;
 
 class Header extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
       didScroll: true,
       lastScrollTop: 0,
-      hidden: false
+      hidden: false,
+      transparent: props.isHome,
+      viewportHeight: 0
     };
-  };
+  }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  };
+    this.updateWindowDimensions();
+    window.addEventListener("resize", this.updateWindowDimensions);
+    window.addEventListener("scroll", this.handleScroll);
+  }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener("resize", this.updateWindowDimensions);
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  updateWindowDimensions = () => {
+    this.setState({ viewportHeight: window.innerHeight });
   };
 
   hideHeader = () => {
@@ -53,24 +49,30 @@ class Header extends React.Component {
 
   hasScrolled = throttle(() => {
     const st = window.scrollY;
-    if (Math.abs(this.state.lastScrollTop - st) <= delta) { return; }
-    if (st > this.state.lastScrollTop && st > navbarHeight) {
+    if (Math.abs(this.state.lastScrollTop - st) <= delta) {
+      return;
+    }
+    if (st > this.state.lastScrollTop && st > theme.header.height) {
       this.hideHeader();
     } else {
-      if(st < this.getDocHeight()) {
+      if (st < this.getDocHeight()) {
         this.showHeader();
       }
     }
     this.setState({
-      lastScrollTop: st
+      lastScrollTop: st,
+      transparent: this.props.isHome && st < this.state.viewportHeight
     });
   }, 250);
 
   getDocHeight = () => {
     return Math.max(
-      document.body.scrollHeight, document.documentElement.scrollHeight,
-      document.body.offsetHeight, document.documentElement.offsetHeight,
-      document.body.clientHeight, document.documentElement.clientHeight
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight,
+      document.body.clientHeight,
+      document.documentElement.clientHeight
     );
   };
 
@@ -83,17 +85,34 @@ class Header extends React.Component {
 
   render() {
     const { menu, url } = this.props;
+    const { transparent } = this.state;
     return (
-      <Wrapper hidden={this.state.hidden}>
-        <FixedContainer>
-          <Menu menu={menu} url={url} />
+      <Wrapper hidden={this.state.hidden} transparent={transparent}>
+        <FixedContainer display={"flex"} flexDirection={"row"} justifyContent="space-between">
+          <section>
+            <img src={transparent ? "/img/logo.svg" : "/img/logo_black.svg"} />
+          </section>
+          <Menu menu={menu} url={url} transparent={transparent} />
         </FixedContainer>
       </Wrapper>
     );
-  } 
-};
+  }
+}
+
+const Wrapper = styled.header`
+  background: ${props => (props.transparent ? "transparent" : "rgba(255, 255, 255, 0.97)")};
+  box-shadow: ${props => (props.transparent ? "none" : "0 4px 12px 0 rgba(0,0,0,.05) !important")};
+  transition: all 0.4s ease-in-out;
+  height: ${props => `${props.theme.header.height}px`};
+  top: ${props => (props.hidden ? `-${props.theme.header.height}px` : 0)};
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+`;
 
 Header.propTypes = {
+  isHome: PropTypes.bool,
   menu: PropTypes.array.isRequired,
   url: PropTypes.string
 };

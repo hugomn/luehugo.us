@@ -2,11 +2,12 @@ const languages = require("./languages");
 
 module.exports = {
   siteUrl: "https://www.luehugo.us",
-  description: "Save the date! 02/05/2020",
+  description:
+    "Queridos amigos! Esperamos vocês no nosso dia especial: 2 de maio de 2020! Reserve essa data e venha comemorar conosco! ❤️",
   author: {
     name: "Hugo Nogueira",
     bio:
-      'Senior software engineer and agile manager. React, and Node.js enthusiast. <br/> Engineering Lead @ <a href="https://www.bcgdv.com">BCG Digital Ventures</a>. Berlin, Germany',
+      "Senior software engineer and agile manager. React, and Node.js enthusiast. <br/> Engineering Lead @ <a href=\"https://www.bcgdv.com\">BCG Digital Ventures</a>. Berlin, Germany",
     homeCity: "Berlin",
     email: "hugomn@gmail.com",
     twitter: "hugomn",
@@ -15,10 +16,10 @@ module.exports = {
   sourceCodeLink: "https://github.com/hugomn/luehugo.us",
   disqusShortname: "hugomagalhes",
   menu: [
-    { label: "home", slug: "/" },
-    { label: "blog", slug: "/blog/" },
-    { label: "about", slug: "/sobre/" },
-    { label: "call", link: "http://call.hugomagalhaes.com/" }
+    { label: "menu.story", link: "#historia" },
+    { label: "menu.where", link: "#onde" },
+    { label: "menu.bestfriends", link: "#padrinhos-madrinhas" },
+    { label: "menu.gifts", slug: "/presentes" },
   ],
   languages,
   contact: [
@@ -33,5 +34,10 @@ module.exports = {
       country: "de",
       link: "tel:+49 151 74477807"
     }
-  ]
+  ],
+  wedding: {
+    date: "2020-05-02",
+    fundingGoal: 40000,
+    fundingPledged: 10000
+  }
 };

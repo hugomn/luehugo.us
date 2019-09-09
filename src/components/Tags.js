@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
-import styled from 'styled-components';
+import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "gatsby";
+import styled from "styled-components";
 
 const Section = styled.section`
   text-align: celeftnter;
@@ -29,7 +29,7 @@ const A = styled(Link)`
   transition: 0.3s;
   padding: ${({theme}) => theme.scale(-2)} ${({theme}) => theme.scale(-2)};
   &:hover {
-      color: ${({theme}) => theme.colors.green};
+      color: ${({theme}) => theme.colors.grand};
       transition: 0.3s;
   }
 `;
@@ -55,7 +55,7 @@ const Ul = styled.ul`
     display: block;
 `;
 
-const Tags = (props) => {
+const Tags = props => {
   if(!props.tags || props.tags.length === 0) return null;
 
   return (

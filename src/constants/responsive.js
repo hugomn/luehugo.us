@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from "styled-components";
 
 export const breakpoints = {
   xs: 0, // Extra small devices (portrait phones, less than 576px)

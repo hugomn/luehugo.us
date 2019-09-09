@@ -107,6 +107,23 @@ module.exports = {
         prefixDefault: false
       }
     },
-    "gatsby-plugin-styled-components"
+    "gatsby-plugin-styled-components",
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Allura`,
+            subsets: [`latin`],
+            variants: [`400`]
+          },
+          {
+            family: `Poppins`,
+            subsets: [`latin`, `latin-ext`],
+            variants: [`300`, `400`, `500`, `700`]
+          }
+        ]
+      }
+    }
   ]
 };

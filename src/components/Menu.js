@@ -2,11 +2,78 @@ import React from "react";
 import PropTypes from "prop-types";
 import { FaBars as MenuIcon } from "react-icons/fa";
 import { InvisibleSpan } from "./Invisible";
-import styled from "styled-components";
+import styled, { withTheme } from "styled-components";
 import { Link } from "gatsby";
 import { endsWith } from "ramda";
 import { injectIntl, FormattedMessage } from "react-intl";
 import { hidden, media } from "../constants/responsive";
+import { color } from "../utils/color";
+
+
+class Menu extends React.PureComponent {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isOpen: false
+    };
+  }
+
+  open = event => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  };
+
+  getMenuItems = (isSelected, menu, langKey, transparent) => {
+    return menu.map(item => {
+      const slug = `${langKey !== "pt" ? "/" + langKey : ""}${item.slug}`;
+
+      const subItems = item.items ? (
+        <ul style={{ display: "none" }}>{this.getMenuItems(isSelected, item.items, langKey)}</ul>
+      ) : null;
+      return (
+        <li key={item.slug}>
+          <FormattedMessage id={item.label}>
+            {label =>
+              item.link ? (
+                <MenuA target="_blank" href={item.link} transparent={transparent}>
+                  {label}
+                </MenuA>
+              ) : (
+                <MenuLink selected={isSelected(slug)} to={slug} onClick={this.open} transparent={transparent}>
+                  {label}
+                </MenuLink>
+              )
+            }
+          </FormattedMessage>
+          {subItems}
+        </li>
+      );
+    });
+  };
+
+  render() {
+    const { intl, menu, url, theme, transparent } = this.props;
+    const { isOpen } = this.state;
+    const isSelected = endsWith(url);
+    const menuItems = this.getMenuItems(isSelected, menu, intl.locale, transparent);
+
+    return (
+      <section>
+        <CloseNav isOpen={isOpen} onClick={this.open} />
+        <MenuLabel isOpen={isOpen} htmlFor="cb-menu">
+          <MenuIcon color={transparent ? theme.a.color.dark : theme.a.color.light} />
+          <InvisibleSpan>Menu</InvisibleSpan>
+          <Checkbox type="checkbox" name="cb-menu" id="cb-menu" checked={this.state.isOpen} onChange={this.open} />
+        </MenuLabel>
+        <Nav isOpen={isOpen}>
+          <Ul isOpen={isOpen}>{menuItems}</Ul>
+        </Nav>
+      </section>
+    );
+  }
+}
 
 const CloseNav = styled.section`
   ${hidden.md}
@@ -58,11 +125,11 @@ const MenuLabel = styled.label`
   float: left;
   cursor: pointer;
   color: ${props => props.theme.colors.dark};
-  margin: 0.8rem 1.5rem;
+  margin: 1.6rem 1.5rem;
   transition: color 0.4s;
   font-size: ${props => props.theme.menu.mobile.label.fontSize};
   &:hover {
-    color: ${props => props.theme.colors.darkGreen};
+    color: ${props => props.theme.colors.brand};
     transition: color 0.4s;
   }
 `;
@@ -81,6 +148,7 @@ const Checkbox = styled.input`
 const MenuLink = styled(Link)`
   font-size: ${props => props.theme.menu.mobile.a.fontSize};
   font-family: ${props => props.theme.menu.mobile.a.fontFamily};
+  text-transform: lowercase;
   padding: ${props => props.theme.menu.mobile.a.padding};
   display: block;
   text-align: ${props => props.theme.menu.mobile.a.textAlign};
@@ -97,10 +165,7 @@ const MenuLink = styled(Link)`
       font-family: ${props => props.theme.menu.desktop.a.fontFamily};
       font-weight: ${props => props.theme.menu.desktop.a.fontWeight};
       padding: ${props => props.theme.menu.desktop.a.padding};
-      color: ${props => (props.selected ? props.theme.menu.desktop.a.active.color : props.theme.menu.desktop.a.color)};
-      &:hover {
-        color: ${props => props.theme.menu.desktop.a.active.color};
-      }
+      ${props =>  color(props.theme.menu.desktop.a, props.selected, props.transparent)}};
     `}
 `;
 
@@ -121,85 +186,11 @@ const Ul = styled.ul`
     `}
 `;
 
-const FixedContainer = styled.div`
-  ${media.md`
-    width: ${props => props.theme.maxWidth};
-    margin: 0 auto;
-    text-align: right;
-  `}
-`;
-
-class Menu extends React.PureComponent {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isOpen: false
-    };
-  }
-
-  open = event => {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
-  };
-
-  getMenuItems = (isSelected, menu, langKey) => {
-    return menu.map(item => {
-      const slug = `/${langKey !== "pt" ? langKey : ""}${item.slug}`;
-
-      const subItems = item.items ? (
-        <ul style={{ display: "none" }}>{this.getMenuItems(isSelected, item.items, langKey)}</ul>
-      ) : null;
-
-      return (
-        <li key={item.slug}>
-          <FormattedMessage id={item.label}>
-            {label =>
-              item.link ? (
-                <MenuA target="_blank" href={item.link}>
-                  {label}
-                </MenuA>
-              ) : (
-                <MenuLink selected={isSelected(slug)} to={slug} onClick={this.open}>
-                  {label}
-                </MenuLink>
-              )
-            }
-          </FormattedMessage>
-          {subItems}
-        </li>
-      );
-    });
-  };
-
-  render() {
-    const { isOpen } = this.state;
-    const isSelected = endsWith(this.props.url);
-    const menuItems = this.getMenuItems(isSelected, this.props.menu, this.props.intl.locale);
-
-    return (
-      <section>
-        <CloseNav isOpen={isOpen} onClick={this.open} />
-        <MenuLabel isOpen={isOpen} htmlFor="cb-menu">
-          <MenuIcon />
-          <InvisibleSpan>Menu</InvisibleSpan>
-          <Checkbox type="checkbox" name="cb-menu" id="cb-menu" checked={this.state.isOpen} onChange={this.open} />
-        </MenuLabel>
-        <Nav isOpen={isOpen}>
-          <FixedContainer>
-            <Ul isOpen={isOpen}>{menuItems}</Ul>
-          </FixedContainer>
-        </Nav>
-      </section>
-    );
-  }
-}
-
 Menu.propTypes = {
   menu: PropTypes.array.isRequired,
   url: PropTypes.string.isRequired,
-  intl: PropTypes.object.isRequired
+  intl: PropTypes.object.isRequired,
+  transparent: PropTypes.bool.isRequired,
 };
 
-export default injectIntl(Menu);
+export default injectIntl(withTheme(Menu));
