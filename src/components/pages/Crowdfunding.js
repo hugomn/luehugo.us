@@ -30,10 +30,10 @@ const Crowdfunding = props => {
         </Column>
         <Column flexBasis="33%">
           <Number>
-            R$ <FormattedNumber value={wedding.fundingPledged} format="BRL" minimumFractionDigits={2} />
+            R$ <FormattedNumber value={wedding.fundingPledged} minimumFractionDigits={2} />
           </Number>
           <p>
-            de R$ <FormattedNumber value={wedding.fundingGoal} format="BRL" minimumFractionDigits={2} /> levantados
+            de R$ <FormattedNumber value={wedding.fundingGoal} minimumFractionDigits={2} /> levantados
           </p>
         </Column>
         <Column flexBasis="33%">
@@ -54,7 +54,7 @@ const Crowdfunding = props => {
           <b>adesivo exclusivo do casamento</b> criado pela <b>Lunara</b>.
         </CardDescription>
         <CardButton>
-          <BtnLink>Contribuir</BtnLink>
+          <PaypalButton id="KHA4STBGNH7DE" />
         </CardButton>
       </Card>
       <Card>
@@ -66,7 +66,7 @@ const Crowdfunding = props => {
           do casamento criada pela <b>Lunara</b>.
         </CardDescription>
         <CardButton>
-          <BtnLink>Contribuir</BtnLink>
+          <PaypalButton id="TEBDXBDM8WM2A" />
         </CardButton>
       </Card>
       <Card>
@@ -78,21 +78,42 @@ const Crowdfunding = props => {
           do casamento criada pela <b>Lunara</b>.
         </CardDescription>
         <CardButton>
-          <BtnLink>Contribuir</BtnLink>
+          <PaypalButton id="KHA4STBGNH7DE" />
         </CardButton>
       </Card>
     </Layout>
   );
 };
 
+const Button = BtnLink.withComponent(styled.button`
+  cursor: pointer;
+`);
+
+const PaypalButton = ({ id }) => {
+  return (
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick" />
+      <input type="hidden" name="hosted_button_id" value={id} />
+      <Button type="submit">Contribuir</Button>
+    </form>
+  );
+};
+
 const Card = styled.div`
   background: ${props => props.theme.colors.white};
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  border: 1.5px solid ${props => props.theme.colors.white};
   border-radius: 5px;
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 20px;
+  transition-property: border color box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  &:hover {
+    border: 1.5px solid ${props => props.theme.colors.brand};
+  }
 `;
 
 const CardPrice = styled.div`

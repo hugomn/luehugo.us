@@ -5,6 +5,7 @@ import styled from "styled-components";
 import FixedContainer from "./FixedContainer";
 import throttle from "lodash.throttle";
 import theme from "../themes/theme";
+import { Link } from "gatsby";
 
 const delta = 5;
 
@@ -90,7 +91,9 @@ class Header extends React.Component {
       <Wrapper hidden={this.state.hidden} transparent={transparent}>
         <FixedContainer display={"flex"} flexDirection={"row"} justifyContent="space-between">
           <section>
-            <img src={transparent ? "/img/logo.svg" : "/img/logo_black.svg"} />
+            <Link to="/">
+              <img src={transparent ? "/img/logo.svg" : "/img/logo_black.svg"} />
+            </Link>
           </section>
           <Menu menu={menu} url={url} transparent={transparent} />
         </FixedContainer>

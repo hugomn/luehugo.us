@@ -16,23 +16,23 @@ const Footer = ({ author, langs, sourceCodeLink, currentLangKey }) => {
         <Grid columns={"repeat(auto-fit,minmax(220px,1fr))"}>
           <LeftCell middle>
             <span>
-              {" Made with "}
-              <HeartIcon />
-              {" and "}
+              {" Designed with "}
+              <HeartIcon /> by <b>Lunara</b>
+              {" and coded with "}
               <a href="https://www.gatsbyjs.org/" target="_blank">
                 <GatsbyIcon src={withPrefix("/img/gatsbyjs.svg")} alt="Gatsby" />
               </a>
-              {" by "} <span>{author.name}</span>
+              by <b>Hugo</b>
             </span>
           </LeftCell>
-          <MiddleCell middle>
+          {/* <MiddleCell middle>
             <a href={sourceCodeLink} target="_blank">
               <GithubIcon />
             </a>
           </MiddleCell>
           <RightCell middle>
             <SelectLanguage langs={langs} className="select-languages" />
-          </RightCell>
+          </RightCell> */}
         </Grid>
       </FixedContainer>
     </Wrapper>
@@ -40,11 +40,12 @@ const Footer = ({ author, langs, sourceCodeLink, currentLangKey }) => {
 };
 
 const Wrapper = styled.footer`
-  border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
   padding: 10px 30px;
   font-size: 0.8rem;
   color: rgba(0, 0, 0, 0.44);
   margin-top: 60px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 -3px 8px 0 rgba(0, 0, 0, 0.05);
 `;
 
 const GatsbyIcon = styled.img`
@@ -76,7 +77,7 @@ const HeartIcon = styled(FaHeart)`
   transition: all 0.4s;
   animation: ${keyframes`to { transform: scale(1.2); }`} 0.42s infinite alternate;
   :hover {
-    color: ${props => props.theme.colors.red}!important;
+    color: #c60000 !important;
   }
 `;
 
@@ -90,6 +91,7 @@ const MiddleCell = styled(Cell)`
 
 const LeftCell = styled(Cell)`
   text-align: center;
+  height: 68px;
   ${media.md`
     text-align: left;
   `};
