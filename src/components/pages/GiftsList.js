@@ -12,7 +12,7 @@ const Gifts = props => {
   return (
     <Layout location={props.location}>
       <H2 textAlign="center">
-        <FormattedMessage id="gifts.title">{txt => <span>{txt}</span>}</FormattedMessage>
+        <FormattedMessage id="giftslist.title">{txt => <span>{txt}</span>}</FormattedMessage>
       </H2>
       <Subtitle>
         Nosso maior presente será poder celebrar esse momento tão especial com nossos amados familiares e amigos. E além
@@ -24,12 +24,12 @@ const Gifts = props => {
         <Column flexBasis="50%">
           <h3>Lista de presentes</h3>
           <Img src={"/img/gifts.svg"} mt={3} />
-          <BtnLink mt={4} to={"/presentes/lista"}>Ver lista de presentes</BtnLink>
+          <BtnLink mt={4}>Ver lista de presentes</BtnLink>
         </Column>
         <Column flexBasis="50%">
           <h3>Financiamento colaborativo</h3>
           <Img src={"/img/crowdfunding.svg"} mt={3} />
-          <BtnLink mt={4} to={"/presentes/crowdfunding"}>Participar da campanha</BtnLink>
+          <BtnLink mt={4} to={"/crowdfunding"}>Participar da campanha</BtnLink>
         </Column>
       </Container>
       {/* <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">

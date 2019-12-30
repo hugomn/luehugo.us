@@ -23,5 +23,6 @@ module.exports = {
   "index.bestfriends": "Padrinhos & Madrinhas",
   "index.rsvp": "RSVP",
   "gifts.title": "Presentes",
+  "giftslist.title": "Lista de Presentes",
   "crowdfunding.title": "Financiamento colaborativo",
 };

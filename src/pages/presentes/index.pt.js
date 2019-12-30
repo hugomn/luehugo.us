@@ -1,11 +1,11 @@
 import React from "react";
+import Gifts from "../../components/pages/Gifts";
 import { graphql } from "gatsby";
-import Crowdfunding from "../components/pages/Crowdfunding";
 
-export default props => <Crowdfunding {...props} />;
+export default props => <Gifts {...props} />;
 
 export const pageQuery = graphql`
-  query CrowdfundingPtQuery {
+  query GiftsPtQuery {
     site {
       siteMetadata {
         author {
@@ -14,11 +14,6 @@ export const pageQuery = graphql`
           email
           bio
           defaultLink
-        },
-        wedding {
-          date
-          fundingGoal
-          fundingPledged
         }
       }
     }
