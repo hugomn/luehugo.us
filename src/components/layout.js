@@ -1,36 +1,32 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import FixedContainer from '../components/FixedContainer';
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { StaticQuery, graphql, withPrefix } from 'gatsby';
-import { addLocaleData, IntlProvider, FormattedMessage } from 'react-intl';
-import en from '../data/messages/en';
-import pt from '../data/messages/pt';
-import enData from 'react-intl/locale-data/en';
-import ptData from 'react-intl/locale-data/pt';
-import theme from '../themes/theme';
-import { getLangs, getUrlForLang, getCurrentLangKey, isHomePage } from 'ptz-i18n';
-import Helmet from 'react-helmet';
+import React from "react";
+import PropTypes from "prop-types";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import FixedContainer from "../components/FixedContainer";
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import { StaticQuery, graphql, withPrefix } from "gatsby";
+import { IntlProvider, FormattedMessage } from "react-intl";
+import en from "../data/messages/en";
+import pt from "../data/messages/pt";
+import theme from "../themes/theme";
+import { getLangs, getUrlForLang, getCurrentLangKey, isHomePage } from "ptz-i18n";
+import Helmet from "react-helmet";
 
 const messages = { en, pt };
-
-addLocaleData([...enData, ...ptData]);
 
 const Container = styled(FixedContainer)`
   padding: ${props => props.theme.padding};
   margin: ${props => props.theme.margin};
 `;
 
-const Layout = (props) => {
+const Layout = props => {
   const { children, location } = props;
   const url = location.pathname;
   const isHome = isHomePage(url);
   const { langs, defaultLangKey } = props.data.site.siteMetadata.languages;
   const langKey = getCurrentLangKey(langs, defaultLangKey, url);
-  const homeLink = `/${langKey !== 'en' ? langKey : ''}`;
-  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)).map((item) => ({ ...item, link: item.link.replace(`/${defaultLangKey}/`, '/') }));
+  const homeLink = `/${langKey !== "en" ? langKey : ""}`;
+  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)).map(item => ({ ...item, link: item.link.replace(`/${defaultLangKey}/`, "/") }));
   const { menu, author, sourceCodeLink, siteUrl, description } = props.data.site.siteMetadata;
 
   return (
@@ -41,7 +37,7 @@ const Layout = (props) => {
       >
         <BodyContainer>
           <FormattedMessage id="title">
-            {(txt) => (
+            {txt => (
               <Helmet
                 defaultTitle={txt}
                 titleTemplate={`%s | ${txt}`}
@@ -52,13 +48,13 @@ const Layout = (props) => {
                 <meta property="og:description" content={description} />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={url} />
-                <meta property="og:image" content={`${siteUrl}${withPrefix('/avatar.jpg')}`} />
+                <meta property="og:image" content={`${siteUrl}${withPrefix("/avatar.jpg")}`} />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={txt} />
                 <meta name="twitter:description" content={description} />
                 <meta name="twitter:site" content={`@${author.twitter}`} />
                 <meta name="twitter:author" content={`@${author.twitter}`} />
-                <meta name="twitter:image" content={`${siteUrl}${withPrefix('/avatar.jpg')}`} />
+                <meta name="twitter:image" content={`${siteUrl}${withPrefix("/avatar.jpg")}`} />
               </Helmet>
             )}
           </FormattedMessage>
