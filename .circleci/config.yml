@@ -18,7 +18,7 @@ jobs:
           - v1-dependencies-
       - run:
           name: Install dependencies
-          command: npm install
+          command: yarn install
       - save_cache:
           paths:
             - node_modules
@@ -37,7 +37,7 @@ jobs:
               git rm -rf .
               cd ..
 
-              npm run build
+              yarn build
 
               cp -a public/. out/.
 
