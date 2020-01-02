@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[17],{"58G2":function(n,e,t){"use strict";t.r(e);var a=t("q1tI"),o=t.n(a),u=t("RVFz");e.default=function(){return o.a.createElement(u.a,{name:"guto"})}}}]);
+//# sourceMappingURL=component---src-pages-um-pedido-para-guto-pt-js-cc5f6380d15213a0a13d.js.map

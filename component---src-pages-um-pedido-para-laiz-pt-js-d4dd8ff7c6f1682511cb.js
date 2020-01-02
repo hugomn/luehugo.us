@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[20],{beo5:function(n,e,a){"use strict";a.r(e);var t=a("q1tI"),o=a.n(t),c=a("RVFz");e.default=function(){return o.a.createElement(c.a,{name:"laiz"})}}}]);
-//# sourceMappingURL=component---src-pages-um-pedido-para-laiz-pt-js-d4dd8ff7c6f1682511cb.js.map

@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[26],{tSWk:function(n,e,t){"use strict";t.r(e);var a=t("q1tI"),o=t.n(a),r=t("RVFz");e.default=function(){return o.a.createElement(r.a,{name:"murilo"})}}}]);
-//# sourceMappingURL=component---src-pages-um-pedido-para-murilo-pt-js-ead4e958079d64c3e386.js.map

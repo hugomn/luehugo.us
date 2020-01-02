@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[26],{"1z10":function(n,e,a){"use strict";a.r(e);var t=a("q1tI"),c=a.n(t),i=a("RVFz");e.default=function(){return c.a.createElement(i.a,{name:"michael"})}}}]);
+//# sourceMappingURL=component---src-pages-um-pedido-para-michael-pt-js-17a69b31fb47da0abbb0.js.map

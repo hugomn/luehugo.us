@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[24],{k3xe:function(n,e,a){"use strict";a.r(e);var t=a("q1tI"),r=a.n(t),c=a("RVFz");e.default=function(){return r.a.createElement(c.a,{name:"mari"})}}}]);
-//# sourceMappingURL=component---src-pages-um-pedido-para-mari-pt-js-79026ae03a404d413dfe.js.map

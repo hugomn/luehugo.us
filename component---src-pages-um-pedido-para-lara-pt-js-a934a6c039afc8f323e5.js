@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[22],{"6gg9":function(n,a,e){"use strict";e.r(a);var t=e("q1tI"),r=e.n(t),c=e("RVFz");a.default=function(){return r.a.createElement(c.a,{name:"lara"})}}}]);
+//# sourceMappingURL=component---src-pages-um-pedido-para-lara-pt-js-a934a6c039afc8f323e5.js.map

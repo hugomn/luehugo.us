@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[30],{TGV2:function(n,e,t){"use strict";t.r(e);var a=t("q1tI"),r=t.n(a),c=t("RVFz");e.default=function(){return r.a.createElement(c.a,{name:"rita"})}}}]);
-//# sourceMappingURL=component---src-pages-um-pedido-para-rita-pt-js-79c8dff579cd8c9d78ad.js.map

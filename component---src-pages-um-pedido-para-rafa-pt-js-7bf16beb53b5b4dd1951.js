@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[27],{NRkH:function(n,a,e){"use strict";e.r(a);var t=e("q1tI"),r=e.n(t),c=e("RVFz");a.default=function(){return r.a.createElement(c.a,{name:"rafa"})}}}]);
-//# sourceMappingURL=component---src-pages-um-pedido-para-rafa-pt-js-7bf16beb53b5b4dd1951.js.map
