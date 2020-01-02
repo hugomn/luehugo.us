@@ -4,24 +4,25 @@ import Helmet from "react-helmet";
 
 const padrinhos = {
   aline: { gender: "M", name: "Chequer", videoId: "wO9fflWkoRI" },
-  ana: { gender: "M", name: "Ana", videoId: "wO9fflWkoRI" },
+  ana: { gender: "F", name: "Ana", videoId: "wO9fflWkoRI" },
   caio: { gender: "M", name: "Caio", videoId: "wO9fflWkoRI" },
-  cau: { gender: "M", name: "Cau", videoId: "wO9fflWkoRI" },
+  cau: { gender: "F", name: "Cau", videoId: "wO9fflWkoRI" },
   chequer: { gender: "M", name: "Chequer", videoId: "wO9fflWkoRI" },
-  jessica: { gender: "M", name: "Jessica", videoId: "wO9fflWkoRI" },
+  guto: { gender: "M", name: "Guto", videoId: "wO9fflWkoRI" },
+  jessica: { gender: "F", name: "Jessica", videoId: "wO9fflWkoRI" },
   jonas: { gender: "M", name: "Jonas", videoId: "wO9fflWkoRI" },
-  julia: { gender: "M", name: "Julia", videoId: "wO9fflWkoRI" },
-  laiz: { gender: "M", name: "Laiz", videoId: "wO9fflWkoRI" },
-  lara: { gender: "M", name: "Lara", videoId: "wO9fflWkoRI" },
+  julia: { gender: "F", name: "Julia", videoId: "wO9fflWkoRI" },
+  laiz: { gender: "F", name: "Laiz", videoId: "wO9fflWkoRI" },
+  lara: { gender: "F", name: "Lara", videoId: "wO9fflWkoRI" },
   leo: { gender: "M", name: "Leo", videoId: "wO9fflWkoRI" },
   marat: { gender: "M", name: "Marat", videoId: "wO9fflWkoRI" },
-  mari: { gender: "M", name: "Mari", videoId: "wO9fflWkoRI" },
+  mari: { gender: "F", name: "Mari", videoId: "wO9fflWkoRI" },
   michael: { gender: "M", name: "Michael", videoId: "wO9fflWkoRI" },
   murilo: { gender: "M", name: "Murilo", videoId: "wO9fflWkoRI" },
   rafa: { gender: "M", name: "Rafa", videoId: "wO9fflWkoRI" },
-  raissa: { gender: "M", name: "Raíssa", videoId: "wO9fflWkoRI" },
+  raissa: { gender: "F", name: "Raíssa", videoId: "wO9fflWkoRI" },
   ricardo: { gender: "M", name: "Ricardo", videoId: "wO9fflWkoRI" },
-  rita: { gender: "M", name: "Rita", videoId: "wO9fflWkoRI" }
+  rita: { gender: "F", name: "Rita", videoId: "wO9fflWkoRI" }
 };
 
 const UmPedidoPara = ({ name }) => {
