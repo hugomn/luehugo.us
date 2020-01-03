@@ -6,8 +6,9 @@ import H2 from "../H2";
 import Subtitle from "../Subtitle";
 import styled, { keyframes } from "styled-components";
 import { flexbox, layout, space } from "styled-system";
-import BtnLink from "../BtnLink";
 import moment from "moment";
+import PaypalButton from "../PaypalButton";
+import Card from "../Card";
 
 const Crowdfunding = props => {
   const { wedding } = props.data.site.siteMetadata;
@@ -85,41 +86,11 @@ const Crowdfunding = props => {
   );
 };
 
-const Button = BtnLink.withComponent(styled.button`
-  cursor: pointer;
-`);
-
-const PaypalButton = ({ id }) => {
-  return (
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-      <input type="hidden" name="cmd" value="_s-xclick" />
-      <input type="hidden" name="hosted_button_id" value={id} />
-      <Button type="submit">Contribuir</Button>
-    </form>
-  );
-};
-
-const Card = styled.div`
-  background: ${props => props.theme.colors.white};
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-  border: 1.5px solid ${props => props.theme.colors.white};
-  border-radius: 5px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 20px;
-  transition-property: border color box-shadow;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-  &:hover {
-    border: 1.5px solid ${props => props.theme.colors.brand};
-  }
-`;
-
 const CardPrice = styled.div`
   font-size: ${props => props.theme.scale(4.6)};
   font-weight: 500;
   padding: 0 30px;
+  min-width: 120px;
   span:after {
     content: ",00";
     font-size: ${props => props.theme.scale(1)};
@@ -128,7 +99,8 @@ const CardPrice = styled.div`
 `;
 
 const CardButton = styled.div`
-  padding: 0 40px 0 20px;
+  padding: 0 10px 0 10px;
+  min-width: 200px;
 `;
 
 const CardDescription = styled.div`

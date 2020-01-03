@@ -14,6 +14,10 @@ import Helmet from "react-helmet";
 
 const messages = { en, pt };
 
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")("a[href*=\"#\"]");
+}
 
 const Layout = props => {
   const { children, location } = props;
@@ -105,6 +109,7 @@ const GlobalStyle = createGlobalStyle`
     margin:${props => props.theme.h4.margin};
     padding:${props => props.theme.h4.padding};
     font-size:${props => props.theme.h4.fontSize};
+    font-weight: 500;
     line-height: 1.4;
   }
   h5{

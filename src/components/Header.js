@@ -89,12 +89,12 @@ class Header extends React.Component {
     const { transparent } = this.state;
     return (
       <Wrapper hidden={this.state.hidden} transparent={transparent}>
-        <FixedContainer display={"flex"} flexDirection={"row"} justifyContent="space-between">
-          <section>
+        <FixedContainer display="flex" flexDirection="row" justifyContent="space-between">
+          <LogoContainer>
             <Link to="/">
-              <img src={transparent ? "/img/logo.svg" : "/img/logo_black.svg"} />
+              <Logo src={transparent ? "/img/logo.svg" : "/img/logo_black.svg"} />
             </Link>
-          </section>
+          </LogoContainer>
           <Menu menu={menu} url={url} transparent={transparent} />
         </FixedContainer>
       </Wrapper>
@@ -105,13 +105,21 @@ class Header extends React.Component {
 const Wrapper = styled.header`
   background: ${props => (props.transparent ? "transparent" : "rgba(255, 255, 255, 0.97)")};
   box-shadow: ${props => (props.transparent ? "none" : "0 4px 12px 0 rgba(0,0,0,.05) !important")};
-  transition: all 0.4s ease-in-out;
+  transition: all 0.25s ease-out;
   height: ${props => `${props.theme.header.height}px`};
   top: ${props => (props.hidden ? `-${props.theme.header.height}px` : 0)};
   box-sizing: border-box;
   position: fixed;
   width: 100%;
   z-index: 999;
+`;
+
+const LogoContainer = styled.section`
+  padding: 7px 0px;
+`;
+
+const Logo = styled.img`
+  height: ${props => `${props.theme.header.height - 14}px`};
 `;
 
 Header.propTypes = {

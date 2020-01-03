@@ -6,14 +6,21 @@ export default props => <GiftsList {...props} />;
 
 export const pageQuery = graphql`
   query ListaPtQuery {
-    site {
-      siteMetadata {
-        author {
+    allGiftsYaml {
+      edges {
+        node {
+          id
           name
-          homeCity
-          email
-          bio
-          defaultLink
+          price
+          total
+          sold
+          image {
+            childImageSharp{
+                sizes(maxWidth: 750) {
+                    ...GatsbyImageSharpSizes
+                }
+            }
+          }
         }
       }
     }

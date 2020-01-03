@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { graphql, Link } from 'gatsby';
-import styled from 'styled-components';
-import PostCardList from '../components/PostCardList';
-import { FormattedMessage } from 'react-intl';
-import Helmet from 'react-helmet';
-import Layout from '../components/layout';
-import BtnLink from '../components/BtnLink';
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql, Link } from "gatsby";
+import styled from "styled-components";
+import PostCardList from "../components/PostCardList";
+import { FormattedMessage } from "react-intl";
+import Helmet from "react-helmet";
+import Layout from "../components/layout";
+import BtnLink from "../components/BtnLink";
 
 const Wrapper = styled.section`
   margin: ${props => props.theme.page.margin};
@@ -36,8 +36,8 @@ const TagRoute = ({ data, pageContext, location }) => {
 
   const allTagsLink = (
     <FormattedMessage id="tags.allTagsLink">
-      {(txt) => (
-        <BtnLink to={`/tags/`}>
+      {txt => (
+        <BtnLink to="/tags/">
           {txt}
         </BtnLink>
       )}
@@ -48,16 +48,16 @@ const TagRoute = ({ data, pageContext, location }) => {
     <Layout location={location}>
       <Wrapper>
         <FormattedMessage id="tags">
-          {(txt) => (
+          {txt => (
             <Header>
               <Helmet
                 title={`${pageContext.tag} | ${txt}`}
-                meta={[{ name: 'description', content: txt }]}
+                meta={[{ name: "description", content: txt }]}
               />
               <H1>
                 <span>
                   <FormattedMessage id="tags.nPostsTaggedWith" values={{ nPosts: data.allMarkdownRemark.totalCount }}>
-                    {(txt) => (
+                    {txt => (
                       `${txt} "${pageContext.tag}"`
                     )}
                   </FormattedMessage>

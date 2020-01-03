@@ -24,17 +24,17 @@ const Index = props => {
         </VideoContainer>
         <Container>
           <Section>
-            <H2 textAlign="center">
+            <H2 textAlign="center" id="historia">
               <FormattedMessage id="index.story">{txt => <span>{txt}</span>}</FormattedMessage>
             </H2>
           </Section>
           <Section>
-            <H2 textAlign="center">
+            <H2 textAlign="center" id="onde">
               <FormattedMessage id="index.where">{txt => <span>{txt}</span>}</FormattedMessage>
             </H2>
           </Section>
           <Section>
-            <H2 textAlign="center">
+            <H2 textAlign="center" id="padrinhos-madrinhas">
               <FormattedMessage id="index.bestfriends">{txt => <span>{txt}</span>}</FormattedMessage>
             </H2>
           </Section>

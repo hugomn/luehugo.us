@@ -174,17 +174,17 @@ const theme = {
     padding: `${scale(6)} 0 0 0`
   },
   h4: {
-    fontSize: scale(2),
+    fontSize: scale(0.4),
     margin: 0,
     padding: `${scale(6)} 0 0 0`
   },
   h5: {
-    fontSize: scale(1),
+    fontSize: scale(0.2),
     margin: 0,
     padding: `${scale(4)} 0 0 0`
   },
   h6: {
-    fontSize: scale(1),
+    fontSize: scale(0),
     margin: 0,
     padding: `${scale(4)} 0 0 0`
   },

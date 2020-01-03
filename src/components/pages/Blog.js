@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import PostCardList from '../PostCardList';
-import Helmet from 'react-helmet';
-import { FormattedMessage } from 'react-intl';
-import Layout from '../layout';
-import styled from 'styled-components';
+import React from "react";
+import PropTypes from "prop-types";
+import PostCardList from "../PostCardList";
+import Helmet from "react-helmet";
+import { FormattedMessage } from "react-intl";
+import Layout from "../layout";
+import styled from "styled-components";
 
 const Wrapper = styled.section`
   margin: ${props => props.theme.page.margin};
@@ -28,17 +28,17 @@ const H1 = styled.h1`
   }
 `;
 
-const Blog = (props) => {
+const Blog = props => {
   const { author } = props.data.site.siteMetadata;
   return (
     <Layout location={props.location}>
       <Wrapper>
         <FormattedMessage id="posts">
-          {(txt) => (
+          {txt => (
             <Header>
               <Helmet
                 title={txt}
-                meta={[{ name: 'description', content: txt }]}
+                meta={[{ name: "description", content: txt }]}
               />
               <H1>
                 <span>{txt}</span>

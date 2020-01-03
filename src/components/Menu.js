@@ -19,7 +19,7 @@ class Menu extends React.PureComponent {
     };
   }
 
-  open = event => {
+  handleOpen = event => {
     this.setState({
       isOpen: !this.state.isOpen
     });
@@ -33,19 +33,18 @@ class Menu extends React.PureComponent {
         <ul style={{ display: "none" }}>{this.getMenuItems(isSelected, item.items, langKey)}</ul>
       ) : null;
       return (
-        <li key={item.slug}>
+        <li key={item.slug || item.link}>
           <FormattedMessage id={item.label}>
             {label =>
               item.link ? (
-                <MenuA target="_blank" href={item.link} transparent={transparent}>
+                <MenuA href={item.link} transparent={transparent ? 1 : 0}>
                   {label}
                 </MenuA>
               ) : (
-                <MenuLink selected={isSelected(slug)} to={slug} onClick={this.open} transparent={transparent}>
+                <MenuLink selected={isSelected(slug)} to={slug} onClick={this.handleOpen} transparent={transparent ? 1 : 0}>
                   {label}
                 </MenuLink>
-              )
-            }
+              )}
           </FormattedMessage>
           {subItems}
         </li>
@@ -61,11 +60,11 @@ class Menu extends React.PureComponent {
 
     return (
       <section>
-        <CloseNav isOpen={isOpen} onClick={this.open} />
+        <CloseNav isOpen={isOpen} onClick={this.handleOpen} />
         <MenuLabel isOpen={isOpen} htmlFor="cb-menu">
           <MenuIcon color={transparent ? theme.a.color.dark : theme.a.color.light} />
           <InvisibleSpan>Menu</InvisibleSpan>
-          <Checkbox type="checkbox" name="cb-menu" id="cb-menu" checked={this.state.isOpen} onChange={this.open} />
+          <Checkbox type="checkbox" name="cb-menu" id="cb-menu" checked={this.state.isOpen} onChange={this.handleOpen} />
         </MenuLabel>
         <Nav isOpen={isOpen}>
           <Ul isOpen={isOpen}>{menuItems}</Ul>

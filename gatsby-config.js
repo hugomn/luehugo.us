@@ -54,7 +54,7 @@ module.exports = {
         short_name: "Hugo Nogueira",
         icons: [
           {
-            src: "/logo.svg",
+            src: "/img/logo.svg",
             sizes: "any",
             type: "image/svg+xml"
           }
@@ -124,6 +124,27 @@ module.exports = {
           }
         ]
       }
-    }
+    },
+    {
+      resolve: `gatsby-transformer-yaml-plus`,
+      options: {
+        enableRemark: true,
+        markdownPreface: "md//",
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data`,
+        name: "yaml"
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+        name: "images"
+      },
+    },
   ]
 };
