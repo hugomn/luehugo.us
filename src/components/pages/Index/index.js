@@ -8,7 +8,6 @@ import MainTitle from "../../MainTitle";
 import { media } from "../../../constants/responsive";
 import Us from "./Us";
 import { Box } from "../../Box";
-import { FixedContainer } from "../../FixedContainer";
 import TImeline from "./Timeline";
 
 const Index = props => {
@@ -16,9 +15,6 @@ const Index = props => {
     <Layout location={props.location}>
       <>
         <VideoContainer>
-          {/* <Title fontFamily={Allura} fontSize={[45, 65, 75, 95]} color="white">
-            Lunara & Hugo
-          </Title> */}
           <TitleContainer color="white" fontFamily={Orator} fontSize={[45, 65, 85, 105]}>
             <DateBox>
               02
@@ -28,12 +24,12 @@ const Index = props => {
               20
             </DateBox>
           </TitleContainer>
-          {/* <Video
+          <Video
             src="https://www.youtube.com/embed/wO9fflWkoRI?controls=0&autoplay=1&loop=1&showinfo=0&rel=0&mute=1&playlist=wO9fflWkoRI"
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-          /> */}
+          />
         </VideoContainer>
         <Container>
           <Box id="os-noivos" py="6">
@@ -99,8 +95,8 @@ const VideoContainer = styled.div`
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.8);
-    /* background: rgba(0, 0, 0, 0.15); */
+    /* background: rgba(0, 0, 0, 0.8); */
+    background: rgba(0, 0, 0, 0.45);
   }
 `;
 
@@ -117,18 +113,6 @@ const Video = styled.iframe`
 
 const Container = styled.div`
   margin-top: 100vh;
-`;
-
-const Title = styled.h1`
-  ${color};
-  ${typography};
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  text-align: center;
-  top: 50%;
-  padding: 0;
-  margin-top: -50px;
 `;
 
 Index.propTypes = {
