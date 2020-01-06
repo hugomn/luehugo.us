@@ -6,6 +6,7 @@
   "dependencies": {
     "gatsby": "2.18.17",
     "gatsby-plugin-react-svg": "^2.1.2",
+    "gatsby-plugin-scroll-reveal": "0.0.4",
     "gatsby-remark-figure-caption": "^2.0.0",
     "gatsby-transformer-yaml-plus": "0.2.2",
     "lodash.throttle": "^4.1.1",

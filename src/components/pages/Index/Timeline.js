@@ -31,12 +31,21 @@ const TImeline = () => {
       <Box px="5em">
         <Wrapper gridTemplateColumns={["1fr", "1fr", "1fr 1fr"]} gridGap="4.75rem">
           {data.timeline.edges.map(({ node }, i) => (
-            <ItemCard gridRow={[`${i + 1} / ${i + 2}`]} gridColumn={[1, 1, (i % 2) + 1]} key={node.date} p="3">
+            <ItemCard
+              gridRow={[`${i + 1} / ${i + 2}`]}
+              gridColumn={[1, 1, (i % 2) + 1]}
+              key={node.name}
+              p="3"
+              right={i % 2}
+              data-sal={i % 2 ? "slide-left" : "slide-right"}
+            >
               <Flex flexDirection="column">
                 <Text display="block" fontWeight="500" color="darkColors.1">
                   {node.name}
                 </Text>
-                <Text display="block" color="brand" mt={3}>{node.date}</Text>
+                <Text display="block" color="brand" mt={3}>
+                  {node.date}
+                </Text>
                 <Text display="block">{node.description}</Text>
               </Flex>
             </ItemCard>
@@ -57,9 +66,9 @@ const ItemCard = styled(Card)`
     border: 8px solid ${({ theme }) => theme.colors.lightColors[2]};
     border-radius: 50%;
     position: absolute;
-    left: calc(-18px - 2.5em);
+    margin-left: -75px;
     ${media.lg`
-      left: calc(50% - 18px - 2px);
+      margin-left: ${({ right }) => (right ? "-72px" : "455px")};
     `}
   }
   &:first-child:before,

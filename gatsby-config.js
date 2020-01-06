@@ -129,7 +129,7 @@ module.exports = {
       resolve: `gatsby-transformer-yaml-plus`,
       options: {
         enableRemark: true,
-        markdownPreface: "md//",
+        markdownPreface: "md//"
       }
     },
     {
@@ -137,14 +137,15 @@ module.exports = {
       options: {
         path: `${__dirname}/src/data`,
         name: "yaml"
-      },
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/images`,
         name: "images"
-      },
+      }
     },
+    `gatsby-plugin-scroll-reveal`
   ]
 };
