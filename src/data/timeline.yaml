@@ -1,0 +1,12 @@
+- name: Nos conhecemos
+  date: 2016-01-01
+  description: Tudo começou com uma carona de Juiz de Fora pra Belo Horizonte, conversamos a viagem inteira!
+- name: Cultivamos uma forte amizade
+  date: 2016-02-01
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim orci sed neque convallis arcu egestas. A sed tincidunt vulputate lectus nulla odio. Fermentum tincidunt sed.
+- name: Começamos a namorar
+  date: 2016-12-01
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim orci sed neque convallis arcu egestas. A sed tincidunt vulputate lectus nulla odio. Fermentum tincidunt sed.
+- name: Nos mudamos para Berlim
+  date: 2017-05-01
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim orci sed neque convallis arcu egestas. A sed tincidunt vulputate lectus nulla odio. Fermentum tincidunt sed.

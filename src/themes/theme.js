@@ -7,7 +7,7 @@ const scale = n => `${scaleN(n)}rem`;
 const brandColor = "#70A076";
 const accentColors = ["#C8664B", "#D1DFD2", "#F2BE3B"];
 const darkColors = ["#333E49", "#484848", "#747474", "#B9C2CE"];
-const lightColors = ["#FFFFFF", "#FAFAFA", "#EFEFEF", "#D7D7D7"];
+const lightColors = ["#FFFFFF", "#F6F6F8", "#EFEFEF", "#D7D7D7"];
 
 const colors = {
   brand: brandColor,
@@ -28,7 +28,7 @@ const theme = {
   colors,
   fonts,
   color: colors.black,
-  bg: colors.lightColors[1],
+  bg: colors.lightColors[0],
   padding: `${settings.headerHeight}px ${scaleN(1)}rem ${scaleN(4)}rem ${scaleN(0)}rem`,
   margin: "0 auto",
   maxWidth: "71.25rem",

@@ -1,11 +1,22 @@
 import styled from "styled-components";
-import { flexbox, layout } from "styled-system";
+import { flexbox, layout, space, color } from "styled-system";
 
-const FixedContainer = styled.section`
-  max-width: ${props => props.theme.maxWidth};
-  margin: 0 auto;
-  ${flexbox};
-  ${layout};
-`;
+export const FixedContainer = styled("section")(
+  {
+    maxWidth: ({ theme }) => theme.maxWidth,
+    margin: "0 auto"
+  },
+  color,
+  flexbox,
+  layout,
+  space
+);
 
-export default FixedContainer;
+FixedContainer.displayName = "FixedContainer";
+
+FixedContainer.propTypes = {
+  ...color.propTypes,
+  ...space.propTypes,
+  ...flexbox.propTypes,
+  ...layout.propTypes,
+};

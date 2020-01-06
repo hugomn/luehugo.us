@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import FixedContainer from "../components/FixedContainer";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import { StaticQuery, graphql, withPrefix } from "gatsby";
 import { IntlProvider, FormattedMessage } from "react-intl";
@@ -56,9 +55,7 @@ const Layout = props => {
             )}
           </FormattedMessage>
           <Header isHome={isHome} url={url} menu={menu} />
-          <Container>
-            <main>{children}</main>
-          </Container>
+          <main>{children}</main>
           <Footer author={author} langs={langsMenu} sourceCodeLink={sourceCodeLink} />
           <GlobalStyle />
         </BodyContainer>
@@ -148,11 +145,6 @@ const GlobalStyle = createGlobalStyle`
   .giphy-embed {
     margin-top: 2rem;
   }
-`;
-
-const Container = styled(FixedContainer)`
-  padding: ${props => props.theme.padding};
-  margin: ${props => props.theme.margin};
 `;
 
 const BodyContainer = styled.div`

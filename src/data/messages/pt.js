@@ -21,8 +21,8 @@ module.exports = {
 
   "index.us.title": "Os noivos",
   "index.us.subtitle": "Hugo & Lunara",
-  "index.story.title": "Nossa história",
-  "index.story.subtitle": "Como tudo começou",
+  "index.timeline.title": "Nossa história",
+  "index.timeline.subtitle": "Como tudo começou",
   "index.groomsmen.title": "Padrinhos",
   "index.groomsmen.subtitle": "Os grandes amigos",
   "index.bridesmaids.title": "Madrinhas",

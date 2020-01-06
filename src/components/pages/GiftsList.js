@@ -7,7 +7,6 @@ import GiftCardList from "../GiftCardList";
 
 const Gifts = props => {
   const gifts = props.data.allGiftsYaml.edges.map(g => g.node);
-  console.log(gifts);
   return (
     <Layout location={props.location}>
       <H2 textAlign="center">

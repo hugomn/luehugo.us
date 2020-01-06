@@ -5,21 +5,21 @@ import styled, { keyframes } from "styled-components";
 import { Grid, Cell } from "styled-css-grid";
 import { withPrefix } from "gatsby";
 
-import SelectLanguage from "./SelectLanguage";
-import FixedContainer from "./FixedContainer";
+// import SelectLanguage from "./SelectLanguage";
 import { media } from "../constants/responsive";
+import { FixedContainer } from "./FixedContainer";
 
 const Footer = ({ author, langs, sourceCodeLink, currentLangKey }) => {
   return (
     <Wrapper>
       <FixedContainer>
-        <Grid columns={"repeat(auto-fit,minmax(220px,1fr))"}>
+        <Grid columns="repeat(auto-fit,minmax(220px,1fr))">
           <LeftCell middle>
             <span>
               {" Designed with "}
               <HeartIcon /> by <b>Lunara</b>
               {" and coded with "}
-              <a href="https://www.gatsbyjs.org/" target="_blank">
+              <a href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer">
                 <GatsbyIcon src={withPrefix("/img/gatsbyjs.svg")} alt="Gatsby" />
               </a>
               by <b>Hugo</b>
@@ -43,7 +43,6 @@ const Wrapper = styled.footer`
   padding: 10px 30px;
   font-size: 0.8rem;
   color: rgba(0, 0, 0, 0.44);
-  margin-top: 60px;
   background: rgba(255, 255, 255, 0.97);
   box-shadow: 0 -3px 8px 0 rgba(0, 0, 0, 0.05);
 `;

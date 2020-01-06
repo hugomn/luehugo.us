@@ -7,18 +7,19 @@ import { Grid } from "../../Grid";
 import { Box } from "../../Box";
 import Text from "../../Text";
 import { Orator } from "../../../constants/fonts";
+import { FixedContainer } from "../../FixedContainer";
 
 const Us = () => {
   const data = useStaticQuery(graphql`
     query UsQuery {
-      groomImage: file(relativePath: { eq: "images/groom.png" }) {
+      groomImage: file(relativePath: { eq: "images/groom2.png" }) {
         childImageSharp {
           sizes(maxWidth: 800, quality: 90) {
             ...GatsbyImageSharpSizes
           }
         }
       },
-      brideImage: file(relativePath: { eq: "images/bride.png" }) {
+      brideImage: file(relativePath: { eq: "images/bride2.png" }) {
         childImageSharp {
           sizes(maxWidth: 800, quality: 90) {
             ...GatsbyImageSharpSizes
@@ -29,7 +30,7 @@ const Us = () => {
   `);
   
   return (
-    <>
+    <FixedContainer>
       <MainTitle title="index.us.title" subtitle="index.us.subtitle" />
       <Subtitle mb={5}>
         Nosso maior presente será poder celebrar esse momento tão especial com nossos amados familiares e amigos. E além
@@ -49,7 +50,7 @@ const Us = () => {
           <Text textAlign="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim orci sed neque convallis arcu egestas. A sed tincidunt vulputate lectus nulla odio. Fermentum tincidunt sed.</Text>
         </Box>
       </Grid>
-    </>
+    </FixedContainer>
   );
 };
 

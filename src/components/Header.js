@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import Menu from "./Menu";
 import styled from "styled-components";
-import FixedContainer from "./FixedContainer";
 import throttle from "lodash.throttle";
 import theme from "../themes/theme";
 import { Link } from "gatsby";
+import { FixedContainer } from "./FixedContainer";
 
 const delta = 5;
 

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {
   space,
   color,
+  display,
   width,
   fontSize,
   flex,
@@ -26,6 +27,7 @@ export const Box = styled("div")(
   },
   space,
   color,
+  display,
   width,
   fontSize,
   flex,
@@ -49,6 +51,7 @@ Box.displayName = "Box";
 Box.propTypes = {
   ...space.propTypes,
   ...color.propTypes,
+  ...display.propTypes,
   ...width.propTypes,
   ...fontSize.propTypes
 };

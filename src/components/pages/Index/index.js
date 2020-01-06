@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Layout from "../../layout";
-import { FormattedMessage } from "react-intl";
 import styled from "styled-components";
-import { color, grid, position, typography } from "styled-system";
-import { Orator, Allura } from "../../../constants/fonts";
+import { color, typography } from "styled-system";
+import { Orator } from "../../../constants/fonts";
 import MainTitle from "../../MainTitle";
 import { media } from "../../../constants/responsive";
 import Us from "./Us";
 import { Box } from "../../Box";
+import { FixedContainer } from "../../FixedContainer";
+import TImeline from "./Timeline";
 
 const Index = props => {
-  console.log(props);
   return (
     <Layout location={props.location}>
       <>
@@ -21,29 +21,31 @@ const Index = props => {
           </Title> */}
           <TitleContainer color="white" fontFamily={Orator} fontSize={[45, 65, 85, 105]}>
             <DateBox>
-              02<br />
-              05<br />
+              02
+              <br />
+              05
+              <br />
               20
             </DateBox>
           </TitleContainer>
-          <Video
+          {/* <Video
             src="https://www.youtube.com/embed/wO9fflWkoRI?controls=0&autoplay=1&loop=1&showinfo=0&rel=0&mute=1&playlist=wO9fflWkoRI"
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-          />
+          /> */}
         </VideoContainer>
         <Container>
-          <Box id="os-noivos" mb="6">
+          <Box id="os-noivos" py="6">
             <Us />
           </Box>
-          <Box id="historia" mb="6">
-            <MainTitle title="index.story.title" subtitle="index.story.subtitle" />
-          </Box>
-          <Box id="padrinhos" mb="6">
+          <TimelineBox id="historia" py="5" backgroundColor="lightColors.1">
+            <TImeline />
+          </TimelineBox>
+          <Box id="padrinhos" py="6">
             <MainTitle title="index.groomsmen.title" subtitle="index.groomsmen.subtitle" />
           </Box>
-          <Box>
+          <Box py="6" backgroundColor="lightColors.1">
             <MainTitle title="index.bridesmaids.title" subtitle="index.bridesmaids.subtitle" />
           </Box>
         </Container>
@@ -51,6 +53,11 @@ const Index = props => {
     </Layout>
   );
 };
+
+const TimelineBox = styled(Box)`
+  background-image: url('/img/timeline_bg.png');
+  background-position: center top;
+`;
 
 const TitleContainer = styled.section`
   ${color};
@@ -92,7 +99,8 @@ const VideoContainer = styled.div`
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.8);
+    /* background: rgba(0, 0, 0, 0.15); */
   }
 `;
 
@@ -109,7 +117,6 @@ const Video = styled.iframe`
 
 const Container = styled.div`
   margin-top: 100vh;
-  min-height: 2000px;
 `;
 
 const Title = styled.h1`
