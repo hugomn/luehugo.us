@@ -5,15 +5,15 @@ const scaleN = n => round(Math.pow(1.2, n), 3);
 const scale = n => `${scaleN(n)}rem`;
 
 const brandColor = "#70A076";
-const accentColors = ["#C8664B", "#D2AB65", "#F2BE3B"];
-const darkColors = ["#333E49", "#435365", "#747474", "#B9C2CE"];
+const accentColors = ["#C8664B", "#D1DFD2", "#F2BE3B"];
+const darkColors = ["#333E49", "#484848", "#747474", "#B9C2CE"];
 const lightColors = ["#FFFFFF", "#FAFAFA", "#EFEFEF", "#D7D7D7"];
 
 const colors = {
   brand: brandColor,
   accentColors,
   white: "#FFFFFF",
-  black: "#282828",
+  black: darkColors[2],
   darkColors,
   lightColors
 };

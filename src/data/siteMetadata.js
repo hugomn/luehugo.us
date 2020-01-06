@@ -16,6 +16,7 @@ module.exports = {
   sourceCodeLink: "https://github.com/hugomn/luehugo.us",
   disqusShortname: "hugomagalhes",
   menu: [
+    { label: "menu.us", link: "/#os-noivos" },
     { label: "menu.story", link: "/#historia" },
     { label: "menu.where", link: "/#onde" },
     { label: "menu.bestfriends", link: "/#padrinhos-madrinhas" },

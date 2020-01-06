@@ -2,6 +2,7 @@ module.exports = {
   "title": "Lunara & Hugo",
   "header.title": "Lunara & Hugo",
   "header.subTitle": "Bem-vindo ao site do nosso casamento!",
+  "menu.us": "Os noivos",
   "menu.story": "Nossa história",
   "menu.where": "Onde",
   "menu.bestfriends": "Padrinhos & Madrinhas",
@@ -18,7 +19,14 @@ module.exports = {
       other {posts}
     } com a tag`,
 
-  "index.story": "Nossa história",
+  "index.us.title": "Os noivos",
+  "index.us.subtitle": "Hugo & Lunara",
+  "index.story.title": "Nossa história",
+  "index.story.subtitle": "Como tudo começou",
+  "index.groomsmen.title": "Padrinhos",
+  "index.groomsmen.subtitle": "Os grandes amigos",
+  "index.bridesmaids.title": "Madrinhas",
+  "index.bridesmaids.subtitle": "As grandes amigas",
   "index.where": "Onde",
   "index.bestfriends": "Padrinhos & Madrinhas",
   "index.rsvp": "RSVP",

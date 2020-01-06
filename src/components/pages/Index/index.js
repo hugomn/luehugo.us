@@ -1,20 +1,31 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Layout from "../layout";
+import Layout from "../../layout";
 import { FormattedMessage } from "react-intl";
 import styled from "styled-components";
 import { color, grid, position, typography } from "styled-system";
-import { Allura } from "../../constants/fonts";
-import H2 from "../H2";
+import { Orator, Allura } from "../../../constants/fonts";
+import MainTitle from "../../MainTitle";
+import { media } from "../../../constants/responsive";
+import Us from "./Us";
+import { Box } from "../../Box";
 
 const Index = props => {
+  console.log(props);
   return (
     <Layout location={props.location}>
       <>
         <VideoContainer>
-          <Title fontFamily={Allura} fontSize={[45, 65, 75, 95]} color="white">
+          {/* <Title fontFamily={Allura} fontSize={[45, 65, 75, 95]} color="white">
             Lunara & Hugo
-          </Title>
+          </Title> */}
+          <TitleContainer color="white" fontFamily={Orator} fontSize={[45, 65, 85, 105]}>
+            <DateBox>
+              02<br />
+              05<br />
+              20
+            </DateBox>
+          </TitleContainer>
           <Video
             src="https://www.youtube.com/embed/wO9fflWkoRI?controls=0&autoplay=1&loop=1&showinfo=0&rel=0&mute=1&playlist=wO9fflWkoRI"
             frameBorder="0"
@@ -23,26 +34,45 @@ const Index = props => {
           />
         </VideoContainer>
         <Container>
-          <Section>
-            <H2 textAlign="center" id="historia">
-              <FormattedMessage id="index.story">{txt => <span>{txt}</span>}</FormattedMessage>
-            </H2>
-          </Section>
-          <Section>
-            <H2 textAlign="center" id="onde">
-              <FormattedMessage id="index.where">{txt => <span>{txt}</span>}</FormattedMessage>
-            </H2>
-          </Section>
-          <Section>
-            <H2 textAlign="center" id="padrinhos-madrinhas">
-              <FormattedMessage id="index.bestfriends">{txt => <span>{txt}</span>}</FormattedMessage>
-            </H2>
-          </Section>
+          <Box id="os-noivos" mb="6">
+            <Us />
+          </Box>
+          <Box id="historia" mb="6">
+            <MainTitle title="index.story.title" subtitle="index.story.subtitle" />
+          </Box>
+          <Box id="padrinhos" mb="6">
+            <MainTitle title="index.groomsmen.title" subtitle="index.groomsmen.subtitle" />
+          </Box>
+          <Box>
+            <MainTitle title="index.bridesmaids.title" subtitle="index.bridesmaids.subtitle" />
+          </Box>
         </Container>
       </>
     </Layout>
   );
 };
+
+const TitleContainer = styled.section`
+  ${color};
+  ${typography};
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  padding: 0;
+  margin-top: -230px;
+`;
+
+const DateBox = styled.div`
+  border: 2px solid white;
+  display: inline-block;
+  line-height: ${({ theme }) => theme.scale(10.6)};
+  padding: ${({ theme }) => `${theme.scale(1)} ${theme.scale(7)}`};
+  ${media.md`
+    line-height: ${({ theme }) => theme.scale(11.8)};
+  `}
+`;
 
 const VideoContainer = styled.div`
   position: absolute;
@@ -82,11 +112,6 @@ const Container = styled.div`
   min-height: 2000px;
 `;
 
-const Section = styled.section`
-  ${grid};
-  ${position};
-`;
-
 const Title = styled.h1`
   ${color};
   ${typography};
@@ -100,7 +125,6 @@ const Title = styled.h1`
 `;
 
 Index.propTypes = {
-  data: PropTypes.object.isRequired,
   location: PropTypes.object.isRequired
 };
 

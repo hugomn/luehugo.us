@@ -23,13 +23,13 @@ const Gifts = props => {
       <Container display="flex" flexDirection="row" justifyContent="space-around" mt={4} mx={3}>
         <Column flexBasis="50%">
           <h3>Lista de presentes</h3>
-          <Img src={"/img/gifts.svg"} mt={3} />
-          <BtnLink mt={4} to={"/presentes/lista"}>Ver lista de presentes</BtnLink>
+          <Img src="/img/gifts.svg" mt={3} />
+          <BtnLink mt={4} to="/presentes/lista">Ver lista de presentes</BtnLink>
         </Column>
         <Column flexBasis="50%">
           <h3>Financiamento colaborativo</h3>
-          <Img src={"/img/crowdfunding.svg"} mt={3} />
-          <BtnLink mt={4} to={"/presentes/crowdfunding"}>Participar da campanha</BtnLink>
+          <Img src="/img/crowdfunding.svg" mt={3} />
+          <BtnLink mt={4} to="/presentes/crowdfunding">Participar da campanha</BtnLink>
         </Column>
       </Container>
       {/* <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
