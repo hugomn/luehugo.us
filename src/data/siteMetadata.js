@@ -18,8 +18,10 @@ module.exports = {
   menu: [
     { label: "menu.us", link: "/#os-noivos" },
     { label: "menu.story", link: "/#historia" },
+    { label: "menu.groomsmen", link: "/#padrinhos" },
+    { label: "menu.bridesmaids", link: "/#madrinhas" },
     { label: "menu.where", link: "/#onde" },
-    { label: "menu.bestfriends", link: "/#padrinhos-madrinhas" },
+    { label: "menu.rsvp", link: "/rsvp" },
     { label: "menu.gifts", slug: "/presentes" },
   ],
   languages,

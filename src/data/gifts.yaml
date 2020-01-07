@@ -1,40 +1,40 @@
 - name: Massagem relaxante
-  image: ../images/massagem.jpg
+  image: ../images/gifts/massagem.jpg
   price: 99
   total: 2
   sold: 0
 - name: Viagem para Santorini
-  image: ../images/viagem_santorini.jpg
+  image: ../images/gifts/viagem_santorini.jpg
   price: 99
   total: 2
   sold: 0
 - name: Sessão de Yoga na praia
-  image: ../images/yoga.jpg
+  image: ../images/gifts/yoga.jpg
   price: 99
   total: 2
   sold: 0
 - name: Spa pro casal
-  image: ../images/spa.jpg
+  image: ../images/gifts/spa.jpg
   price: 99
   total: 2
   sold: 0
 - name: Massagem relaxante
-  image: ../images/massagem.jpg
+  image: ../images/gifts/massagem.jpg
   price: 99
   total: 2
   sold: 0
 - name: Viagem para Santorini
-  image: ../images/viagem_santorini.jpg
+  image: ../images/gifts/viagem_santorini.jpg
   price: 99
   total: 2
   sold: 0
 - name: Sessão de Yoga na praia
-  image: ../images/yoga.jpg
+  image: ../images/gifts/yoga.jpg
   price: 99
   total: 2
   sold: 0
 - name: Spa pro casal
-  image: ../images/spa.jpg
+  image: ../images/gifts/spa.jpg
   price: 99
   total: 2
   sold: 0

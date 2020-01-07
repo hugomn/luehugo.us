@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { FormattedMessage } from "react-intl";
-import { grid, position, typography } from "styled-system";
+import { grid, space, position, typography } from "styled-system";
 import { Orator, Allura } from "../constants/fonts";
 import { media } from "../constants/responsive";
 
-const MainTitle = ({ title, subtitle}) => {
+const MainTitle = ({ title, subtitle, ...props}) => {
   return (
-    <Wrapper>
+    <Wrapper {...props}>
       <Title fontFamily={Orator} fontSize={[24, 28, 32, 36]} textAlign="center">
         <FormattedMessage id={title}>{txt => <span>{txt}</span>}</FormattedMessage>
       </Title>
@@ -19,9 +19,10 @@ const MainTitle = ({ title, subtitle}) => {
 };
 
 const Wrapper = styled.div`
-  ${grid};
-  ${position};
-  ${typography};
+  ${grid}
+  ${position}
+  ${typography}
+  ${space}
   width: 100%;
   position: relative;
   display: block;

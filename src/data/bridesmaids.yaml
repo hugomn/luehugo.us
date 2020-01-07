@@ -1,0 +1,27 @@
+- name: Lara Nogueira
+  image: ../images/bridesmaids/lara.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- name: Laiz Nogueira
+  image: ../images/bridesmaids/laiz.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- name: Mariana Souza
+  image: ../images/bridesmaids/mari.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- name: Ritalice Morgado
+  image: ../images/bridesmaids/rita.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- name: Jéssica Carsalade
+  image: ../images/bridesmaids/jessica.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- name: Ana Carolina Lewer
+  image: ../images/bridesmaids/ana.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- name: Ana Cláudia Machado
+  image: ../images/bridesmaids/cau.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- name: Júlia Prata
+  image: ../images/bridesmaids/julia.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- name: Aline Furlan
+  image: ../images/bridesmaids/aline.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.

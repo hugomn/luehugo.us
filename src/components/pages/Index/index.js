@@ -9,6 +9,8 @@ import { media } from "../../../constants/responsive";
 import Us from "./Us";
 import { Box } from "../../Box";
 import TImeline from "./Timeline";
+import Groomsmen from "./Groomsmen";
+import Bridesmaids from "./Bridesmaids";
 
 const Index = props => {
   return (
@@ -24,12 +26,6 @@ const Index = props => {
               20
             </DateBox>
           </TitleContainer>
-          {/* <Video
-            src="https://www.youtube.com/embed/wO9fflWkoRI?controls=0&autoplay=1&playsinline=1&loop=1&showinfo=0&rel=0&mute=1&playlist=wO9fflWkoRI"
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          /> */}
           <Video autoPlay muted loop id="myVideo">
             <source src="video.mp4" type="video/mp4" />
           </Video>
@@ -41,11 +37,11 @@ const Index = props => {
           <TimelineBox id="historia" py="5" backgroundColor="lightColors.1">
             <TImeline />
           </TimelineBox>
-          <Box id="padrinhos" py="6">
-            <MainTitle title="index.groomsmen.title" subtitle="index.groomsmen.subtitle" />
+          <Box id="padrinhos" pt="6" pb="5">
+            <Groomsmen />
           </Box>
-          <Box py="6" backgroundColor="lightColors.1">
-            <MainTitle title="index.bridesmaids.title" subtitle="index.bridesmaids.subtitle" />
+          <Box id="madrinhas" py="6" backgroundColor="lightColors.1">
+            <Bridesmaids />
           </Box>
         </Container>
       </>
@@ -56,6 +52,7 @@ const Index = props => {
 const TimelineBox = styled(Box)`
   background-image: url('/img/timeline_bg.png');
   background-position: right top;
+  background-repeat: no-repeat;
 `;
 
 const TitleContainer = styled.section`

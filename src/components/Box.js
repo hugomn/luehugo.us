@@ -5,7 +5,7 @@ import {
   display,
   width,
   fontSize,
-  flex,
+  flexbox,
   order,
   alignSelf,
   borders,
@@ -30,7 +30,7 @@ export const Box = styled("div")(
   display,
   width,
   fontSize,
-  flex,
+  flexbox,
   order,
   alignSelf,
   borders,
@@ -50,6 +50,7 @@ Box.displayName = "Box";
 
 Box.propTypes = {
   ...space.propTypes,
+  ...flexbox.propTypes,
   ...color.propTypes,
   ...display.propTypes,
   ...width.propTypes,

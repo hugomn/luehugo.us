@@ -1,0 +1,27 @@
+- name: Caio Moreira (Melão)
+  image: ../images/groomsmen/caio.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- name: Rafael Costa
+  image: ../images/groomsmen/rafa.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- name: Gabriel Chequer
+  image: ../images/groomsmen/chequer.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- name: Michael Filippo 
+  image: ../images/groomsmen/mike.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- name: Ricardo Verly
+  image: ../images/groomsmen/ricardo.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- name: Leonardo Pimenta
+  image: ../images/groomsmen/leo.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- name: Jonas Oliveira
+  image: ../images/groomsmen/jonas.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- name: Marco Antônio
+  image: ../images/groomsmen/marat.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- name: Murilo Morgado
+  image: ../images/groomsmen/murilo.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
