@@ -27,6 +27,11 @@ const Wrapper = styled.div`
   position: relative;
   display: block;
   height: 125px;
+  padding-top: 40px;
+  background-image: url('/img/maintitle_bg.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 300px auto;
 `;
 
 const Title = styled.h2`
