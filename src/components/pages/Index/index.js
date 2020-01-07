@@ -7,9 +7,10 @@ import { Orator } from "../../../constants/fonts";
 import { media } from "../../../constants/responsive";
 import { Box } from "../../Box";
 import Us from "./Us";
-import TImeline from "./Timeline";
+import Timeline from "./Timeline";
 import Groomsmen from "./Groomsmen";
 import Bridesmaids from "./Bridesmaids";
+import Rsvp from "./Rsvp";
 
 const Index = props => {
   return (
@@ -34,7 +35,7 @@ const Index = props => {
             <Us />
           </Box>
           <TimelineBox id="historia" py="5" backgroundColor="lightColors.1">
-            <TImeline />
+            <Timeline />
           </TimelineBox>
           <Box id="padrinhos" py="5">
             <Groomsmen />
@@ -42,6 +43,9 @@ const Index = props => {
           <Box id="madrinhas" py="5" backgroundColor="lightColors.1">
             <Bridesmaids />
           </Box>
+          <RsvpBox id="rsvp" pt="5" pb="6" backgroundColor="lightColors.1">
+            <Rsvp />
+          </RsvpBox>
         </Container>
       </>
     </Layout>
@@ -49,9 +53,17 @@ const Index = props => {
 };
 
 const TimelineBox = styled(Box)`
-  background-image: url('/img/timeline_bg.png');
+  background-image: url('/img/timeline_bg.jpg');
   background-position: right top;
   background-repeat: no-repeat;
+`;
+
+const RsvpBox = styled(Box)`
+  background-image: url('/img/rsvp_bg.jpg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 800px; */
 `;
 
 const TitleContainer = styled.section`

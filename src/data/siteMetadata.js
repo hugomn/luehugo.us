@@ -21,7 +21,7 @@ module.exports = {
     { label: "menu.groomsmen", link: "/#padrinhos" },
     { label: "menu.bridesmaids", link: "/#madrinhas" },
     { label: "menu.where", link: "/#onde" },
-    { label: "menu.rsvp", link: "/rsvp" },
+    { label: "menu.rsvp", link: "/#rsvp" },
     { label: "menu.gifts", slug: "/presentes" },
   ],
   languages,

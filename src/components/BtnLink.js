@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { space } from "styled-system";
 
 const BtnLink = styled(Link)`
-  background-color: ${({ theme }) => theme.colors.brand};
+  background-color: ${({ secondary, theme }) => (secondary ? theme.colors.accentColors[0] : theme.colors.brand)};
   font-size: ${({ theme }) => theme.scale(-0.6)};
   font-family: ${({ theme }) => theme.fonts.Poppins};
   padding: 1rem 1rem;
@@ -14,7 +14,7 @@ const BtnLink = styled(Link)`
   border-width: 0px;
   ${space};
   &:hover {
-    background-color: ${props => props.theme.colors.accentColors[0]};
+    background-color: ${({ secondary, theme }) => (secondary ? theme.colors.brand : theme.colors.accentColors[0])};
     color: ${({ theme }) => theme.colors.white};
     transition: 0.3s;
   }

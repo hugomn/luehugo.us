@@ -4,6 +4,8 @@ import {
   color,
   display,
   width,
+  maxWidth,
+  typography,
   fontSize,
   flexbox,
   order,
@@ -29,6 +31,8 @@ export const Box = styled("div")(
   color,
   display,
   width,
+  typography,
+  maxWidth,
   fontSize,
   flexbox,
   order,
@@ -52,7 +56,9 @@ Box.propTypes = {
   ...space.propTypes,
   ...flexbox.propTypes,
   ...color.propTypes,
+  ...typography.propTypes,
   ...display.propTypes,
   ...width.propTypes,
+  ...maxWidth.propTypes,
   ...fontSize.propTypes
 };

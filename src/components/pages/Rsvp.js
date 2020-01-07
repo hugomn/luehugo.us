@@ -17,7 +17,7 @@ const Rsvp = props => {
         criaremos uma campanha de financiamento colaborativo, onde mostraremos exatamente o valor que arracadamos, e
         oferecemos também a opção de nos presentear com alguma experiência ou algo do nosso dia-a-dia.
       </Subtitle>
-      {/* <iframe
+      <iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLSe0tiP_8Ys_0DCJSrV5EHy0wG-9LNhTzCjmU6iadP8Ed5uU8A/viewform?embedded=true"
         width="640"
         height="1272"
@@ -26,11 +26,11 @@ const Rsvp = props => {
         marginWidth="0"
       >
         Loading…
-      </iframe> */}
+      </iframe>
       {/* <script type="text/javascript">var submitted=false;</script> */}
       {/* <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='THE REDIRECT LINK HERE';}"></iframe> */}
 
-      <form
+      {/* <form
         action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe0tiP_8Ys_0DCJSrV5EHy0wG-9LNhTzCjmU6iadP8Ed5uU8A/formResponse?embedded=true"
         method="post"
         target="hidden_iframe"
@@ -39,7 +39,7 @@ const Rsvp = props => {
         <label>Email</label>
         <input name="emailAddress" type="text" placeholder="Name" />
         <input type="submit" value="Send" />
-      </form>
+      </form> */}
     </Layout>
   );
 };
