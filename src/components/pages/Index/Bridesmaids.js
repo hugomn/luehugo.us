@@ -32,7 +32,7 @@ const Bridesmaids = () => {
   
   return (
     <FixedContainer>
-      <MainTitle title="index.bridesmaids.title" subtitle="index.bridesmaids.subtitle" mb={4} />
+      <MainTitle title="index.bridesmaids.title" subtitle="index.bridesmaids.subtitle" mb={4} secondary />
       <Flex justifyContent="center" flexWrap="wrap">
         {data.timeline.edges.map(({ node }, i) => (
           <Box
@@ -46,7 +46,7 @@ const Bridesmaids = () => {
             <Box px="3">
               <Picture sizes={node.image.childImageSharp.sizes} />
             </Box>
-            <Text fontFamily={Orator} fontSize={3} textAlign="center" color="brand" mt="4" mb="2">
+            <Text fontFamily={Orator} fontSize={3} textAlign="center" color="accentColors.0" mt="4" mb="2">
               {node.name}
             </Text>
             <Text textAlign="center" fontSize={1}>

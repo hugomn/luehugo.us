@@ -22,7 +22,7 @@ module.exports = {
     { label: "menu.bridesmaids", link: "/#madrinhas" },
     { label: "menu.where", link: "/#onde" },
     { label: "menu.rsvp", link: "/#rsvp" },
-    { label: "menu.gifts", slug: "/presentes" },
+    { label: "menu.gifts", slug: "/#presentes" },
   ],
   languages,
   contact: [

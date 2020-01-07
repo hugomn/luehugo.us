@@ -6,7 +6,7 @@ import { Orator, Allura } from "../constants/fonts";
 import { media } from "../constants/responsive";
 import Text from "./Text";
 
-const MainTitle = ({ dark, title, subtitle, ...props}) => {
+const MainTitle = ({ title, subtitle, dark, secondary, ...props}) => {
   return (
     <Wrapper {...props}>
       <Title fontFamily={Orator} fontSize={[24, 28, 32, 36]} textAlign="center" color={dark ? "white" : "black"}>
@@ -16,7 +16,7 @@ const MainTitle = ({ dark, title, subtitle, ...props}) => {
         fontFamily={Allura}
         fontSize={[46, 56, 66, 76]}
         textAlign="center"
-        color={dark ? "accentColors.0" : "accentColors.1"}
+        color={secondary ? "accentColors.0" : "brand"}
       >
         <FormattedMessage id={subtitle}>{txt => <span>{txt}</span>}</FormattedMessage>
       </Subtitle>
@@ -51,10 +51,10 @@ const Title = styled.h2`
 `;
 
 const Subtitle = styled(Text)`
-  /* position: absolute; */
   z-index: 1;
   width: 100%;
   white-space: nowrap;
+  opacity: 0.45;
   ${media.md`
     margin-top: -10px;
   `}

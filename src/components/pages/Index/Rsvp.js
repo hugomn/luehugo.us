@@ -12,7 +12,7 @@ const Rsvp = () => {
     <FixedContainer>
       <Flex flexDirection="column" alignItems="flex-end" pr={4}>
         <Box>
-          <MainTitle title="index.rsvp.title" subtitle="index.rsvp.subtitle" dark />
+          <MainTitle title="index.rsvp.title" subtitle="index.rsvp.subtitle" dark secondary />
           <Flex alignItems="center" flexDirection="column">
             <Text mb={5} color="white" maxWidth="440px" textAlign="center">
               Ter você conosco nesse dia será uma grande alegria!

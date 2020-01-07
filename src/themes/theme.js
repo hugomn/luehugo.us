@@ -5,7 +5,7 @@ const scaleN = n => round(Math.pow(1.2, n), 3);
 const scale = n => `${scaleN(n)}rem`;
 
 const brandColor = "#70A076";
-const accentColors = ["#D2AB65", "#D1DFD2", "#F2BE3B"];
+const accentColors = ["#D2AB65", "#D1DFD2", "red"];
 const darkColors = ["#333E49", "#484848", "#747474", "#B9C2CE"];
 const lightColors = ["#FFFFFF", "#F6F6F8", "#EFEFEF", "#D7D7D7"];
 

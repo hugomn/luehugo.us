@@ -11,6 +11,8 @@ import Timeline from "./Timeline";
 import Groomsmen from "./Groomsmen";
 import Bridesmaids from "./Bridesmaids";
 import Rsvp from "./Rsvp";
+import Where from "./Where";
+import Gifts from "./Gifts";
 
 const Index = props => {
   return (
@@ -43,9 +45,15 @@ const Index = props => {
           <Box id="madrinhas" py="5" backgroundColor="lightColors.1">
             <Bridesmaids />
           </Box>
-          <RsvpBox id="rsvp" pt="5" pb="6" backgroundColor="lightColors.1">
+          <WhereBox id="onde" pt="5" pb="6">
+            <Where />
+          </WhereBox>
+          <RsvpBox id="rsvp" pt="5" pb="6">
             <Rsvp />
           </RsvpBox>
+          <Box id="presentes" py="5">
+            <Gifts />
+          </Box>
         </Container>
       </>
     </Layout>
@@ -63,7 +71,13 @@ const RsvpBox = styled(Box)`
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* height: 800px; */
+`;
+
+const WhereBox = styled(Box)`
+  background-image: url('/img/where_bg.jpg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 const TitleContainer = styled.section`
