@@ -42,7 +42,10 @@ const theme = {
     lineHeight: 1.58
   },
   a: {
-    color: colors.black,
+    color: {
+      dark: colors.white,
+      light: colors.black
+    },
     textDecoration: "none",
     hover: {
       color: colors.brand

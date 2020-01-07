@@ -66,7 +66,7 @@ const Layout = props => {
 
 const GlobalStyle = createGlobalStyle`
   a {
-    color: ${props => props.theme.a.color};
+    color: ${props => props.theme.a.color.light};
     text-decoration: ${props => props.theme.a.textDecoration};
     transition: all 0.2s;
     :hover {

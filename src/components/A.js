@@ -3,7 +3,7 @@ import { typography } from "styled-system";
 
 const A = styled.a`
     ${typography}
-    color: ${props => props.theme.a.color};
+    color: ${props => props.theme.a.color.light};
     text-decoration: ${props => props.theme.a.textDecoration};
     cursor: pointer;
     transition: 0.3s;
