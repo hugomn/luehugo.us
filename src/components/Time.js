@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { FormattedDate } from 'react-intl';
+import React from "react";
+import PropTypes from "prop-types";
+import { FormattedDate } from "react-intl";
 
-const Time = (props) => {
+const Time = props => {
   return (
     <time {...props} dateTime={props.date}>
       <FormattedDate

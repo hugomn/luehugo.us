@@ -1,6 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { typography } from "styled-system";
 
 const A = styled.a`
+    ${typography}
     color: ${props => props.theme.a.color};
     text-decoration: ${props => props.theme.a.textDecoration};
     cursor: pointer;

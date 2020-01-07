@@ -5,9 +5,10 @@ import styled, { keyframes } from "styled-components";
 import { Grid, Cell } from "styled-css-grid";
 import { withPrefix } from "gatsby";
 
-// import SelectLanguage from "./SelectLanguage";
+import SelectLanguage from "./SelectLanguage";
 import { media } from "../constants/responsive";
 import { FixedContainer } from "./FixedContainer";
+import A from "./A";
 
 const Footer = ({ author, langs, sourceCodeLink, currentLangKey }) => {
   return (
@@ -16,23 +17,28 @@ const Footer = ({ author, langs, sourceCodeLink, currentLangKey }) => {
         <Grid columns="repeat(auto-fit,minmax(220px,1fr))">
           <LeftCell middle>
             <span>
-              {" Designed with "}
-              <HeartIcon /> by <b>Lunara</b>
-              {" and coded with "}
+              Designed with <HeartIcon /> by{" "}
+              <A fontWeight="500" href="https://www.lunara.me" target="_blank">
+                Lunara
+              </A>{" "}
+              and coded with
               <a href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer">
                 <GatsbyIcon src={withPrefix("/img/gatsbyjs.svg")} alt="Gatsby" />
               </a>
-              by <b>Hugo</b>
+              by{" "}
+              <A fontWeight="500" href="https://www.hugo.im" target="_blank">
+                Hugo
+              </A>
             </span>
           </LeftCell>
           {/* <MiddleCell middle>
             <a href={sourceCodeLink} target="_blank">
               <GithubIcon />
             </a>
-          </MiddleCell>
+          </MiddleCell> */}
           <RightCell middle>
             <SelectLanguage langs={langs} className="select-languages" />
-          </RightCell> */}
+          </RightCell>
         </Grid>
       </FixedContainer>
     </Wrapper>

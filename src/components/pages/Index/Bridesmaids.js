@@ -35,7 +35,7 @@ const Bridesmaids = () => {
       <MainTitle title="index.bridesmaids.title" subtitle="index.bridesmaids.subtitle" mb={4} />
       <Flex justifyContent="center" flexWrap="wrap">
         {data.timeline.edges.map(({ node }, i) => (
-          <Box p={4} mb={[4]} key={node.name} flexBasis={["50%", "33%", "25%"]}>
+          <Box p={4} mb={[4]} key={node.name} flexBasis={["50%", "33%", "25%"]} data-sal="zoom-in">
             <Box px="3">
               <Picture sizes={node.image.childImageSharp.sizes} />
             </Box>

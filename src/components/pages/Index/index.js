@@ -30,16 +30,16 @@ const Index = props => {
           </Video>
         </VideoContainer>
         <Container>
-          <Box id="os-noivos" py="6">
+          <Box id="os-noivos" py="5">
             <Us />
           </Box>
           <TimelineBox id="historia" py="5" backgroundColor="lightColors.1">
             <TImeline />
           </TimelineBox>
-          <Box id="padrinhos" pt="6" pb="5">
+          <Box id="padrinhos" py="5">
             <Groomsmen />
           </Box>
-          <Box id="madrinhas" py="6" backgroundColor="lightColors.1">
+          <Box id="madrinhas" py="5" backgroundColor="lightColors.1">
             <Bridesmaids />
           </Box>
         </Container>
@@ -63,7 +63,7 @@ const TitleContainer = styled.section`
   text-align: center;
   top: 50%;
   padding: 0;
-  margin-top: -230px;
+  margin-top: -180px;
 `;
 
 const DateBox = styled.div`
