@@ -24,12 +24,15 @@ const Index = props => {
               20
             </DateBox>
           </TitleContainer>
-          <Video
-            src="https://www.youtube.com/embed/wO9fflWkoRI?controls=0&autoplay=1&loop=1&showinfo=0&rel=0&mute=1&playlist=wO9fflWkoRI"
+          {/* <Video
+            src="https://www.youtube.com/embed/wO9fflWkoRI?controls=0&autoplay=1&playsinline=1&loop=1&showinfo=0&rel=0&mute=1&playlist=wO9fflWkoRI"
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-          />
+          /> */}
+          <Video autoPlay muted loop id="myVideo">
+            <source src="video.mp4" type="video/mp4" />
+          </Video>
         </VideoContainer>
         <Container>
           <Box id="os-noivos" py="6">
@@ -52,7 +55,7 @@ const Index = props => {
 
 const TimelineBox = styled(Box)`
   background-image: url('/img/timeline_bg.png');
-  background-position: center top;
+  background-position: right top;
 `;
 
 const TitleContainer = styled.section`
@@ -100,7 +103,7 @@ const VideoContainer = styled.div`
   }
 `;
 
-const Video = styled.iframe`
+const Video = styled.video`
   width: 100vw;
   height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
   min-height: 100vh;

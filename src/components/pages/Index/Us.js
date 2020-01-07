@@ -41,12 +41,12 @@ const Us = () => {
       <Grid gridTemplateColumns={["auto", "auto", "1fr 1fr"]}>
         <Box px={[5, 6]} mb={[6, 6, 0]}>
           <Img sizes={data.groomImage.childImageSharp.sizes} />
-          <Text fontFamily={Orator} fontSize={5} textAlign="center" color="darkColors.1" mt="4" mb="2">Hugo Nogueira</Text>
+          <Text fontFamily={Orator} fontSize={4} textAlign="center" color="darkColors.1" mt="4" mb="2">Hugo Nogueira</Text>
           <Text textAlign="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim orci sed neque convallis arcu egestas. A sed tincidunt vulputate lectus nulla odio. Fermentum tincidunt sed.</Text>
         </Box>
         <Box px={[5, 6]}>
           <Img sizes={data.brideImage.childImageSharp.sizes} />
-          <Text fontFamily={Orator} fontSize={5} textAlign="center" color="darkColors.1" mt="4" mb="2">Lunara Costa</Text>
+          <Text fontFamily={Orator} fontSize={4} textAlign="center" color="darkColors.1" mt="4" mb="2">Lunara Costa</Text>
           <Text textAlign="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim orci sed neque convallis arcu egestas. A sed tincidunt vulputate lectus nulla odio. Fermentum tincidunt sed.</Text>
         </Box>
       </Grid>
