@@ -9,38 +9,54 @@ import Card from "../Card";
 import { Flex } from "../Flex";
 import { typography, space } from "styled-system";
 import Button from "../Button";
+import BtnLink from "../BtnLink";
 
 const Rsvp = props => {
+  const { confirmation } = props;
   return (
     <Layout location={props.location} backgroundColor="lightColors.1">
       <FixedContainer pt="4" pb="6">
         <MainTitle title="index.rsvp.title" subtitle="index.rsvp.subtitle" />
-        <Subtitle>
-          Nosso maior presente será poder celebrar esse momento tão especial com nossos amados familiares e amigos. E
-          além disso, nós moramos atualmente em Berlim, o que dificulta trazer qualquer presente na mala. Sendo assim,
-          criaremos uma campanha de financiamento colaborativo, onde mostraremos exatamente o valor que arracadamos, e
-          oferecemos também a opção de nos presentear com alguma experiência ou algo do nosso dia-a-dia.
-        </Subtitle>
-        <Card p="5" mt="5">
-          <form className="email-form" name="rsvp" method="POST" data-netlify="true">
-            <Flex flexDirection="column">
-              <Input type="hidden" name="form-name" value="rsvp " />
-              <Label htmlFor="name" fontWeight="500">
-                Nome:
-              </Label>
-              <Input type="text" name="name" placeholder="Digite seu nome:" id="name" required mb="4" />
-              <Label htmlFor="email" fontWeight="500">
-                Email:
-              </Label>
-              <Input type="email" name="email" placeholder="Email" id="email" required mb="4" />
-              <Label htmlFor="song">Alguma música especial que gostaria de ouvir?</Label>
-              <Input type="text" name="song" placeholder="Digite sua míusica favorita" id="song" mb="4" />
-              <Label htmlFor="comment">Algum comentário adicional?</Label>
-              <Input type="text" name="comment" placeholder="Deixe sua mensagem" id="comment" required mb="4" />
-              <Button type="submit">Confirmar</Button>
-            </Flex>
-          </form>
-        </Card>
+        {confirmation ? (
+          <>
+            <Subtitle>
+            Obrigado!
+            </Subtitle>
+            <BtnLink mt={4} to="/rsvp" secondary>
+              Confirmar outro convidado
+            </BtnLink>
+          </>
+        ) : (
+          <>
+            <Subtitle>
+              Nosso maior presente será poder celebrar esse momento tão especial com nossos amados familiares e amigos.
+              E além disso, nós moramos atualmente em Berlim, o que dificulta trazer qualquer presente na mala. Sendo
+              assim, criaremos uma campanha de financiamento colaborativo, onde mostraremos exatamente o valor que
+              arracadamos, e oferecemos também a opção de nos presentear com alguma experiência ou algo do nosso
+              dia-a-dia.
+            </Subtitle>
+            <Card p="5" mt="5">
+              <form className="email-form" name="rsvp" method="POST" data-netlify="true" action="/rsvp/success">
+                <Flex flexDirection="column">
+                  <Input type="hidden" name="form-name" value="rsvp" />
+                  <Label htmlFor="name" fontWeight="500">
+                    Nome:
+                  </Label>
+                  <Input type="text" name="name" placeholder="Digite seu nome:" id="name" required mb="4" />
+                  <Label htmlFor="email" fontWeight="500">
+                    Email:
+                  </Label>
+                  <Input type="email" name="email" placeholder="Email" id="email" required mb="4" />
+                  <Label htmlFor="song">Alguma música especial que gostaria de ouvir?</Label>
+                  <Input type="text" name="song" placeholder="Digite sua míusica favorita" id="song" mb="4" />
+                  <Label htmlFor="comment">Algum comentário adicional?</Label>
+                  <Input type="text" name="comment" placeholder="Deixe sua mensagem" id="comment" required mb="4" />
+                  <Button type="submit">Confirmar</Button>
+                </Flex>
+              </form>
+            </Card>
+          </>
+        )}
 
         {/* <button onClick={handleSubmit}>Enviar</button>
         <Iframe
@@ -76,6 +92,7 @@ const Iframe = styled.iframe`
 `;
 
 Rsvp.propTypes = {
+  confirmation: PropTypes.bool,
   location: PropTypes.object.isRequired
 };
 
