@@ -22,6 +22,7 @@ const Rsvp = props => {
           oferecemos também a opção de nos presentear com alguma experiência ou algo do nosso dia-a-dia.
         </Subtitle>
         <form className="email-form" name="rsvp" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="rsvp" />
           <label htmlFor="email">Your email address</label>
           <div>
             <input type="email" name="email" placeholder="Email" id="email" required />
