@@ -55,7 +55,7 @@ const Layout = props => {
             )}
           </FormattedMessage>
           <Header isHome={isHome} url={url} menu={menu} />
-          <main>{children}</main>
+          <Main>{children}</Main>
           <Footer author={author} langs={langsMenu} sourceCodeLink={sourceCodeLink} />
           <GlobalStyle />
         </BodyContainer>
@@ -145,6 +145,10 @@ const GlobalStyle = createGlobalStyle`
   .giphy-embed {
     margin-top: 2rem;
   }
+`;
+
+const Main = styled.main`
+  margin-top: ${props => props.theme.header.height}px;
 `;
 
 const BodyContainer = styled.div`

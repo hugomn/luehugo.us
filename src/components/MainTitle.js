@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FormattedMessage } from "react-intl";
-import { color, grid, space, position, typography } from "styled-system";
+import { color, grid, space, position, typography, layout } from "styled-system";
 import { Orator, Allura } from "../constants/fonts";
 import { media } from "../constants/responsive";
 import Text from "./Text";
@@ -25,10 +25,6 @@ const MainTitle = ({ title, subtitle, dark, secondary, ...props}) => {
 };
 
 const Wrapper = styled.div`
-  ${grid}
-  ${position}
-  ${typography}
-  ${space}
   width: 100%;
   position: relative;
   display: block;
@@ -38,6 +34,11 @@ const Wrapper = styled.div`
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 300px auto;
+  ${grid}
+  ${position}
+  ${typography}
+  ${space}
+  ${layout}
 `;
 
 const Title = styled.h2`
