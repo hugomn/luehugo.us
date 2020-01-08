@@ -6,13 +6,9 @@ import MainTitle from "../MainTitle";
 import { FixedContainer } from "../FixedContainer";
 import styled from "styled-components";
 
-// const handleSubmit = () => {
-//   console.log("[dev:hugo] submit", true);
-// };
-
 const Rsvp = props => {
   return (
-    <Layout location={props.location}>
+    <Layout location={props.location} backgroundColor="lightColors.1">
       <FixedContainer pt="4">
         <MainTitle title="index.rsvp.title" subtitle="index.rsvp.subtitle" />
         <Subtitle>
@@ -22,7 +18,7 @@ const Rsvp = props => {
           oferecemos também a opção de nos presentear com alguma experiência ou algo do nosso dia-a-dia.
         </Subtitle>
         <form className="email-form" name="rsvp" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="rsvp" />
+          <input type="hidden" name="form-name" value="rsvp " />
           <label htmlFor="email">Your email address</label>
           <div>
             <input type="email" name="email" placeholder="Email" id="email" required />

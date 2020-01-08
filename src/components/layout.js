@@ -10,6 +10,7 @@ import pt from "../data/messages/pt";
 import theme from "../themes/theme";
 import { getLangs, getUrlForLang, getCurrentLangKey, isHomePage } from "ptz-i18n";
 import Helmet from "react-helmet";
+import { color } from "styled-system";
 
 const messages = { en, pt };
 
@@ -19,7 +20,8 @@ if (typeof window !== "undefined") {
 }
 
 const Layout = props => {
-  const { children, location } = props;
+  console.log("[dev:hugo] props", props);
+  const { backgroundColor, children, location } = props;
   const url = location.pathname;
   const { langs, defaultLangKey } = props.data.site.siteMetadata.languages;
   const langKey = getCurrentLangKey(langs, defaultLangKey, url);
@@ -55,7 +57,7 @@ const Layout = props => {
             )}
           </FormattedMessage>
           <Header isHome={isHome} url={url} menu={menu} />
-          <Main>{children}</Main>
+          <Main backgroundColor={backgroundColor}>{children}</Main>
           <Footer author={author} langs={langsMenu} sourceCodeLink={sourceCodeLink} />
           <GlobalStyle />
         </BodyContainer>
@@ -149,6 +151,7 @@ const GlobalStyle = createGlobalStyle`
 
 const Main = styled.main`
   margin-top: ${props => props.theme.header.height}px;
+  ${color}
 `;
 
 const BodyContainer = styled.div`
@@ -203,5 +206,6 @@ export default props => (
 Layout.propTypes = {
   children: PropTypes.object.isRequired,
   data: PropTypes.object.isRequired,
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
+  // ...backgroundColor.propTypes
 };

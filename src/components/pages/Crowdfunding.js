@@ -1,90 +1,95 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Layout from "../layout";
-import { FormattedMessage, FormattedNumber } from "react-intl";
-import H2 from "../H2";
 import Subtitle from "../Subtitle";
 import styled, { keyframes } from "styled-components";
 import { flexbox, layout, space } from "styled-system";
 import moment from "moment";
 import PaypalButton from "../PaypalButton";
 import Card from "../Card";
+import { FixedContainer } from "../FixedContainer";
+import MainTitle from "../MainTitle";
+import { FormattedNumber } from "react-intl";
 
 const Crowdfunding = props => {
   const { wedding } = props.data.site.siteMetadata;
   const days = moment(wedding.date).diff(new Date(), "days");
   const percentage = (wedding.fundingPledged / wedding.fundingGoal) * 100;
   return (
-    <Layout location={props.location}>
-      <H2 textAlign="center">
-        <FormattedMessage id="crowdfunding.title">{txt => <span>{txt}</span>}</FormattedMessage>
-      </H2>
-      <Subtitle>
-        <i>Crowdfunding</i> (ou Financiamento Colaborativo) é uma nova abordagem em que diversas pessoas, participando
-        com pequenas contribuições, fazem um grande projeto acontecer. Considerando nosso contexto atual, e a nossa
-        vontade de fazer um evento inesquecível, decidimos utilizar o crowdfunding como ferramenta.
-      </Subtitle>
-      <Container display="flex" flexDirection="row" justifyContent="space-around">
-        <Column flexBasis="33%">
-          <Number>{percentage}%</Number>
-          <p>alcançados</p>
-        </Column>
-        <Column flexBasis="33%">
-          <Number>
-            R$ <FormattedNumber value={wedding.fundingPledged} minimumFractionDigits={2} />
-          </Number>
-          <p>
-            de R$ <FormattedNumber value={wedding.fundingGoal} minimumFractionDigits={2} /> levantados
-          </p>
-        </Column>
-        <Column flexBasis="33%">
-          <Number>{days} dias</Number>
-          <p>para o grande dia</p>
-        </Column>
-      </Container>
-      <ProgressBarWrapper>
-        <ProgressBar percentage={percentage} />
-      </ProgressBarWrapper>
-      <H3 mb={4}>Escolha algum dos valores abaixo:</H3>
-      <Card>
-        <CardPrice>
-          <span>R$60</span>
-        </CardPrice>
-        <CardDescription>
-          Qualquer ajuda é mega bem-vinda. Além de comemorar conosco no nosso grande dia, você receberá um{" "}
-          <b>adesivo exclusivo do casamento</b> criado pela <b>Lunara</b>.
-        </CardDescription>
-        <CardButton>
-          <PaypalButton id="KHA4STBGNH7DE" />
-        </CardButton>
-      </Card>
-      <Card>
-        <CardPrice>
-          <span>R$200</span>
-        </CardPrice>
-        <CardDescription>
-          Agradecemos de coração! Além de vários shots com os noivos, você receberá <b>uma super caneca</b> com a a arte
-          do casamento criada pela <b>Lunara</b>.
-        </CardDescription>
-        <CardButton>
-          <PaypalButton id="TEBDXBDM8WM2A" />
-        </CardButton>
-      </Card>
-      <Card>
-        <CardPrice>
-          <span>R$500</span>
-        </CardPrice>
-        <CardDescription>
-          Agradecemos de coração! Além de vários shots com os noivos, você receberá <b>uma super caneca</b> com a a arte
-          do casamento criada pela <b>Lunara</b>.
-        </CardDescription>
-        <CardButton>
-          <PaypalButton id="KHA4STBGNH7DE" />
-        </CardButton>
-      </Card>
+    <Layout location={props.location} backgroundColor="lightColors.1">
+      <FixedContainer pt="4" pb="5">
+        <MainTitle title="page.crowdfunding.title" subtitle="page.crowdfunding.subtitle" />
+        <Subtitle>
+          <i>Crowdfunding</i> (ou Financiamento Colaborativo) é uma nova abordagem em que diversas pessoas, participando
+          com pequenas contribuições, fazem um grande projeto acontecer. Considerando nosso contexto atual, e a nossa
+          vontade de fazer um evento inesquecível, decidimos utilizar o crowdfunding como ferramenta.
+        </Subtitle>
+        <Container display="flex" flexDirection="row" justifyContent="space-around">
+          <Column flexBasis="33%">
+            <Number>{percentage}%</Number>
+            <p>alcançados</p>
+          </Column>
+          <Column flexBasis="33%">
+            <Number>
+              R$ <FormattedNumber value={wedding.fundingPledged} minimumFractionDigits={2} />
+            </Number>
+            <p>
+              de R$ <FormattedNumber value={wedding.fundingGoal} minimumFractionDigits={2} /> levantados
+            </p>
+          </Column>
+          <Column flexBasis="33%">
+            <Number>{days} dias</Number>
+            <p>para o grande dia</p>
+          </Column>
+        </Container>
+        <ProgressBarWrapper>
+          <ProgressBar percentage={percentage} />
+        </ProgressBarWrapper>
+        <H3 mb={4}>Escolha algum dos valores abaixo:</H3>
+        <StyledCard>
+          <CardPrice>
+            <span>R$60</span>
+          </CardPrice>
+          <CardDescription>
+            Qualquer ajuda é mega bem-vinda. Além de comemorar conosco no nosso grande dia, você receberá um{" "}
+            <b>adesivo exclusivo do casamento</b> criado pela <b>Lunara</b>.
+          </CardDescription>
+          <CardButton>
+            <PaypalButton id="KHA4STBGNH7DE" />
+          </CardButton>
+        </StyledCard>
+        <StyledCard>
+          <CardPrice>
+            <span>R$200</span>
+          </CardPrice>
+          <CardDescription>
+            Agradecemos de coração! Além de vários shots com os noivos, você receberá <b>uma super caneca</b> com a a
+            arte do casamento criada pela <b>Lunara</b>.
+          </CardDescription>
+          <CardButton>
+            <PaypalButton id="TEBDXBDM8WM2A" />
+          </CardButton>
+        </StyledCard>
+        <StyledCard>
+          <CardPrice>
+            <span>R$500</span>
+          </CardPrice>
+          <CardDescription>
+            Agradecemos de coração! Além de vários shots com os noivos, você receberá <b>uma super caneca</b> com a a
+            arte do casamento criada pela <b>Lunara</b>.
+          </CardDescription>
+          <CardButton>
+            <PaypalButton id="KHA4STBGNH7DE" />
+          </CardButton>
+        </StyledCard>
+      </FixedContainer>
     </Layout>
   );
 };
+
+const StyledCard = styled(Card)`
+  margin-bottom: 20px;
+`;
 
 const CardPrice = styled.div`
   font-size: ${props => props.theme.scale(4.6)};

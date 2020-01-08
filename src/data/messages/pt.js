@@ -37,5 +37,8 @@ module.exports = {
   "index.rsvp.subtitle": "Confirme sua presença",
   "gifts.title": "Presentes",
   "giftslist.title": "Lista de Presentes",
-  "crowdfunding.title": "Financiamento colaborativo"
+  "page.crowdfunding.title": "Financiamento colaborativo",
+  "page.crowdfunding.subtitle": "Nosso sonho compartilhado",
+  "page.gifts.title": "Presentes",
+  "page.gifts.subtitle": "Agredecemos o carinho"
 };
