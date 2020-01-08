@@ -20,7 +20,6 @@ if (typeof window !== "undefined") {
 }
 
 const Layout = props => {
-  console.log("[dev:hugo] props", props);
   const { backgroundColor, children, location } = props;
   const url = location.pathname;
   const { langs, defaultLangKey } = props.data.site.siteMetadata.languages;

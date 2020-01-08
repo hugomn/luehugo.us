@@ -36,7 +36,7 @@ const Rsvp = props => {
               dia-a-dia.
             </Subtitle>
             <Card p="5" mt="5">
-              <form className="email-form" name="rsvp" method="POST" data-netlify="true" action="/rsvp/success">
+              <form className="email-form" name="rsvp" method="POST" data-netlify="true" action="/rsvp/sucesso">
                 <Flex flexDirection="column">
                   <Input type="hidden" name="form-name" value="rsvp" />
                   <Label htmlFor="name" fontWeight="500">
