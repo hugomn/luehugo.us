@@ -21,17 +21,11 @@ const Rsvp = props => {
           criaremos uma campanha de financiamento colaborativo, onde mostraremos exatamente o valor que arracadamos, e
           oferecemos também a opção de nos presentear com alguma experiência ou algo do nosso dia-a-dia.
         </Subtitle>
-        <form className="email-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <div hidden aria-hidden="true">
-            <label>
-              Don’t fill this out if you're human:
-              <input name="bot-field" />
-            </label>
-          </div>
+        <form className="email-form" name="rsvp" method="POST" data-netlify="true">
           <label htmlFor="email">Your email address</label>
           <div>
             <input type="email" name="email" placeholder="Email" id="email" required />
-            <button type="submit">Subscribe</button>
+            <button type="submit">Confirm</button>
           </div>
         </form>
         {/* <button onClick={handleSubmit}>Enviar</button>
