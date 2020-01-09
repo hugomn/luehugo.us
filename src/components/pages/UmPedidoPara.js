@@ -3,26 +3,26 @@ import styled from "styled-components";
 import Helmet from "react-helmet";
 
 const padrinhos = {
-  aline: { gender: "M", name: "Chequer", videoId: "wO9fflWkoRI" },
-  ana: { gender: "F", name: "Ana", videoId: "wO9fflWkoRI" },
-  caio: { gender: "M", name: "Caio", videoId: "wO9fflWkoRI" },
-  cau: { gender: "F", name: "Cau", videoId: "wO9fflWkoRI" },
-  chequer: { gender: "M", name: "Chequer", videoId: "wO9fflWkoRI" },
-  guto: { gender: "M", name: "Guto", videoId: "wO9fflWkoRI" },
-  jessica: { gender: "F", name: "Jessica", videoId: "wO9fflWkoRI" },
-  jonas: { gender: "M", name: "Jonas", videoId: "wO9fflWkoRI" },
-  julia: { gender: "F", name: "Julia", videoId: "wO9fflWkoRI" },
-  laiz: { gender: "F", name: "Laiz", videoId: "wO9fflWkoRI" },
-  lara: { gender: "F", name: "Lara", videoId: "wO9fflWkoRI" },
-  leo: { gender: "M", name: "Leo", videoId: "wO9fflWkoRI" },
-  marat: { gender: "M", name: "Marat", videoId: "wO9fflWkoRI" },
-  mari: { gender: "F", name: "Mari", videoId: "wO9fflWkoRI" },
-  michael: { gender: "M", name: "Michael", videoId: "wO9fflWkoRI" },
-  murilo: { gender: "M", name: "Murilo", videoId: "wO9fflWkoRI" },
-  rafa: { gender: "M", name: "Rafa", videoId: "wO9fflWkoRI" },
-  raissa: { gender: "F", name: "Raíssa", videoId: "wO9fflWkoRI" },
-  ricardo: { gender: "M", name: "Ricardo", videoId: "wO9fflWkoRI" },
-  rita: { gender: "F", name: "Rita", videoId: "wO9fflWkoRI" }
+  aline: { gender: "M", name: "Chequer", videoId: "q98ojha6Nsk" },
+  ana: { gender: "F", name: "Ana", videoId: "IfVyIKpVaTg" },
+  caio: { gender: "M", name: "Caio", videoId: "fQaoyrViqNI" },
+  cau: { gender: "F", name: "Cau", videoId: "xtSOE4XupOE" },
+  chequer: { gender: "M", name: "Chequer", videoId: "NDCQGeW1AUg" },
+  guto: { gender: "M", name: "Guto", videoId: "BZjfxrje0BU" },
+  jessica: { gender: "F", name: "Jessica", videoId: "75d_L0T_doA" },
+  jonas: { gender: "M", name: "Jonas", videoId: "bXWBIEvPtfE" },
+  julia: { gender: "F", name: "Julia", videoId: "Olsw103OZ4Y" },
+  laiz: { gender: "F", name: "Laiz", videoId: "rA3tfADVSY8" },
+  lara: { gender: "F", name: "Lara", videoId: "Tl7FoVg-Y_U" },
+  leo: { gender: "M", name: "Leo", videoId: "rA3tfADVSY8" },
+  marat: { gender: "M", name: "Marat", videoId: "8J3w-fnwY5o" },
+  mari: { gender: "F", name: "Mari", videoId: "-oFIQGL4BbY" },
+  michael: { gender: "M", name: "Michael", videoId: "WPuS3dCZRjo" },
+  murilo: { gender: "M", name: "Murilo", videoId: "pj0t4ZN00Do" },
+  rafa: { gender: "M", name: "Rafa", videoId: "xtSOE4XupOE" },
+  raissa: { gender: "F", name: "Raíssa", videoId: "BZjfxrje0BU" },
+  ricardo: { gender: "M", name: "Ricardo", videoId: "xhIMhHx9J-M" },
+  rita: { gender: "F", name: "Rita", videoId: "pj0t4ZN00Do" }
 };
 
 const UmPedidoPara = ({ name }) => {
