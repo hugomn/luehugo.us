@@ -3,8 +3,9 @@ import { flexbox, layout, space, color } from "styled-system";
 
 export const FixedContainer = styled("section")(
   {
-    maxWidth: ({ theme }) => theme.maxWidth,
-    margin: "0 auto"
+    maxWidth: ({ theme: t }) => t.maxWidth,
+    margin: "0 auto",
+    padding: ({theme: t}) => `0 ${t.scaleN(2)}rem`
   },
   color,
   flexbox,

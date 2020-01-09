@@ -9,7 +9,7 @@ const Gifts = props => {
   const gifts = props.data.allGiftsYaml.edges.map(g => g.node);
   return (
     <Layout location={props.location} backgroundColor="lightColors.1">
-      <FixedContainer pt="4" pb="5">
+      <FixedContainer pt="4" pb="4">
         <MainTitle title="page.gifts.title" subtitle="page.gifts.subtitle" />
         <Subtitle mb={5}>
           Nosso maior presente será poder celebrar esse momento tão especial com nossos amados familiares e amigos. E

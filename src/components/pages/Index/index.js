@@ -137,7 +137,7 @@ const Video = styled.video`
 `;
 
 const Container = styled.div`
-  margin-top: 100vh;
+  margin-top: calc(100vh - ${({ theme }) => theme.header.height}px);
 `;
 
 Index.propTypes = {

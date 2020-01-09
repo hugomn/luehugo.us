@@ -15,7 +15,7 @@ const Rsvp = props => {
   const { confirmation } = props;
   return (
     <Layout location={props.location} backgroundColor="lightColors.1">
-      <FixedContainer pt="4" pb="6">
+      <FixedContainer pt="4" pb="4">
         <MainTitle title="index.rsvp.title" subtitle="index.rsvp.subtitle" />
         {confirmation ? (
           <>
@@ -48,7 +48,7 @@ const Rsvp = props => {
                   </Label>
                   <Input type="email" name="email" placeholder="Email" id="email" required mb="4" />
                   <Label htmlFor="song">Alguma música especial que gostaria de ouvir?</Label>
-                  <Input type="text" name="song" placeholder="Digite sua míusica favorita" id="song" mb="4" />
+                  <Input type="text" name="song" placeholder="Digite sua música favorita" id="song" mb="4" />
                   <Label htmlFor="comment">Algum comentário adicional?</Label>
                   <Input type="text" name="comment" placeholder="Deixe sua mensagem" id="comment" required mb="4" />
                   <Button type="submit">Confirmar</Button>

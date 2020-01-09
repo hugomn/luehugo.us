@@ -37,11 +37,16 @@ class Menu extends React.PureComponent {
           <FormattedMessage id={item.label}>
             {label =>
               item.link ? (
-                <MenuA href={item.link} transparent={transparent ? 1 : 0}>
+                <MenuA href={item.link} onClick={this.handleOpen} transparent={transparent ? 1 : 0}>
                   {label}
                 </MenuA>
               ) : (
-                <MenuLink selected={isSelected(slug)} to={slug} onClick={this.handleOpen} transparent={transparent ? 1 : 0}>
+                <MenuLink
+                  selected={isSelected(slug)}
+                  to={slug}
+                  onClick={this.handleOpen}
+                  transparent={transparent ? 1 : 0}
+                >
                   {label}
                 </MenuLink>
               )}
@@ -124,7 +129,7 @@ const MenuLabel = styled.label`
   float: left;
   cursor: pointer;
   color: ${props => props.theme.colors.dark};
-  margin: 1.6rem 1.5rem;
+  margin: 1.2rem 1.5rem;
   transition: color 0.4s;
   font-size: ${props => props.theme.menu.mobile.label.fontSize};
   &:hover {

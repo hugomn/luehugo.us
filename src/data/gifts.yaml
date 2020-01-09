@@ -1,12 +1,12 @@
 - name: Massagem relaxante
-  image: ../images/gifts/massagem.jpg
+  image: ../images/gifts/massage.jpg
   price: 99
   total: 2
   sold: 0
 - name: Viagem para Santorini
   image: ../images/gifts/viagem_santorini.jpg
   price: 99
-  total: 2
+  total: 2  
   sold: 0
 - name: Sessão de Yoga na praia
   image: ../images/gifts/yoga.jpg
@@ -19,7 +19,7 @@
   total: 2
   sold: 0
 - name: Massagem relaxante
-  image: ../images/gifts/massagem.jpg
+  image: ../images/gifts/massage.jpg
   price: 99
   total: 2
   sold: 0

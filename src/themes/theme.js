@@ -29,7 +29,7 @@ const theme = {
   fonts,
   color: colors.black,
   bg: colors.lightColors[0],
-  padding: `${settings.headerHeight}px ${scaleN(1)}rem ${scaleN(4)}rem ${scaleN(0)}rem`,
+  padding: `${settings.headerHeight}px 0 ${scaleN(2)}rem 0`,
   margin: "0 auto",
   maxWidth: "71.25rem",
   borderRadius: "0.2rem",

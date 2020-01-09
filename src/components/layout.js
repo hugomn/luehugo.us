@@ -149,7 +149,8 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Main = styled.main`
-  margin-top: ${props => props.theme.header.height}px;
+  padding: ${props => props.theme.padding};
+  flex-grow: 1;
   ${color}
 `;
 
@@ -166,6 +167,9 @@ const BodyContainer = styled.div`
   overflow-x: hidden;
   right: 0;
   top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 `;
 
 export default props => (
