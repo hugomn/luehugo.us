@@ -48,10 +48,10 @@ const Index = props => {
           <WhereBox id="onde" pt="5" pb="6">
             <Where />
           </WhereBox>
-          <RsvpBox id="rsvp" pt="5" pb="6">
+          <RsvpBox id="rsvp" pt={["5", "6"]} pb={["6", "7"]}>
             <Rsvp />
           </RsvpBox>
-          <Box id="presentes" py="5">
+          <Box id="presentes" py="5" backgroundColor="lightColors.1">
             <Gifts />
           </Box>
         </Container>

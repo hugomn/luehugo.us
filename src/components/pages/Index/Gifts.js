@@ -4,7 +4,12 @@ import Subtitle from "../../Subtitle";
 import { FixedContainer } from "../../FixedContainer";
 import BtnLink from "../../BtnLink";
 import styled from "styled-components";
-import { flexbox, layout, space } from "styled-system";
+import { flexbox, layout, space, typography } from "styled-system";
+import { Grid } from "../../Grid";
+import { Box } from "../../Box";
+import Text from "../../Text";
+import { Orator } from "../../../constants/fonts";
+import Card from "../../Card";
 
 const Gifts = () => {  
   return (
@@ -16,39 +21,41 @@ const Gifts = () => {
         criaremos uma campanha de financiamento colaborativo, onde mostraremos exatamente o valor que arracadamos, e
         oferecemos também a opção de nos presentear com alguma experiência ou algo do nosso dia-a-dia.
       </Subtitle>
-      <Container display="flex" flexDirection="row" justifyContent="space-around" mt={4} mx={3}>
-        <Column flexBasis="50%">
-          <h3>Lista de presentes</h3>
-          <Img src="/img/gifts.svg" mt={3} />
-          <BtnLink mt={4} to="/presentes/lista">
-            Ver lista de presentes
-          </BtnLink>
-        </Column>
-        <Column flexBasis="50%">
-          <h3>Financiamento colaborativo</h3>
-          <Img src="/img/crowdfunding.svg" mt={3} />
-          <BtnLink mt={4} to="/presentes/crowdfunding">
-            Participar da campanha
-          </BtnLink>
-        </Column>
-      </Container>
+      <Grid gridTemplateColumns={["auto", "auto", "1fr 1fr"]} px={[4, 6]} gridGap={5} mb="4">
+        <Card px={[4, 3]} data-sal="slide-right" data-sal-delay="0" justifyContent="center">
+          <Grid columns={1} rows="1fr auto" textAlign="center">
+            <Body>
+              <Img src="/img/crowdfunding.svg" mt={4} />
+              <Text fontSize={3} color="brand" fontWeight="500" mt="2" mb="2">
+                Financiamento colaborativo
+              </Text>
+              <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
+            </Body>
+            <BtnLink to="/presentes/crowdfunding" my="4" mx="4">
+              Participar da campanha
+            </BtnLink>
+          </Grid>
+        </Card>
+        <Card px={[3, 3]} data-sal="slide-left" data-sal-delay="200" justifyContent="center">
+          <Grid columns={1} rows="1fr auto" textAlign="center">
+            <Box>
+              <Img src="/img/gifts.svg" mt={4} />
+              <Text fontSize={3} color="brand" fontWeight="500" mt="2" mb="2">
+                Lista de presentes
+              </Text>
+              <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
+            </Box>
+            <BtnLink to="/presentes/lista" my="40px" mx="4">
+              Ver lista de presentes
+            </BtnLink>
+          </Grid>
+        </Card>
+      </Grid>
     </FixedContainer>
   );
 };
 
-const Container = styled.section`
-  ${flexbox};
-  ${layout};
-  ${space};
-`;
-
-const Column = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 50px;
-  ${flexbox};
-  ${layout};
+const Body = styled(Box)`
   ${space};
 `;
 

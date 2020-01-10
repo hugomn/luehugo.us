@@ -15,7 +15,7 @@ const Rsvp = props => {
   const { confirmation } = props;
   return (
     <Layout location={props.location} backgroundColor="lightColors.1">
-      <FixedContainer pt="4" pb="4">
+      <FixedContainer pt="4" pb="5">
         <MainTitle title="index.rsvp.title" subtitle="index.rsvp.subtitle" />
         {confirmation ? (
           <>

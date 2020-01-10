@@ -1,6 +1,5 @@
 import React from "react";
 import MainTitle from "../../MainTitle";
-import Subtitle from "../../Subtitle";
 import { FixedContainer } from "../../FixedContainer";
 import BtnLink from "../../BtnLink";
 import { Box } from "../../Box";
@@ -11,12 +10,12 @@ const Rsvp = () => {
   return (
     <FixedContainer>
       <Flex flexDirection="column" alignItems="flex-end" pr={4}>
-        <Box>
+        <Box data-sal="slide-left" data-sal-delay="300">
           <MainTitle title="index.rsvp.title" subtitle="index.rsvp.subtitle" dark secondary />
           <Flex alignItems="center" flexDirection="column">
             <Text mb={5} color="white" maxWidth="440px" textAlign="center">
-              Ter você conosco nesse dia será uma grande alegria!
-              Por favor, confirme sua presença até dia 18 de Abril de 2020.
+              Ter você conosco nesse dia será uma grande alegria! Por favor, confirme sua presença até dia 18 de Abril
+              de 2020.
             </Text>
           </Flex>
           <Box textAlign="center">

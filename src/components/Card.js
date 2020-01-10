@@ -1,9 +1,7 @@
 import styled from "styled-components";
-import { grid, space } from "styled-system";
+import { flexbox, grid, space } from "styled-system";
 
 const Card = styled.div`
-  ${grid}
-  ${space}
   background: ${props => props.theme.colors.white};
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -16,6 +14,9 @@ const Card = styled.div`
   &:hover {
     box-shadow: 0px 0px 1px 2px ${props => props.theme.colors.brand};
   }
+  ${flexbox}
+  ${grid}
+  ${space}
 `;
 
 export default Card;
