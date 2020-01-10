@@ -30,7 +30,7 @@ const UmPedidoPara = ({ name }) => {
   const title = `Um pedido para ${padrinho.name} | Lunara & Hugo`;
   const description = `Querid${padrinho.gender === "M" ? "o" : "a"} ${
     padrinho.name
-  }, A unica coisa melhor do que ter você como amig${padrinho.gender === "M" ? "o" : "a"} é... ❤️`;
+  }, a única coisa melhor do que ter você como amig${padrinho.gender === "M" ? "o" : "a"} é... ❤️`;
   return (
     <MainContainer>
       <Helmet defaultTitle={title}>
