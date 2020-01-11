@@ -28,7 +28,7 @@ const TImeline = () => {
   return (
     <FixedContainer>
       <MainTitle title="index.timeline.title" subtitle="index.timeline.subtitle" mb={4} />
-      <Box px="5em">
+      <Box pl={["3.4em", "5em"]} pr={["0", "5em"]}>
         <Wrapper gridTemplateColumns={["1fr", "1fr", "1fr 1fr"]} gridGap="4.75rem">
           {data.timeline.edges.map(({ node }, i) => (
             <ItemCard

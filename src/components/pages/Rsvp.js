@@ -29,11 +29,7 @@ const Rsvp = props => {
         ) : (
           <>
             <Subtitle>
-              Nosso maior presente será poder celebrar esse momento tão especial com nossos amados familiares e amigos.
-              E além disso, nós moramos atualmente em Berlim, o que dificulta trazer qualquer presente na mala. Sendo
-              assim, criaremos uma campanha de financiamento colaborativo, onde mostraremos exatamente o valor que
-              arracadamos, e oferecemos também a opção de nos presentear com alguma experiência ou algo do nosso
-              dia-a-dia.
+              Digite seus dados e confirme sua presença abaixo.
             </Subtitle>
             <Card p="5" mt="5">
               <form className="email-form" name="rsvp" method="POST" data-netlify="true" action="/rsvp/sucesso">

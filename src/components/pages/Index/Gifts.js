@@ -8,7 +8,6 @@ import { flexbox, layout, space, typography } from "styled-system";
 import { Grid } from "../../Grid";
 import { Box } from "../../Box";
 import Text from "../../Text";
-import { Orator } from "../../../constants/fonts";
 import Card from "../../Card";
 
 const Gifts = () => {  

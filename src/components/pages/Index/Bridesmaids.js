@@ -36,7 +36,7 @@ const Bridesmaids = () => {
       <Flex justifyContent="center" flexWrap="wrap">
         {data.timeline.edges.map(({ node }, i) => (
           <Box
-            p={4}
+            p={["1", "4"]}
             mb={[4]}
             key={node.name}
             flexBasis={["50%", "33%", "25%"]}

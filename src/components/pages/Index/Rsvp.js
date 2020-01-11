@@ -9,7 +9,7 @@ import Text from "../../Text";
 const Rsvp = () => {
   return (
     <FixedContainer>
-      <Flex flexDirection="column" alignItems="flex-end" pr={4}>
+      <Flex flexDirection="column" alignItems={["center", "flex-end"]} pr={[0, 4]}>
         <Box data-sal="slide-left" data-sal-delay="300">
           <MainTitle title="index.rsvp.title" subtitle="index.rsvp.subtitle" dark secondary />
           <Flex alignItems="center" flexDirection="column">

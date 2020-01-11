@@ -33,13 +33,13 @@ const Index = props => {
           </Video>
         </VideoContainer>
         <Container>
-          <Box id="os-noivos" py="5">
+          <Box id="os-noivos" py={["4", "5"]}>
             <Us />
           </Box>
-          <TimelineBox id="historia" py="5" backgroundColor="lightColors.1">
+          <TimelineBox id="historia" py={["4", "5"]} backgroundColor="lightColors.1">
             <Timeline />
           </TimelineBox>
-          <Box id="padrinhos" py="5">
+          <Box id="padrinhos" py={["4", "5"]}>
             <Groomsmen />
           </Box>
           <Box id="madrinhas" py="5" backgroundColor="lightColors.1">
@@ -89,13 +89,16 @@ const TitleContainer = styled.section`
   text-align: center;
   top: 50%;
   padding: 0;
-  margin-top: -180px;
+  margin-top: -130px;
+  ${media.md`
+    margin-top: -180px;
+  `}
 `;
 
 const DateBox = styled.div`
   border: 2px solid white;
   display: inline-block;
-  line-height: ${({ theme }) => theme.scale(10.6)};
+  line-height: ${({ theme }) => theme.scale(9.6)};
   padding: ${({ theme }) => `${theme.scale(1)} ${theme.scale(7)}`};
   ${media.md`
     line-height: ${({ theme }) => theme.scale(11.8)};

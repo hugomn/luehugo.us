@@ -39,7 +39,7 @@ const Us = () => {
         oferecemos também a opção de nos presentear com alguma experiência ou algo do nosso dia-a-dia.
       </Subtitle>
       <Grid gridTemplateColumns={["auto", "auto", "1fr 1fr"]}>
-        <Box px={[5, 6]} mb={[6, 6, 0]} data-sal="slide-right" data-sal-delay="0">
+        <Box px={[3, 6]} mb={[6, 6, 0]} data-sal="slide-right" data-sal-delay="0">
           <Img sizes={data.groomImage.childImageSharp.sizes} />
           <Text fontFamily={Orator} fontSize={4} textAlign="center" color="darkColors.1" mt="4" mb="2">
             Hugo Nogueira
@@ -49,7 +49,7 @@ const Us = () => {
             tincidunt vulputate lectus nulla odio. Fermentum tincidunt sed.
           </Text>
         </Box>
-        <Box px={[5, 6]} data-sal="slide-left" data-sal-delay="200">
+        <Box px={[3, 6]} data-sal="slide-left" data-sal-delay="200">
           <Img sizes={data.brideImage.childImageSharp.sizes} />
           <Text fontFamily={Orator} fontSize={4} textAlign="center" color="darkColors.1" mt="4" mb="2">
             Lunara Costa

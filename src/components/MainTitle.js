@@ -9,12 +9,12 @@ import Text from "./Text";
 const MainTitle = ({ title, subtitle, dark, secondary, ...props}) => {
   return (
     <Wrapper {...props}>
-      <Title fontFamily={Orator} fontSize={[24, 28, 32, 36]} textAlign="center" color={dark ? "white" : "black"}>
+      <Title fontFamily={Orator} fontSize={[22, 26, 28, 32]} textAlign="center" color={dark ? "white" : "black"}>
         <FormattedMessage id={title}>{txt => <span>{txt}</span>}</FormattedMessage>
       </Title>
       <Subtitle
         fontFamily={Allura}
-        fontSize={[46, 56, 66, 76]}
+        fontSize={[38, 48, 60, 68]}
         textAlign="center"
         color={secondary ? "accentColors.0" : "brand"}
       >
@@ -28,12 +28,15 @@ const Wrapper = styled.div`
   width: 100%;
   position: relative;
   display: block;
-  height: 125px;
+  height: 80px;
   padding-top: 40px;
   background-image: url('/img/maintitle_bg.png');
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 300px auto;
+  ${media.md`
+    height: 125px;
+  `}
   ${grid}
   ${position}
   ${typography}

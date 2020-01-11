@@ -3,7 +3,7 @@ module.exports = {
   "header.title": "Lunara & Hugo",
   "header.subTitle": "Bem-vindo ao site do nosso casamento!",
   "menu.us": "Os noivos",
-  "menu.story": "Nossa história",
+  "menu.story": "História",
   "menu.where": "Onde",
   "menu.groomsmen": "Padrinhos",
   "menu.bridesmaids": "Madrinhas",
