@@ -23,7 +23,7 @@ module.exports = {
   "index.us.title": "Os noivos",
   "index.us.subtitle": "Hugo & Lunara",
   "index.gifts.title": "Presentes",
-  "index.gifts.subtitle": "Agredecemos o carinho",
+  "index.gifts.subtitle": "Agradecemos o carinho",
   "index.timeline.title": "Nossa história",
   "index.timeline.subtitle": "Como tudo começou",
   "index.groomsmen.title": "Padrinhos",
@@ -40,5 +40,5 @@ module.exports = {
   "page.crowdfunding.title": "Financiamento colaborativo",
   "page.crowdfunding.subtitle": "Nosso sonho compartilhado",
   "page.gifts.title": "Presentes",
-  "page.gifts.subtitle": "Agredecemos o carinho"
+  "page.gifts.subtitle": "Agradecemos o carinho"
 };

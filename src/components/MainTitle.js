@@ -14,7 +14,7 @@ const MainTitle = ({ title, subtitle, dark, secondary, ...props}) => {
       </Title>
       <Subtitle
         fontFamily={Allura}
-        fontSize={[38, 48, 60, 68]}
+        fontSize={[34, 48, 60, 68]}
         textAlign="center"
         color={secondary ? "accentColors.0" : "brand"}
       >

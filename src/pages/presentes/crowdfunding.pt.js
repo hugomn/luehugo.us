@@ -14,11 +14,31 @@ export const pageQuery = graphql`
           email
           bio
           defaultLink
-        },
+        }
         wedding {
           date
           fundingGoal
           fundingPledged
+        }
+      }
+    }
+    allRewardsYaml {
+      edges {
+        node {
+          id
+          description
+          bbId
+          paypalId
+          price
+          total
+          sold
+          image {
+            childImageSharp {
+              sizes(maxWidth: 750) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
         }
       }
     }

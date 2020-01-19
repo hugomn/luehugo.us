@@ -4,7 +4,7 @@ import Subtitle from "../../Subtitle";
 import { FixedContainer } from "../../FixedContainer";
 import BtnLink from "../../BtnLink";
 import styled from "styled-components";
-import { flexbox, layout, space, typography } from "styled-system";
+import { space } from "styled-system";
 import { Grid } from "../../Grid";
 import { Box } from "../../Box";
 import Text from "../../Text";

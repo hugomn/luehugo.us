@@ -92,7 +92,7 @@ const Content = styled.section`
     padding: ${({ theme }) => theme.scale(0)} ${({ theme }) => theme.scale(1)};    
     position: relative;
     text-align: left;
-    color: ${({ theme }) => theme.colors.darkColors[2]};
+    color: ${({ theme }) => theme.colors.dark[2]};
   }
 
   blockquote > p:first-child {

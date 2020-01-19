@@ -66,6 +66,13 @@ const Layout = props => {
 };
 
 const GlobalStyle = createGlobalStyle`
+  body {
+    color: ${props => props.theme.color};
+    font-family: ${props => props.theme.fonts.Poppins};
+    font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
+    font-weight: 300;
+    line-height: ${props => props.theme.lineHeight};
+  }
   a {
     color: ${props => props.theme.a.color.light};
     text-decoration: ${props => props.theme.a.textDecoration};
@@ -157,12 +164,7 @@ const Main = styled.main`
 const BodyContainer = styled.div`
   background-color: ${props => props.theme.bg};
   bottom: 0;
-  color: ${props => props.theme.color};
-  font-family: ${props => props.theme.fonts.Poppins};
-  font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-  font-weight: 300;
   left: 0;
-  line-height: ${props => props.theme.lineHeight};
   min-height: 100%;
   overflow-x: hidden;
   right: 0;

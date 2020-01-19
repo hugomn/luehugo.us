@@ -1,20 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Layout from "../layout";
 import Subtitle from "../Subtitle";
 import styled, { keyframes } from "styled-components";
-import { flexbox, layout, space } from "styled-system";
+import { flexbox, layout, space, typography, color } from "styled-system";
 import moment from "moment";
-import PaypalButton from "../PaypalButton";
-import Card from "../Card";
 import { FixedContainer } from "../FixedContainer";
 import MainTitle from "../MainTitle";
 import { FormattedNumber } from "react-intl";
+import Text from "../Text";
+import Modal from "react-responsive-modal";
+import RewardCardList from "../RewardCardList";
+import { Box } from "../Box";
+import { Grid } from "../Grid";
+import Link from "../Link";
+import PaypalButton from "../PaypalButton";
+import { media } from "../../constants/responsive";
 
 const Crowdfunding = props => {
   const { wedding } = props.data.site.siteMetadata;
+  const [modalOpen, setModalOpen] = useState(false);
   const days = moment(wedding.date).diff(new Date(), "days");
   const percentage = (wedding.fundingPledged / wedding.fundingGoal) * 100;
+  const rewards = props.data.allRewardsYaml.edges.map(g => g.node);
+  const [reward, setReward] = useState(rewards[0]);
+  const handleContribute = reward => {
+    setReward(reward);
+    setModalOpen(true);
+  };
   return (
     <Layout location={props.location} backgroundColor="lightColors.1">
       <FixedContainer pt="4" pb="5">
@@ -24,7 +37,7 @@ const Crowdfunding = props => {
           com pequenas contribuições, fazem um grande projeto acontecer. Considerando nosso contexto atual, e a nossa
           vontade de fazer um evento inesquecível, decidimos utilizar o crowdfunding como ferramenta.
         </Subtitle>
-        <Container display="flex" flexDirection="row" justifyContent="space-around">
+        <Container display="flex" flexDirection={["column", "row"]} justifyContent="space-around">
           <Column flexBasis="33%">
             <Number>{percentage}%</Number>
             <p>alcançados</p>
@@ -46,72 +59,112 @@ const Crowdfunding = props => {
           <ProgressBar percentage={percentage} />
         </ProgressBarWrapper>
         <H3 mb={4}>Escolha algum dos valores abaixo:</H3>
-        <StyledCard>
-          <CardPrice>
-            <span>R$60</span>
-          </CardPrice>
-          <CardDescription>
-            Qualquer ajuda é mega bem-vinda. Além de comemorar conosco no nosso grande dia, você receberá um{" "}
-            <b>adesivo exclusivo do casamento</b> criado pela <b>Lunara</b>.
-          </CardDescription>
-          <CardButton>
-            <PaypalButton id="KHA4STBGNH7DE" />
-          </CardButton>
-        </StyledCard>
-        <StyledCard>
-          <CardPrice>
-            <span>R$200</span>
-          </CardPrice>
-          <CardDescription>
-            Agradecemos de coração! Além de vários shots com os noivos, você receberá <b>uma super caneca</b> com a a
-            arte do casamento criada pela <b>Lunara</b>.
-          </CardDescription>
-          <CardButton>
-            <PaypalButton id="TEBDXBDM8WM2A" />
-          </CardButton>
-        </StyledCard>
-        <StyledCard>
-          <CardPrice>
-            <span>R$500</span>
-          </CardPrice>
-          <CardDescription>
-            Agradecemos de coração! Além de vários shots com os noivos, você receberá <b>uma super caneca</b> com a a
-            arte do casamento criada pela <b>Lunara</b>.
-          </CardDescription>
-          <CardButton>
-            <PaypalButton id="KHA4STBGNH7DE" />
-          </CardButton>
-        </StyledCard>
+        <Modal open={modalOpen} onClose={() => setModalOpen(false)} center styles={{ modal: { borderRadius: "6px" } }}>
+          <H3 mb={4} pt={0} textAlign="center" color="dark.1">
+            Escolha uma forma de pagamento:
+          </H3>
+          {/* <Text>{reward.description}</Text> */}
+          <Grid gridTemplateColumns={["auto", "auto", "1fr 1fr"]} px={[2, 2]} gridGap={5} mb="4">
+            <Box px={[2, 2]} justifyContent="center" textAlign="center">
+              <Img src="/img/bb_logo.png" mt={4} />
+              <Text fontSize={2} color="dark.1" fontWeight="500" mt="2" mb="2">
+                Via transferência ou boleto
+              </Text>
+              <Text mb="5">Utilize o botão abaixo para contribuir via transferência bancária ou boleto.</Text>
+              <Link
+                target="_blank"
+                href={`https://www49.bb.com.br/pagar-receber/#/${reward.bbId}`}
+              >
+                Contribuir
+              </Link>
+            </Box>
+            <Box px={[2, 2]} justifyContent="center" textAlign="center">
+              <Img src="/img/paypal_logo.png" mt={4} />
+              <Text fontSize={2} color="dark.1" fontWeight="500" mt="2" mb="2" textAlign="center">
+                Via Cartão de Crédito
+              </Text>
+              <Text textAlign="center" mb="5">
+                Utilize o botão abaixo para contribuir via cartão de crédito (qualquer bandeira).
+              </Text>
+              <PaypalButton id={reward.paypalId} />
+            </Box>
+          </Grid>
+        </Modal>
+
+        <RewardCardList rewards={rewards} onContribute={handleContribute} />
+
+        {/* <StyledGrid>
+          <StyledCard>
+            <CardPrice>
+              <span>R$2</span>
+            </CardPrice>
+            <CardDescription>
+              Qualquer ajuda é mega bem-vinda. Além de comemorar conosco no nosso grande dia, você receberá um{" "}
+              <b>adesivo exclusivo do casamento</b> criado pela <b>Lunara</b>.
+            </CardDescription>
+            <CardButton>
+              <Button onClick={() => setModalOpen(true)} />
+              <PaypalButton id="TEBDXBDM8WM2A" />
+            </CardButton>
+          </StyledCard>
+          <StyledCard>
+            <CardPrice>
+              <span>R$60</span>
+            </CardPrice>
+            <CardDescription>
+              Qualquer ajuda é mega bem-vinda. Além de comemorar conosco no nosso grande dia, você receberá um{" "}
+              <b>adesivo exclusivo do casamento</b> criado pela <b>Lunara</b>.
+            </CardDescription>
+            <CardButton>
+              <PaypalButton id="KHA4STBGNH7DE" />
+            </CardButton>
+          </StyledCard>
+          <StyledCard>
+            <CardPrice>
+              <span>R$200</span>
+            </CardPrice>
+            <CardDescription>
+              Agradecemos de coração! Além de vários shots com os noivos, você receberá <b>uma super caneca</b> com a a
+              arte do casamento criada pela <b>Lunara</b>.
+            </CardDescription>
+            <CardButton>
+              <PaypalButton id="D5VHBYQFHKWE8" />
+            </CardButton>
+            <Text>
+              <a href="https://www49.bb.com.br/pagar-receber/#/cm49eyJvcHIiOiJwZyIsImlkIjoiNGE3MDhmZTgtNzFjZC00ZmFjLTgxOGYtZTE0YzRlMDYyMjNiIn0=">
+                Pagar via BB
+              </a>
+            </Text>
+          </StyledCard>
+          <StyledCard>
+            <CardPrice>
+              <span>R$500</span>
+            </CardPrice>
+            <CardDescription>
+              Agradecemos de coração! Além de vários shots com os noivos, você receberá <b>uma super caneca</b> com a a
+              arte do casamento criada pela <b>Lunara</b>.
+            </CardDescription>
+            <CardButton>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick" />
+                <input type="hidden" name="hosted_button_id" value="D5VHBYQFHKWE8" />
+                <input
+                  type="image"
+                  src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+                  border="0"
+                  name="submit"
+                  title="PayPal - The safer, easier way to pay online!"
+                  alt="Donate with PayPal button"
+                />
+                <img alt="" border="0" src="https://www.paypal.com/en_BR/i/scr/pixel.gif" width="1" height="1" />
+              </form>
+            </CardButton>
+          </StyledCard>
+        </StyledGrid> */}
       </FixedContainer>
     </Layout>
   );
 };
-
-const StyledCard = styled(Card)`
-  margin-bottom: 20px;
-`;
-
-const CardPrice = styled.div`
-  font-size: ${props => props.theme.scale(4.6)};
-  font-weight: 500;
-  padding: 0 30px;
-  min-width: 120px;
-  span:after {
-    content: ",00";
-    font-size: ${props => props.theme.scale(1)};
-    font-weight: 400;
-  }
-`;
-
-const CardButton = styled.div`
-  padding: 0 10px 0 10px;
-  min-width: 200px;
-`;
-
-const CardDescription = styled.div`
-  padding: 30px 30px;
-  font-size: ${props => props.theme.scale(-0.7)};
-`;
 
 const Container = styled.section`
   ${flexbox};
@@ -129,12 +182,21 @@ const Column = styled.section`
   ${space};
 `;
 
-const H3 = styled.h3`
+const Img = styled.img`
   ${space};
 `;
 
+const H3 = styled.h3`
+  ${color};
+  ${space};
+  ${typography};
+`;
+
 const Number = styled.h3`
-  font-size: ${props => props.theme.scale(5)};
+  font-size: ${props => props.theme.scale(3)};
+  ${media.sm`
+    font-size: ${props => props.theme.scale(5)};
+  `}
 `;
 
 const expand = props => keyframes`

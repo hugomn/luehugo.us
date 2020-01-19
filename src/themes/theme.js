@@ -6,15 +6,15 @@ const scale = n => `${scaleN(n)}rem`;
 
 const brandColor = "#70A076";
 const accentColors = ["#D2AB65", "#D1DFD2", "red"];
-const darkColors = ["#333E49", "#484848", "#747474", "#B9C2CE"];
+const dark = ["#333E49", "#484848", "#747474", "#B9C2CE"];
 const lightColors = ["#FFFFFF", "#F6F6F8", "#EFEFEF", "#D7D7D7"];
 
 const colors = {
   brand: brandColor,
   accentColors,
   white: "#FFFFFF",
-  black: darkColors[2],
-  darkColors,
+  black: dark[2],
+  dark,
   lightColors
 };
 
@@ -86,7 +86,7 @@ const theme = {
     mobile: {
       padding: `${scale(3)} ${scale(3)}`,
       opened: {
-        bg: colors.darkColors[0]
+        bg: colors.dark[0]
       },
       closed: {
         bg: "transparent"
@@ -194,7 +194,7 @@ const theme = {
       fontSize: scale(-0.7),
       lineHeight: scaleN(2),
       time: {
-        color: colors.darkColors[2]
+        color: colors.dark[2]
       }
     },
     list: {
@@ -212,22 +212,22 @@ const theme = {
         border: "1px solid rgba(0,0,0,.125);",
         padding: scale(1.2),
         hover: {
-          backgroundColor: colors.darkColors[0]
+          backgroundColor: colors.dark[0]
         },
         title: {
           fontFamily: fonts.SansSerif,
           fontSize: scale(1.2),
           lineHeight: scaleN(1),
           margin: `0 0 ${scale(-0.8)}`,
-          color: colors.darkColors[0],
+          color: colors.dark[0],
           hover: {
-            color: colors.darkColors[2]
+            color: colors.dark[2]
           }
         },
         text: {
           fontFamily: fonts.System,
           fontSize: scale(-0.3),
-          color: colors.darkColors[2],
+          color: colors.dark[2],
           lineHeight: scaleN(2),
           padding: `0`,
           margin: `0`
@@ -251,7 +251,7 @@ const theme = {
           borderRadius: "0.2rem",
           margin: `0`,
           padding: `${scale(-8)} ${scale(-4)}`,
-          backgroundColor: colors.darkColors[0]
+          backgroundColor: colors.dark[0]
         },
         highlight: {
           backgroundColor: null,

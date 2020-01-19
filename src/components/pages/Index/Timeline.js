@@ -40,7 +40,7 @@ const TImeline = () => {
               data-sal={i % 2 ? "slide-left" : "slide-right"}
             >
               <Flex flexDirection="column">
-                <Text display="block" fontWeight="500" color="darkColors.1">
+                <Text display="block" fontWeight="500" color="dark.1">
                   {node.name}
                 </Text>
                 <Text display="block" color="brand" mt={3}>
