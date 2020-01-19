@@ -1,11 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FaGithub, FaHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 import styled, { keyframes } from "styled-components";
 import { Grid, Cell } from "styled-css-grid";
 import { withPrefix } from "gatsby";
 
-import SelectLanguage from "./SelectLanguage";
 import { media } from "../constants/responsive";
 import { FixedContainer } from "./FixedContainer";
 import A from "./A";
@@ -31,14 +30,6 @@ const Footer = ({ author, langs, sourceCodeLink, currentLangKey }) => {
               </A>
             </span>
           </LeftCell>
-          {/* <MiddleCell middle>
-            <a href={sourceCodeLink} target="_blank">
-              <GithubIcon />
-            </a>
-          </MiddleCell> */}
-          <RightCell middle>
-            <SelectLanguage langs={langs} className="select-languages" />
-          </RightCell>
         </Grid>
       </FixedContainer>
     </Wrapper>
@@ -67,15 +58,6 @@ const GatsbyIcon = styled.img`
   }
 `;
 
-const GithubIcon = styled(FaGithub)`
-  font-size: ${({ theme }) => theme.scale(3)};
-  color: ${({ theme }) => theme.colors.black};
-  display: inline-block;
-  margin: auto;
-  opacity: 0.7;
-  padding: 0 ${({ theme }) => theme.scale(-6)} 0 0;
-`;
-
 const HeartIcon = styled(FaHeart)`
   margin: 0 6px;
   cursor: pointer;
@@ -86,26 +68,11 @@ const HeartIcon = styled(FaHeart)`
   }
 `;
 
-const MiddleCell = styled(Cell)`
-  text-align: center;
-  display: none;
-  ${media.md`
-    display: inline-flex;
-  `};
-`;
-
 const LeftCell = styled(Cell)`
   text-align: center;
   height: 68px;
   ${media.md`
     text-align: left;
-  `};
-`;
-
-const RightCell = styled(Cell)`
-  text-align: center;
-  ${media.sm`
-    text-align: right;
   `};
 `;
 

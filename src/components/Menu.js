@@ -169,7 +169,7 @@ const MenuLink = styled(Link)`
       font-family: ${props => props.theme.menu.desktop.a.fontFamily};
       font-weight: ${props => props.theme.menu.desktop.a.fontWeight};
       padding: ${props => props.theme.menu.desktop.a.padding};
-      ${props =>  color(props.theme.menu.desktop.a, props.selected, props.transparent)}};
+      ${props =>  color(props.theme.menu.desktop.a, props.selected, props.transparent)};
     `}
 `;
 

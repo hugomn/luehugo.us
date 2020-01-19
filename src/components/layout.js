@@ -55,7 +55,7 @@ const Layout = props => {
               </Helmet>
             )}
           </FormattedMessage>
-          <Header isHome={isHome} url={url} menu={menu} />
+          <Header isHome={isHome} url={url} menu={menu} langs={langsMenu} />
           <Main backgroundColor={backgroundColor}>{children}</Main>
           <Footer author={author} langs={langsMenu} sourceCodeLink={sourceCodeLink} />
           <GlobalStyle />

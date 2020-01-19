@@ -6,6 +6,9 @@ import throttle from "lodash.throttle";
 import theme from "../themes/theme";
 import { Link } from "gatsby";
 import { FixedContainer } from "./FixedContainer";
+import { Grid, Cell } from "styled-css-grid";
+import SelectLanguage from "./SelectLanguage";
+import { media } from "../constants/responsive";
 
 const delta = 5;
 
@@ -85,7 +88,7 @@ class Header extends React.Component {
   };
 
   render() {
-    const { menu, url } = this.props;
+    const { langs, menu, url } = this.props;
     const { transparent } = this.state;
     return (
       <Wrapper hidden={this.state.hidden} transparent={transparent}>
@@ -95,7 +98,14 @@ class Header extends React.Component {
               <Logo src={transparent ? "/img/logo.svg" : "/img/logo_black.svg"} />
             </Link>
           </LogoContainer>
-          <Menu menu={menu} url={url} transparent={transparent} />
+          <GridWrapper>
+            <MenuContainer>
+              <Menu menu={menu} url={url} transparent={transparent ? 1 : 0} />
+            </MenuContainer>
+            <LanguageContainer>
+              <SelectLanguage langs={langs} className="select-languages" transparent={transparent ? 1 : 0} />
+            </LanguageContainer>
+          </GridWrapper>
         </FixedContainer>
       </Wrapper>
     );
@@ -112,6 +122,32 @@ const Wrapper = styled.header`
   position: fixed;
   width: 100%;
   z-index: 999;
+`;
+
+const GridWrapper = styled(Grid)`
+  grid-auto-flow: dense;
+  grid-template-columns: 1fr 55px;
+  grid-gap: 0px;
+  ${media.md`
+    grid-gap: 8px;
+    grid-template-columns: 1fr 100px;
+    grid-auto-flow: column;
+  `}
+`;
+
+const LanguageContainer = styled(Cell)`
+  text-align: right;
+  order: 1;
+  ${media.md`
+    order: 2;
+  `}
+`;
+
+const MenuContainer = styled(Cell)`
+  order: 2;
+  ${media.md`
+    order: 1;
+  `}
 `;
 
 const LogoContainer = styled.section`

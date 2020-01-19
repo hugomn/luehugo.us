@@ -30,12 +30,12 @@ const theme = {
   color: colors.black,
   bg: colors.lightColors[0],
   padding: `${settings.headerHeight}px 0 0 0`,
-  margin: "0 auto",
-  maxWidth: "71.25rem",
-  borderRadius: "0.2rem",
+  margin: '0 auto',
+  maxWidth: '71.25rem',
+  borderRadius: '0.2rem',
   lineHeight: 1.8,
   focus: {
-    border: "0.4rem red solid"
+    border: '0.4rem red solid'
   },
   p: {
     fontSize: scale(1.25),
@@ -46,7 +46,7 @@ const theme = {
       dark: colors.white,
       light: colors.black
     },
-    textDecoration: "none",
+    textDecoration: 'none',
     hover: {
       color: colors.brand
     }
@@ -55,7 +55,7 @@ const theme = {
     height: settings.headerHeight,
     title: {
       fontSize: scale(3),
-      textAlign: "left",
+      textAlign: 'left',
       padding: `${scale(0)} 0 0 0`,
       margin: `0 0 ${scale(6)} 0`,
       lineHeight: scaleN(0)
@@ -69,7 +69,7 @@ const theme = {
     isHome: {
       title: {
         fontSize: scale(7),
-        textAlign: "center",
+        textAlign: 'center',
         padding: `${scale(2)} 0 0 0`,
         margin: `${scale(0)} 0 ${scale(4)} 0`,
         lineHeight: scaleN(0)
@@ -89,7 +89,7 @@ const theme = {
         bg: colors.dark[0]
       },
       closed: {
-        bg: "transparent"
+        bg: 'transparent'
       },
       label: {
         width: scale(3),
@@ -100,10 +100,22 @@ const theme = {
         fontFamily: fonts.Orator,
         fontSize: scale(1.5),
         padding: `0 0 ${scale(1)}`,
-        textAlign: "left",
-        color: colors.white,
+        textAlign: 'left',
+        color: {
+          dark: colors.white,
+          light: colors.black
+        },
         active: {
-          color: colors.brand
+          color: {
+            dark: colors.brand,
+            light: colors.brand
+          }
+        },
+        hover: {
+          color: {
+            dark: colors.brand,
+            light: colors.brand
+          }
         }
       },
       ul: {
@@ -112,13 +124,13 @@ const theme = {
     },
     desktop: {
       padding: `${scale(2.8)} 0`,
-      bg: "transparent",
+      bg: 'transparent',
       a: {
         fontFamily: fonts.Orator,
         fontSize: scale(0.6),
         fontWeight: 400,
         padding: `${scale(1)} ${scale(-0.4)}`,
-        textAlign: "left",
+        textAlign: 'left',
         color: {
           dark: colors.white,
           light: colors.black
@@ -209,7 +221,7 @@ const theme = {
         margin: `0`
       },
       item: {
-        border: "1px solid rgba(0,0,0,.125);",
+        border: '1px solid rgba(0,0,0,.125);',
         padding: scale(1.2),
         hover: {
           backgroundColor: colors.dark[0]
@@ -235,12 +247,12 @@ const theme = {
       }
     },
     post: {
-      padding: "20px",
+      padding: '20px',
       margin: `${scale(4)} auto 0`,
-      maxWidth: "46.25rem",
+      maxWidth: '46.25rem',
       header: {
         fontFamily: fonts.SansSerif,
-        fontSize: "2.6rem",
+        fontSize: '2.6rem',
         margin: `0 0 ${scale(4)}`
       },
       content: {
@@ -248,14 +260,14 @@ const theme = {
         code: {
           color: colors.white,
           fontSize: scale(1),
-          borderRadius: "0.2rem",
+          borderRadius: '0.2rem',
           margin: `0`,
           padding: `${scale(-8)} ${scale(-4)}`,
           backgroundColor: colors.dark[0]
         },
         highlight: {
           backgroundColor: null,
-          borderRadius: "0.2rem",
+          borderRadius: '0.2rem',
           margin: `${scale(0)} -50rem`,
           padding: `0 50rem`,
           code: {
@@ -279,12 +291,12 @@ const theme = {
     }
   },
   page: {
-    padding: "20px",
+    padding: '20px',
     margin: `${scale(0)} auto ${scale(4)}`,
-    maxWidth: "60rem",
+    maxWidth: '60rem',
     header: {
       fontFamily: fonts.SansSerif,
-      fontSize: "2.4rem",
+      fontSize: '2.4rem',
       margin: `0 0 ${scale(2)}`
     },
     content: {
@@ -298,13 +310,16 @@ const theme = {
   },
   i18n: {
     selectLanguage: {
+      padding: `${scale(3.0)} ${scale(-2)}`,
       li: {
         margin: `0 0 0 5px`,
-        padding: `${scale(-8)} ${scale(-2)} ${scale(-5)} ${scale(-2)}`,
-        fontSize: scale(3),
-        borderRadius: "0.2rem",
+        fontFamily: fonts.Orator,
+        fontSize: scale(-0.7),
+        fontWeight: 400,
+        padding: `${scale(1)} ${scale(-4.2)}`,
+        borderRadius: '0.2rem',
         selected: {
-          backgroundColor: colors.brand
+          backgroundColor: colors.lightGreen
         }
       }
     }
