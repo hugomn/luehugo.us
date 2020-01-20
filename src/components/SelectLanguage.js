@@ -37,8 +37,6 @@ const LangLink = styled(Link)`
   &:hover {
     text-decoration: none;
     color: ${props => props.theme.menu.mobile.a.active.color};
-    /* color: ${props =>
-    props.selected ? props.theme.colors.dark[3] : props => props.theme.menu.desktop.a.active.color}; */
   }
   ${media.md`
     ${props => color(props.theme.menu.desktop.a, props.selected, props.transparent)};

@@ -80,7 +80,7 @@ class Menu extends React.PureComponent {
 }
 
 const CloseNav = styled.section`
-  ${hidden.md}
+  ${hidden.lg}
   ${props =>
     props.isOpen
       ? ` top: 0;
@@ -106,7 +106,7 @@ const Nav = styled.nav`
     props.isOpen ? "transform 1s, background-color 0.5s" : "transform 0.5s, background-color 1s"};
   background-color: ${props => (props.isOpen ? props.theme.menu.mobile.opened.bg : props.theme.menu.mobile.closed.bg)};
   ${props => (props.isOpen ? "transform: translateX(-60%);" : "")};
-  ${media.md`
+  ${media.lg`
     padding: ${props => props.theme.menu.desktop.padding};
     display: flex;
     flex-grow: 1;
@@ -122,13 +122,13 @@ const Nav = styled.nav`
 `;
 
 const MenuLabel = styled.label`
-  ${hidden.md}
+  ${hidden.lg}
   width: ${props => props.theme.menu.mobile.label.width};
   height: ${props => props.theme.menu.mobile.label.height};
   position: relative;
   float: left;
   cursor: pointer;
-  color: ${props => props.theme.colors.dark};
+  color: ${props => props.theme.colors.dark[0]};
   margin: 1.2rem 1.5rem;
   transition: color 0.4s;
   font-size: ${props => props.theme.menu.mobile.label.fontSize};
@@ -139,7 +139,7 @@ const MenuLabel = styled.label`
 `;
 
 const Checkbox = styled.input`
-  ${hidden.md}
+  ${hidden.lg}
   position: absolute;
   opacity: 0.02;
   cursor: pointer;
@@ -158,18 +158,18 @@ const MenuLink = styled(Link)`
   text-align: ${props => props.theme.menu.mobile.a.textAlign};
   text-decoration: none;
   transition: 0.5s;
-  color: ${props => (props.selected ? props.theme.menu.mobile.a.active.color : props.theme.menu.mobile.a.color)};
-  &:hover {
+  ${props => color(props.theme.menu.mobile.a, props.selected, true)};
+  &:hover { 
     color: ${props => props.theme.menu.mobile.a.active.color};
     transition: 0.5s;
   }
-  ${media.md`
+  ${media.lg`
       display: inline;
       font-size: ${props => props.theme.menu.desktop.a.fontSize};
       font-family: ${props => props.theme.menu.desktop.a.fontFamily};
       font-weight: ${props => props.theme.menu.desktop.a.fontWeight};
       padding: ${props => props.theme.menu.desktop.a.padding};
-      ${props =>  color(props.theme.menu.desktop.a, props.selected, props.transparent)};
+      ${props => color(props.theme.menu.desktop.a, props.selected, props.transparent)};
     `}
 `;
 
@@ -181,7 +181,7 @@ const Ul = styled.ul`
   list-style: none;
   transition: opacity 1s, transform 0.5s;
   opacity: ${props => (props.isOpen ? 1 : 0)};
-  ${media.md`
+  ${media.lg`
       opacity: 1;
       margin: ${props => props.theme.menu.desktop.ul.margin};
       li {

@@ -5,9 +5,9 @@ import styled from "styled-components";
 import throttle from "lodash.throttle";
 import theme from "../themes/theme";
 import { Link } from "gatsby";
-import { FixedContainer } from "./FixedContainer";
 import { Grid, Cell } from "styled-css-grid";
 import SelectLanguage from "./SelectLanguage";
+import { Flex } from "./Flex";
 import { media } from "../constants/responsive";
 
 const delta = 5;
@@ -92,7 +92,7 @@ class Header extends React.Component {
     const { transparent } = this.state;
     return (
       <Wrapper hidden={this.state.hidden} transparent={transparent}>
-        <FixedContainer display="flex" flexDirection="row" justifyContent="space-between">
+        <Flex display="flex" flexDirection="row" justifyContent="space-between" px={3}>
           <LogoContainer>
             <Link to="/">
               <Logo src={transparent ? "/img/logo.svg" : "/img/logo_black.svg"} />
@@ -106,7 +106,7 @@ class Header extends React.Component {
               <SelectLanguage langs={langs} className="select-languages" transparent={transparent ? 1 : 0} />
             </LanguageContainer>
           </GridWrapper>
-        </FixedContainer>
+        </Flex>
       </Wrapper>
     );
   }
@@ -138,14 +138,14 @@ const GridWrapper = styled(Grid)`
 const LanguageContainer = styled(Cell)`
   text-align: right;
   order: 1;
-  ${media.md`
+  ${media.lg`
     order: 2;
   `}
 `;
 
 const MenuContainer = styled(Cell)`
   order: 2;
-  ${media.md`
+  ${media.lg`
     order: 1;
   `}
 `;
