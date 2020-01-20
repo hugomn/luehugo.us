@@ -19,26 +19,22 @@ const Rsvp = props => {
         <MainTitle title="index.rsvp.title" subtitle="index.rsvp.subtitle" />
         {confirmation ? (
           <>
-            <Subtitle>
-            Obrigado!
-            </Subtitle>
+            <Subtitle>Obrigado!</Subtitle>
             <BtnLink mt={4} to="/rsvp" secondary>
               Confirmar outro convidado
             </BtnLink>
           </>
         ) : (
           <>
-            <Subtitle>
-              Digite seus dados e confirme sua presença abaixo.
-            </Subtitle>
-            <Card p="5" mt="5">
-              <form className="email-form" name="rsvp" method="POST" data-netlify="true" action="/rsvp/sucesso">
+            <Subtitle>Digite seus dados e confirme sua presença abaixo.</Subtitle>
+            <Card p="5" mt="5" mx={[1, 3, 5, 7]} textAlign="center">
+              <Form className="email-form" name="rsvp" method="POST" data-netlify="true" action="/rsvp/sucesso">
                 <Flex flexDirection="column">
                   <Input type="hidden" name="form-name" value="rsvp" />
                   <Label htmlFor="name" fontWeight="500">
                     Nome:
                   </Label>
-                  <Input type="text" name="name" placeholder="Digite seu nome:" id="name" required mb="4" />
+                  <Input type="text" name="name" placeholder="Digite seu nome " id="name" required mb="4" />
                   <Label htmlFor="email" fontWeight="500">
                     Email:
                   </Label>
@@ -46,45 +42,44 @@ const Rsvp = props => {
                   <Label htmlFor="song">Alguma música especial que gostaria de ouvir?</Label>
                   <Input type="text" name="song" placeholder="Digite sua música favorita" id="song" mb="4" />
                   <Label htmlFor="comment">Algum comentário adicional?</Label>
-                  <Input type="text" name="comment" placeholder="Deixe sua mensagem" id="comment" required mb="4" />
+                  <Input type="text" name="comment" placeholder="Deixe sua mensagem" id="comment" required mb="5" />
                   <Button type="submit">Confirmar</Button>
                 </Flex>
-              </form>
+              </Form>
             </Card>
           </>
         )}
-
-        {/* <button onClick={handleSubmit}>Enviar</button>
-        <Iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSe0tiP_8Ys_0DCJSrV5EHy0wG-9LNhTzCjmU6iadP8Ed5uU8A/viewform?embedded=true"
-          width="100%"
-          height="1372"
-          frameBorder="0"
-          marginHeight="0"
-          marginWidth="0"
-        >
-          Loading…
-        </Iframe> */}
       </FixedContainer>
     </Layout>
   );
 };
 
+const Form = styled.form`
+  width: 100%;
+`;
+
 const Label = styled.label`
   ${typography}
+  margin-bottom: 8px;
 `;
 
 const Input = styled.input`
-  width: 100%;
   font-size: ${({ theme: t }) => t.scale(0.2)};
   padding: 18px 12px;
   border-radius: 4px;
   border: 1px solid ${({ theme: t }) => t.colors.lightColors[3]};
+  font-family: ${({ theme: t }) => t.fonts.Poppins};
+  color: ${({ theme: t }) => t.colors.dark[1]};
   ${space}
-`;
-
-const Iframe = styled.iframe`
-  margin-top: 86px;
+  &::placeholder {
+    color: ${({ theme: t }) => t.colors.lightColors[3]};
+  }
+  &:focus,
+  &:active {
+    outline: none;
+    border: 1px solid ${props => props.theme.colors.brand};
+    box-shadow: 0px 0px 1px 0px ${props => props.theme.colors.brand};
+  }
 `;
 
 Rsvp.propTypes = {

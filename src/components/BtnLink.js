@@ -17,6 +17,7 @@ const BtnLink = styled(Link)`
   transition: 0.3s;
   border-width: 0px;
   line-height: 24px;
+  cursor: pointer;
   ${space};
   &:hover {
     background-color: ${({ secondary, theme }) => (secondary ? theme.colors.brand : theme.colors.accentColors[0])};
