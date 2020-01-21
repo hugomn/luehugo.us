@@ -20,8 +20,8 @@ const Gifts = () => {
         criaremos uma campanha de financiamento colaborativo, onde mostraremos exatamente o valor que arracadamos, e
         oferecemos também a opção de nos presentear com alguma experiência ou algo do nosso dia-a-dia.
       </Subtitle>
-      <Grid gridTemplateColumns={["auto", "auto", "1fr 1fr"]} px={[4, 6]} gridGap={5} mb="4">
-        <Card px={[4, 3]} data-sal="slide-right" data-sal-delay="0" justifyContent="center">
+      <Grid gridTemplateColumns={["auto", "auto", "1fr 1fr"]} px={[1, 6]} gridGap={[4, 6]} mb={[1, 4]}>
+        <Card px={[2, 3]} data-sal="slide-right" data-sal-delay="0" justifyContent="center">
           <Grid columns={1} rows="1fr auto" textAlign="center">
             <Body>
               <Img src="/img/crowdfunding.svg" mt={4} />
@@ -35,7 +35,7 @@ const Gifts = () => {
             </BtnLink>
           </Grid>
         </Card>
-        <Card px={[3, 3]} data-sal="slide-left" data-sal-delay="200" justifyContent="center">
+        <Card px={[2, 3]} data-sal="slide-left" data-sal-delay="200" justifyContent="center">
           <Grid columns={1} rows="1fr auto" textAlign="center">
             <Box>
               <Img src="/img/gifts.svg" mt={4} />

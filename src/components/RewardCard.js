@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Grid, Cell } from "styled-css-grid";
 import Img from "gatsby-image";
-import PaypalButton from "./PaypalButton";
 import Card from "./Card";
 import { layout, typography } from "styled-system";
 import { Box } from "./Box";
@@ -36,7 +35,7 @@ const RewardCard = ({ reward, onContribute }) => {
               </Box>
             </Cell>
             <Footer>
-              <Button onClick={() => onContribute(reward)}>Contribuir</Button>
+              <StyledButton onClick={() => onContribute(reward)}>Contribuir</StyledButton>
             </Footer>
           </ContentWrapper>
         </Cell>
@@ -70,6 +69,10 @@ const Image = styled(Img)`
   height: 90px;
   width: 90px;
   border-radius: 50%;
+`;
+
+const StyledButton = styled(Button)`
+  width: calc(100% - 46px);
 `;
 
 RewardCard.propTypes = {

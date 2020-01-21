@@ -13,13 +13,13 @@ const Rsvp = () => {
         <Box data-sal="slide-left" data-sal-delay="300">
           <MainTitle title="index.rsvp.title" subtitle="index.rsvp.subtitle" dark secondary />
           <Flex alignItems="center" flexDirection="column">
-            <Text mb={5} color="white" maxWidth="440px" textAlign="center">
+            <Text mb={5} mt={2} color="white" maxWidth="420px" textAlign="center">
               Ter você conosco nesse dia será uma grande alegria! Por favor, confirme sua presença até dia 18 de Abril
               de 2020.
             </Text>
           </Flex>
           <Box textAlign="center">
-            <BtnLink mt={4} to="/rsvp" secondary>
+            <BtnLink mt={3} px={4} to="/rsvp" secondary>
               Confirmar presença
             </BtnLink>
           </Box>

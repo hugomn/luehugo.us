@@ -13,7 +13,7 @@ const Footer = ({ author, langs, sourceCodeLink, currentLangKey }) => {
   return (
     <Wrapper>
       <FixedContainer>
-        <Grid columns="repeat(auto-fit,minmax(220px,1fr))">
+        <Grid columns="1">
           <LeftCell middle>
             <span>
               Designed with <HeartIcon /> by{" "}
@@ -37,11 +37,15 @@ const Footer = ({ author, langs, sourceCodeLink, currentLangKey }) => {
 };
 
 const Wrapper = styled.footer`
-  padding: 10px 30px;
-  font-size: 0.8rem;
+  padding: 10px 5px;
+  font-size: 0.4rem;
   color: rgba(0, 0, 0, 0.44);
   background: rgba(255, 255, 255, 0.97);
   box-shadow: 0 -3px 8px 0 rgba(0, 0, 0, 0.05);
+  ${media.md`
+    padding: 10px 30px;
+    font-size: 0.8rem;
+  `}
 `;
 
 const GatsbyIcon = styled.img`
@@ -72,7 +76,7 @@ const LeftCell = styled(Cell)`
   text-align: center;
   height: 68px;
   ${media.md`
-    text-align: left;
+    text-align: center;
   `};
 `;
 

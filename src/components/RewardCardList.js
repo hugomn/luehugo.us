@@ -8,7 +8,7 @@ import RewardCard from "./RewardCard";
 const RewardCardList = props => {
   return (
     <nav>
-      <StyledGrid gap="30px">
+      <StyledGrid>
         {props.rewards.map(reward => (
           <Cell key={reward.name}>
             <RewardCard reward={reward} {...props} />
@@ -20,10 +20,11 @@ const RewardCardList = props => {
 };
 
 const StyledGrid = styled(Grid)`
-  grid-template-columns: 86%;
+  grid-template-columns: 96%;
   justify-content: center;
+  grid-gap: 40px;
   ${media.sm`
-    grid-template-columns: repeat(auto-fit,minmax(360px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
     align-content: stretch;
   `}
 `;

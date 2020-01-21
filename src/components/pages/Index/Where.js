@@ -15,7 +15,7 @@ const Where = () => {
         confortáveis.
       </Subtitle>
       <Box textAlign="center">
-        <BtnLink mt={4} to="/rsvp">
+        <BtnLink mt={4} to="/rsvp" px={5}>
           Ver no mapa
         </BtnLink>
       </Box>

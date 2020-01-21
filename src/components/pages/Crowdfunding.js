@@ -59,6 +59,7 @@ const Crowdfunding = props => {
           <ProgressBar percentage={percentage} />
         </ProgressBarWrapper>
         <H3 mb={4}>Escolha algum dos valores abaixo:</H3>
+
         <Modal open={modalOpen} onClose={() => setModalOpen(false)} center styles={{ modal: { borderRadius: "6px" } }}>
           <H3 mb={4} pt={0} textAlign="center" color="dark.1">
             Escolha uma forma de pagamento:
@@ -92,75 +93,6 @@ const Crowdfunding = props => {
         </Modal>
 
         <RewardCardList rewards={rewards} onContribute={handleContribute} />
-
-        {/* <StyledGrid>
-          <StyledCard>
-            <CardPrice>
-              <span>R$2</span>
-            </CardPrice>
-            <CardDescription>
-              Qualquer ajuda é mega bem-vinda. Além de comemorar conosco no nosso grande dia, você receberá um{" "}
-              <b>adesivo exclusivo do casamento</b> criado pela <b>Lunara</b>.
-            </CardDescription>
-            <CardButton>
-              <Button onClick={() => setModalOpen(true)} />
-              <PaypalButton id="TEBDXBDM8WM2A" />
-            </CardButton>
-          </StyledCard>
-          <StyledCard>
-            <CardPrice>
-              <span>R$60</span>
-            </CardPrice>
-            <CardDescription>
-              Qualquer ajuda é mega bem-vinda. Além de comemorar conosco no nosso grande dia, você receberá um{" "}
-              <b>adesivo exclusivo do casamento</b> criado pela <b>Lunara</b>.
-            </CardDescription>
-            <CardButton>
-              <PaypalButton id="KHA4STBGNH7DE" />
-            </CardButton>
-          </StyledCard>
-          <StyledCard>
-            <CardPrice>
-              <span>R$200</span>
-            </CardPrice>
-            <CardDescription>
-              Agradecemos de coração! Além de vários shots com os noivos, você receberá <b>uma super caneca</b> com a a
-              arte do casamento criada pela <b>Lunara</b>.
-            </CardDescription>
-            <CardButton>
-              <PaypalButton id="D5VHBYQFHKWE8" />
-            </CardButton>
-            <Text>
-              <a href="https://www49.bb.com.br/pagar-receber/#/cm49eyJvcHIiOiJwZyIsImlkIjoiNGE3MDhmZTgtNzFjZC00ZmFjLTgxOGYtZTE0YzRlMDYyMjNiIn0=">
-                Pagar via BB
-              </a>
-            </Text>
-          </StyledCard>
-          <StyledCard>
-            <CardPrice>
-              <span>R$500</span>
-            </CardPrice>
-            <CardDescription>
-              Agradecemos de coração! Além de vários shots com os noivos, você receberá <b>uma super caneca</b> com a a
-              arte do casamento criada pela <b>Lunara</b>.
-            </CardDescription>
-            <CardButton>
-              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_s-xclick" />
-                <input type="hidden" name="hosted_button_id" value="D5VHBYQFHKWE8" />
-                <input
-                  type="image"
-                  src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
-                  border="0"
-                  name="submit"
-                  title="PayPal - The safer, easier way to pay online!"
-                  alt="Donate with PayPal button"
-                />
-                <img alt="" border="0" src="https://www.paypal.com/en_BR/i/scr/pixel.gif" width="1" height="1" />
-              </form>
-            </CardButton>
-          </StyledCard>
-        </StyledGrid> */}
       </FixedContainer>
     </Layout>
   );

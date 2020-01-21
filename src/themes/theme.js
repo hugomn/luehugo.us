@@ -4,8 +4,8 @@ const round = (x, n) => Math.round(x * (n * 10)) / (n * 10);
 const scaleN = n => round(Math.pow(1.2, n), 3);
 const scale = n => `${scaleN(n)}rem`;
 
-const brandColor = "#4caf50";
-const accentColors = ["#D2AB65", "#D1DFD2", "red"];
+const brandColor = "#70A076";
+const accentColors = ["#D2AB65", "#D1DFD2", "#527556", "#AC8C53"];
 const dark = ["#333E49", "#484848", "#747474", "#B9C2CE"];
 const lightColors = ["#FFFFFF", "#F6F6F8", "#EFEFEF", "#D7D7D7"];
 
