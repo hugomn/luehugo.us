@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import styled, { createGlobalStyle, ThemeProvider, css } from "styled-components";
 import { StaticQuery, graphql, withPrefix } from "gatsby";
 import { IntlProvider, FormattedMessage } from "react-intl";
 import en from "../data/messages/en";
@@ -65,13 +65,17 @@ const Layout = props => {
   );
 };
 
+const bodyStyle = css`
+  color: ${props => props.theme.color};
+  font-family: ${props => props.theme.fonts.Poppins};
+  font-feature-settings: 'calt' 1, 'clig' 1, 'dlig' 1, 'kern' 1, 'liga' 1, 'salt' 1;
+  font-weight: 300;
+  line-height: ${props => props.theme.lineHeight};
+`;
+
 const GlobalStyle = createGlobalStyle`
   body {
-    color: ${props => props.theme.color};
-    font-family: ${props => props.theme.fonts.Poppins};
-    font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
-    font-weight: 300;
-    line-height: ${props => props.theme.lineHeight};
+    ${bodyStyle}
   }
   a {
     color: ${props => props.theme.a.color.light};
@@ -162,6 +166,7 @@ const Main = styled.main`
 `;
 
 const BodyContainer = styled.div`
+  ${bodyStyle}
   background-color: ${props => props.theme.bg};
   bottom: 0;
   left: 0;
