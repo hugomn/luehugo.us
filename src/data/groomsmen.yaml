@@ -1,27 +1,27 @@
-- name: Caio Moreira
+- name: Caio
   image: ../images/groomsmen/caio.jpeg
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-- name: Rafael Costa
+  description: O primo, quase irmão, representando toda a família Magalhães.
+- name: Chequer
+  image: ../images/groomsmen/chequer.jpeg
+  description: Um dos melhores amigos da faculdade, companheiro dos luais na UFV e dos jogos do Mengão.
+- name: Rafa
   image: ../images/groomsmen/rafa.jpeg
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-- name: Gabriel Chequer
-  image: ../images/groomsmen/chequer.jpeg
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-- name: Michael Filippo 
+- name: Mike 
   image: ../images/groomsmen/mike.jpeg
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-- name: Ricardo Verly
+  description: Amizade que BH trouxe. Companheiro de viagens incríveis. Acompanhou o casal desde o início.
+- name: Ricardo
   image: ../images/groomsmen/ricardo.jpeg
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-- name: Leonardo Pimenta
+  description: Presente de Viçosa. Grande amigo do novo, que se tornou grande amigo do casal.
+- name: Leo
   image: ../images/groomsmen/leo.jpeg
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-- name: Jonas Oliveira
+  description: Cunhado, companheiro de viagens e de alguns litros de cerveja na Oktoberfest.
+- name: Joninhas
   image: ../images/groomsmen/jonas.jpeg
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-- name: Marco Antônio
+  description: Grande amizade iniciado num carnaval em Pompéu. Daqueles amigos pra qualquer situação. Sujo.
+- name: Marat
   image: ../images/groomsmen/marat.jpeg
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-- name: Murilo Morgado
+  description: Amigo do Opção, da época do pré-vestibular. Daqueles que faz falta em qualquer encontro.
+- name: Murilo
   image: ../images/groomsmen/murilo.jpeg
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  description: O companheiro de quarto, dos atrasos nas aulas de redes e de tantas outras coisas na UFV.

@@ -13,7 +13,7 @@ const colors = {
   brand: brandColor,
   accentColors,
   white: "#FFFFFF",
-  black: dark[1],
+  black: dark[2],
   dark,
   lightColors
 };

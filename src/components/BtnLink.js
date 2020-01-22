@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
-import { space } from "styled-system";
+import { space, width } from "styled-system";
 
 const BtnLink = styled(Link)`
   box-sizing: border-box;
@@ -19,6 +19,7 @@ const BtnLink = styled(Link)`
   line-height: 24px;
   cursor: pointer;
   ${space};
+  ${width}
   &:hover {
     background-color: ${({ secondary, theme }) =>
     secondary ? theme.colors.accentColors[3] : theme.colors.accentColors[2]};

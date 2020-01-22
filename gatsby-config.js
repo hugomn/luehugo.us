@@ -146,6 +146,11 @@ module.exports = {
         name: "images"
       }
     },
-    `gatsby-plugin-scroll-reveal`
+    {
+      resolve: `gatsby-plugin-scroll-reveal`,
+      options: {
+        disable: true
+      }
+    }
   ]
 };
