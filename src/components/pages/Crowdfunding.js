@@ -35,7 +35,8 @@ const Crowdfunding = props => {
         <Subtitle>
           <i>Crowdfunding</i> (ou Financiamento Colaborativo) é uma nova abordagem em que diversas pessoas, participando
           com pequenas contribuições, fazem um grande projeto acontecer. Considerando nosso contexto atual, e a nossa
-          vontade de fazer um evento inesquecível, decidimos utilizar o crowdfunding como ferramenta.
+          vontade de fazer um evento inesquecível, decidimos abrir esse projeto para que nossos amigos nos ajudem a fazer
+          esse dia acontecer! Será um presente inesquecível pra nós!
         </Subtitle>
         <Container display="flex" flexDirection={["column", "row"]} justifyContent="space-around">
           <Column flexBasis="33%">

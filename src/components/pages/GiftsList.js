@@ -12,10 +12,8 @@ const Gifts = props => {
       <FixedContainer pt="4" pb="4">
         <MainTitle title="page.gifts.title" subtitle="page.gifts.subtitle" />
         <Subtitle mb={5}>
-          Nosso maior presente será poder celebrar esse momento tão especial com nossos amados familiares e amigos. E
-          além disso, nós moramos atualmente em Berlim, o que dificulta trazer qualquer presente na mala. Sendo assim,
-          criaremos uma campanha de financiamento colaborativo, onde mostraremos exatamente o valor que arracadamos, e
-          oferecemos também a opção de nos presentear com alguma experiência ou algo do nosso dia-a-dia.
+          Como já temos nossa casinha em Berlim quase pronta e cabe pouca coisa na mala, pensamos que nossa lista de presentes poderia ser uma
+          mistura de experiências especiais que ainda não vivemos e algumas coisinhas que vão nos proporcionar momentos de lazer e relaxamento.
         </Subtitle>
 
         <GiftCardList gifts={gifts} />
