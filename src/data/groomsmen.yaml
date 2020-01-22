@@ -25,3 +25,6 @@
 - name: Murilo
   image: ../images/groomsmen/murilo.jpeg
   description: O companheiro de quarto, dos atrasos nas aulas de redes e de tantas outras coisas na UFV.
+- name: Guto
+  image: ../images/groomsmen/guto.jpeg
+  description: O companheiro de quarto, dos atrasos nas aulas de redes e de tantas outras coisas na UFV.
