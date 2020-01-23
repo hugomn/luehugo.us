@@ -28,7 +28,7 @@ const Index = props => {
               20
             </DateBox>
           </TitleContainer>
-          <Video playsinline autoPlay muted loop id="myVideo" poster="/img/poster.jpg">
+          <Video playsInline autoPlay muted loop id="myVideo">
             <source src="video.mp4" type="video/mp4" />
           </Video>
         </VideoContainer>
@@ -123,7 +123,6 @@ const VideoContainer = styled.div`
     width: 100%;
     height: 100%;
     z-index: 1;
-    /* background: rgba(0, 0, 0, 0.8); */
     background: rgba(0, 0, 0, 0.45);
   }
 `;
