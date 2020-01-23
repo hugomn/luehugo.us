@@ -28,7 +28,7 @@ const Index = props => {
               20
             </DateBox>
           </TitleContainer>
-          <Video playsinline autoPlay muted loop id="myVideo">
+          <Video playsinline autoPlay muted loop id="myVideo" poster="/img/poster.jpg">
             <source src="video.mp4" type="video/mp4" />
           </Video>
         </VideoContainer>
