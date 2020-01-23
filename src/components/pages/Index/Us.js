@@ -42,7 +42,7 @@ const Us = () => {
             Hugo
           </Text>
           <Text textAlign="center">
-            "Hugo é uma pessoal incrível em tantas formas, que me faz sentir amada e afortunada todos os dias! É difícil às vezes acreditar que
+            "Ele é uma pessoal incrível em tantas formas, que me faz sentir amada e afortunada todos os dias! É difícil às vezes acreditar que
             estou prestes a casar com o grande amor da minha vida!" - <b>Lu</b>
           </Text>
         </Box>
