@@ -25,6 +25,9 @@
 - name: Aline
   image: ../images/bridesmaids/aline.jpeg
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-- name: Raíssa
+- name: Raïssa
+  image: ../images/bridesmaids/raissa.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- name: Adriana
   image: ../images/bridesmaids/raissa.jpeg
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
