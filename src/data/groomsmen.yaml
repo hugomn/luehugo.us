@@ -28,3 +28,6 @@
 - name: Guto
   image: ../images/groomsmen/guto.jpeg
   description: O nosso afilhado que hoje mora na Austrália. Queríamos morar um pouco mais perto!
+- name: Thiago
+  image: ../images/groomsmen/thiago.jpeg
+  description: O alemão.
