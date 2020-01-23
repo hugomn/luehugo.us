@@ -6,19 +6,19 @@
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 - name: Mariana
   image: ../images/bridesmaids/mari.jpeg
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  description: Amiga da noiva desde sempre, moraram juntas em BH e se tornou grande amiga do casal. Conhece toda nossa história.
 - name: Rita
   image: ../images/bridesmaids/rita.jpeg
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 - name: Jéssica
   image: ../images/bridesmaids/jessica.jpeg
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  description: Presente que BH trouxe para vida da noiva. Companheira demais! Representando nosso grupo amado, as salientes.
 - name: Ana Carolina
   image: ../images/bridesmaids/ana.jpeg
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  description: Amizade forte da Lu desde o colégio, acompanha o casal desde o início! Daquelas que faz falta demais ter por perto.
 - name: Ana Claudia
   image: ../images/bridesmaids/cau.jpeg
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  description: Cunhada amada da noiva, amizade que só fez crescer ao longo dos anos. Amiga do casal e companheira de eurotrip!
 - name: Júlia
   image: ../images/bridesmaids/julia.jpeg
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -30,4 +30,4 @@
   description: Amiga de infância da noiva, irmã por escolha. Companheira de risadas e de histórias inesquecíveis!
 - name: Adri
   image: ../images/bridesmaids/adri.jpeg
-  description: Nossa grande amiga colombiana que se tornou mais brasileira que tudo! Vibra só coisas boas.
+  description: Nossa grande amiga colombiana que se tornou mais brasileira que tudo! Vibra só coisas boas e está sempre presente.
