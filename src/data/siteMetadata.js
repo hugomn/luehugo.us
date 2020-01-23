@@ -16,13 +16,13 @@ module.exports = {
   sourceCodeLink: "https://github.com/hugomn/luehugo.us",
   disqusShortname: "hugomagalhes",
   menu: [
-    { label: "menu.us", link: "/#os-noivos" },
-    { label: "menu.story", link: "/#historia" },
-    { label: "menu.groomsmen", link: "/#padrinhos" },
-    { label: "menu.bridesmaids", link: "/#madrinhas" },
-    { label: "menu.where", link: "/#onde" },
-    { label: "menu.rsvp", link: "/#rsvp" },
-    { label: "menu.gifts", slug: "/#presentes" },
+    { label: "menu.us", slug: "/#os-noivos" },
+    { label: "menu.story", slug: "/#historia" },
+    { label: "menu.groomsmen", slug: "/#padrinhos" },
+    { label: "menu.bridesmaids", slug: "/#madrinhas" },
+    { label: "menu.where", slug: "/#onde" },
+    { label: "menu.rsvp", slug: "/#rsvp" },
+    { label: "menu.gifts", slug: "/#presentes" }
   ],
   languages,
   contact: [
