@@ -23,9 +23,11 @@ const Layout = props => {
   const { backgroundColor, children, location } = props;
   const url = location.pathname;
   const { langs, defaultLangKey } = props.data.site.siteMetadata.languages;
-  const isHome = isHomePage(url, false, langs);
+  // const isHome = isHomePage(url, false, langs);
   const langKey = getCurrentLangKey(langs, defaultLangKey, url);
   const homeLink = `/${langKey !== "pt" ? langKey : ""}`;
+  const isHome = homeLink === url;
+  console.log("[dev:hugo] isHome", isHome);
   const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)).map(item => ({
     ...item,
     link: item.link.replace(`/${defaultLangKey}/`, "/")

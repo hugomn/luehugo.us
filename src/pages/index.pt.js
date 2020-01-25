@@ -5,74 +5,43 @@ import { graphql } from "gatsby";
 export default props => <Index {...props} />;
 
 export const pageQuery = graphql`
-  query IndexPtQuery {
-    site {
-      siteMetadata {
-        author {
+  query IndexPt {
+    timeline: allTimelinePtYaml {
+      edges {
+        node {
           name
-          homeCity
-          email
-          bio
-          defaultLink
+          date(formatString: "MMMM [de] YYYY", locale: "pt-BR")
+          description
         }
       }
-    },
-    all: allMarkdownRemark(
-      limit: 3
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: {
-        frontmatter: { draft: { ne: true }, featured: { ne: true} },
-        fields: { langKey: { regex: "/(pt|any)/" } }
-      },
-    ) {
+    }
+    groomsmen: allGroomsmenPtYaml(sort: { fields: name }) {
       edges {
-        node{
-          frontmatter{
-            title,
-            date,
-            image {
-              childImageSharp{
-                  sizes(maxWidth: 750) {
-                      ...GatsbyImageSharpSizes
-                  }
+        node {
+          name
+          description
+          image {
+            childImageSharp {
+              sizes(maxWidth: 750) {
+                ...GatsbyImageSharpSizes
               }
             }
-          },
-          fields{
-            slug,
-            langKey
-          },
-          excerpt,
-          timeToRead
+          }
         }
       }
-    },
-    featured: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: {
-        frontmatter: { draft: { ne: true }, featured: { eq: true} },
-        fields: { langKey: { regex: "/(pt|any)/" } }
-      },
-    ) {
+    }
+    bridesmaids: allBridesmaidsPtYaml(sort: { fields: name }) {
       edges {
-        node{
-          frontmatter{
-            title,
-            date,
-            image {
-              childImageSharp{
-                  sizes(maxWidth: 750) {
-                      ...GatsbyImageSharpSizes
-                  }
+        node {
+          name
+          description
+          image {
+            childImageSharp {
+              sizes(maxWidth: 750) {
+                ...GatsbyImageSharpSizes
               }
             }
-          },
-          fields{
-            slug,
-            langKey
-          },
-          excerpt,
-          timeToRead
+          }
         }
       }
     }

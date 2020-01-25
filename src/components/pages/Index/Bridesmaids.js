@@ -1,7 +1,6 @@
 import React from "react";
 import MainTitle from "../../MainTitle";
 import Img from "gatsby-image";
-import { useStaticQuery, graphql } from "gatsby";
 import { Box } from "../../Box";
 import Text from "../../Text";
 import { Orator } from "../../../constants/fonts";
@@ -9,32 +8,12 @@ import { FixedContainer } from "../../FixedContainer";
 import styled from "styled-components";
 import { Flex } from "../../Flex";
 
-const Bridesmaids = () => {
-  const data = useStaticQuery(graphql`
-    query BridesmaidsQuery {
-      timeline: allBridesmaidsYaml(sort: { fields: name }) {
-        edges {
-          node {
-            name
-            description
-            image {
-              childImageSharp {
-                sizes(maxWidth: 750) {
-                  ...GatsbyImageSharpSizes
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
-  
+const Bridesmaids = props => {
   return (
     <FixedContainer>
       <MainTitle title="index.bridesmaids.title" subtitle="index.bridesmaids.subtitle" mb={4} secondary />
       <Flex justifyContent="center" flexWrap="wrap">
-        {data.timeline.edges.map(({ node }, i) => (
+        {props.data.bridesmaids.edges.map(({ node }, i) => (
           <Box
             p={["1", "4"]}
             mb={[4]}

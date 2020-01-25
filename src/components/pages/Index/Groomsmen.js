@@ -1,7 +1,6 @@
 import React from "react";
 import MainTitle from "../../MainTitle";
 import Img from "gatsby-image";
-import { useStaticQuery, graphql } from "gatsby";
 import { Box } from "../../Box";
 import Text from "../../Text";
 import { Orator } from "../../../constants/fonts";
@@ -9,32 +8,12 @@ import { FixedContainer } from "../../FixedContainer";
 import styled from "styled-components";
 import { Flex } from "../../Flex";
 
-const Groomsmen = () => {
-  const data = useStaticQuery(graphql`
-    query GroomsmenQuery {
-      timeline: allGroomsmenYaml(sort: { fields: name }) {
-        edges {
-          node {
-            name
-            description
-            image {
-              childImageSharp {
-                sizes(maxWidth: 750) {
-                  ...GatsbyImageSharpSizes
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
-  
+const Groomsmen = props => {
   return (
     <FixedContainer>
       <MainTitle title="index.groomsmen.title" subtitle="index.groomsmen.subtitle" mb={4} />
       <Flex justifyContent="center" flexWrap="wrap">
-        {data.timeline.edges.map(({ node }, i) => (
+        {props.data.groomsmen.edges.map(({ node }, i) => (
           <Box p={["1", "4"]} mb={[4]} key={node.name} flexBasis={["50%", "33%", "25%"]} data-sal="zoom-in" data-sal-delay={i * 100}>
             <Box px="3">
               <Picture sizes={node.image.childImageSharp.sizes} />

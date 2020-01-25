@@ -22,10 +22,9 @@ module.exports = {
   "index.where.subtitle": "Juiz de Fora",
   "index.rsvp.title": "RSVP",
   "index.rsvp.subtitle": "Confirm your attendance",
-  "gifts.title": "Gifts",
   "giftslist.title": "Registry",
   "page.crowdfunding.title": "Crowdfunding",
   "page.crowdfunding.subtitle": "Our dream shared",
-  "page.gifts.title": "Gifts",
-  "page.gifts.subtitle": "We appreciate your kindness"
+  "gifts.title": "Gifts",
+  "gifts.subtitle": "We appreciate your kindness"
 };

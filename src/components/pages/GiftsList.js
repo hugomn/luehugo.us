@@ -10,7 +10,7 @@ const Gifts = props => {
   return (
     <Layout location={props.location} backgroundColor="lightColors.1">
       <FixedContainer pt="4" pb="4">
-        <MainTitle title="page.gifts.title" subtitle="page.gifts.subtitle" />
+        <MainTitle title="gifts.title" subtitle="gifts.subtitle" />
         <Subtitle mb={5}>
           Como já temos nossa casinha em Berlim quase pronta e cabe pouca coisa na mala, pensamos que nossa lista de presentes poderia ser uma
           mistura de experiências especiais que ainda não vivemos e algumas coisinhas que vão nos proporcionar momentos de lazer e relaxamento.

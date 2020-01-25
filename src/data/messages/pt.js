@@ -23,10 +23,27 @@ module.exports = {
   "index.bestfriends": "Padrinhos & Madrinhas",
   "index.rsvp.title": "RSVP",
   "index.rsvp.subtitle": "Confirme sua presença",
-  "gifts.title": "Presentes",
-  "giftslist.title": "Lista de Presentes",
   "page.crowdfunding.title": "Financiamento colaborativo",
   "page.crowdfunding.subtitle": "Nosso sonho compartilhado",
-  "page.gifts.title": "Presentes",
-  "page.gifts.subtitle": "Agradecemos o carinho"
+  "us.statement.hugo":
+    "Ele é uma pessoal incrível em tantas formas, que me faz sentir amada e afortunada todos os dias! É difícil às vezes acreditar que estou prestes a casar com o grande amor da minha vida!",
+  "us.statement.lunara":
+    "Ela tem todas as nuances de uma pessoa ímpar, intensa e leve. Encanta e cativa com sua empatia, amizade e inteligência. Me proporciona uma felicidade que nunca imaginei ser possível.",
+  "where.description":
+    "Nossa celebração e recepção serão realizadas no <b>Bosque São Pedro</b> (rua Dimas Bergo Xisto, 396 - São Pedro, Juiz de Fora). A cerimônia será às 16h em uma área de gramado. Lembre-se de garantir calçados confortáveis.",
+  "where.action": "Ver no mapa",
+  "rsvp.description":
+    "Ter você conosco nesse dia será uma grande alegria! Por favor, confirme sua presença até dia 18 de Abril de 2020.",
+  "rsvp.action": "Confirmar presença",
+  "giftslist.title": "Lista de Presentes",
+  "gifts.title": "Presentes",
+  "gifts.subtitle": "Agradecemos o carinho",
+  "gifts.description":
+    "Nosso maior presente será celebrar esse momento tão especial com vocês! Moramos em Berlim, o que nos impossibilita levar presentes na mala. Por isso criamos a opção de presentear-nos ajudando a nossa campanha de financiamento colaborativo do nosso grande dia! E se você desejar, também tem a opção de nos presentear com alguma experiência ou algo do nosso dia-a-dia.",
+  "gifts.crowdfunding.title": "Contribuir com o nosso dia",
+  "gifts.crowdfunding.description": "Deseja nos presentear com a sua participação na nossa campanha de arrecadação?",
+  "gifts.crowdfunding.action": "Participar da campanha",
+  "gifts.list.title": "Lista virtual de presentes",
+  "gifts.list.description": "Quer nos presentear com uma experiência ou algo que ainda não temos em nossa casinha?",
+  "gifts.list.action": "Ver lista de presentes"
 };

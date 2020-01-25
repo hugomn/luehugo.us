@@ -9,29 +9,26 @@ import { Grid } from "../../Grid";
 import { Box } from "../../Box";
 import Text from "../../Text";
 import Card from "../../Card";
+import { useIntl } from "react-intl";
 
 const Gifts = () => {  
+  const intl = useIntl();
   return (
     <FixedContainer>
       <MainTitle title="index.gifts.title" subtitle="index.gifts.subtitle" />
-      <Subtitle mb={5}>
-        Nosso maior presente será celebrar esse momento tão especial com vocês! Moramos em Berlim, o que nos
-        impossibilita levar presentes na mala. Por isso criamos a opção de presentear-nos ajudando a nossa campanha de
-        financiamento colaborativo do nosso grande dia! E se você desejar, também tem a opção de nos presentear com alguma experiência
-        ou algo do nosso dia-a-dia.
-      </Subtitle>
+      <Subtitle mb={5}>{intl.formatMessage({ id: "gifts.description" })}</Subtitle>
       <Grid gridTemplateColumns={["auto", "auto", "1fr 1fr"]} px={[1, 6]} gridGap={[4, 6]} mb={[1, 4]}>
         <Card px={[4, 3]} data-sal="slide-right" data-sal-delay="0" justifyContent="center">
           <Grid columns={1} rows="1fr auto" textAlign="center">
             <Body>
               <Img src="/img/crowdfunding.svg" mt={4} />
               <Text fontSize={18} color="dark.1" fontWeight="500" mt="2" mb="2">
-                Contribuir com o nosso dia
+                {intl.formatMessage({ id: "gifts.crowdfunding.title" })}
               </Text>
-              <Text>Deseja nos presentear com a sua participação na nossa campanha de arrecadação?</Text>
+              <Text>{intl.formatMessage({ id: "gifts.crowdfunding.description" })}</Text>
             </Body>
             <BtnLink to="/presentes/crowdfunding" my="4" mx="4">
-              Participar da campanha
+              {intl.formatMessage({ id: "gifts.crowdfunding.action" })}
             </BtnLink>
           </Grid>
         </Card>
@@ -40,12 +37,12 @@ const Gifts = () => {
             <Box>
               <Img src="/img/gifts.svg" mt={4} />
               <Text fontSize={18} color="dark.1" fontWeight="500" mt="2" mb="2">
-                Lista virtual de presentes
+                {intl.formatMessage({ id: "gifts.list.title" })}
               </Text>
-              <Text>Quer nos presentear com uma experiência ou algo que ainda não temos em nossa casinha? </Text>
+              <Text>{intl.formatMessage({ id: "gifts.list.description" })}</Text>
             </Box>
             <BtnLink to="/presentes/lista" my="40px" mx="4">
-              Ver lista de presentes
+              {intl.formatMessage({ id: "gifts.list.action" })}
             </BtnLink>
           </Grid>
         </Card>

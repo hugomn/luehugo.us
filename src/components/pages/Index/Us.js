@@ -1,6 +1,5 @@
 import React from "react";
 import MainTitle from "../../MainTitle";
-import Subtitle from "../../Subtitle";
 import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
 import { Grid } from "../../Grid";
@@ -8,8 +7,10 @@ import { Box } from "../../Box";
 import Text from "../../Text";
 import { Orator } from "../../../constants/fonts";
 import { FixedContainer } from "../../FixedContainer";
+import { useIntl } from "react-intl";
 
 const Us = () => {
+  const intl = useIntl();
   const data = useStaticQuery(graphql`
     query UsQuery {
       groomImage: file(relativePath: { eq: "images/groom2.png" }) {
@@ -18,7 +19,7 @@ const Us = () => {
             ...GatsbyImageSharpSizes
           }
         }
-      },
+      }
       brideImage: file(relativePath: { eq: "images/bride2.png" }) {
         childImageSharp {
           sizes(maxWidth: 800, quality: 90) {
@@ -28,7 +29,7 @@ const Us = () => {
       }
     }
   `);
-  
+
   return (
     <FixedContainer>
       <MainTitle mb={4} title="index.us.title" subtitle="index.us.subtitle" />
@@ -42,8 +43,7 @@ const Us = () => {
             Hugo
           </Text>
           <Text textAlign="center">
-            "Ele é uma pessoal incrível em tantas formas, que me faz sentir amada e afortunada todos os dias! É difícil às vezes acreditar que
-            estou prestes a casar com o grande amor da minha vida!" - <b>Lu</b>
+            {intl.formatMessage({ id: "us.statement.hugo" })} - <b>Lu</b>
           </Text>
         </Box>
         <Box px={[3, 5]} data-sal="slide-left" data-sal-delay="200">
@@ -54,8 +54,7 @@ const Us = () => {
             Lunara
           </Text>
           <Text textAlign="center">
-            "Ela tem todas as nuances de uma pessoa ímpar, intensa e leve. Encanta e cativa com sua
-            empatia, amizade e inteligência. Me proporciona uma felicidade que nunca imaginei ser possível." - <b>Hugo</b>
+            {intl.formatMessage({ id: "us.statement.lunara" })} - <b>Hugo</b>
           </Text>
         </Box>
       </Grid>

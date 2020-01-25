@@ -9,28 +9,23 @@ import Card from "../../Card";
 import styled from "styled-components";
 import { media } from "../../../constants/responsive";
 import { Flex } from "../../Flex";
+// import { useIntl } from "react-intl";
 
-const TImeline = () => {
-  const data = useStaticQuery(graphql`
-    query TimelineQuery {
-      timeline: allTimelineYaml {
-        edges {
-          node {
-            name
-            date(formatString: "MMMM [de] YYYY", locale: "pt-BR")
-            description
-          }
-        }
-      }
-    }
-  `);
-  
+// export const queryPt = graphql`
+//   query TimelinePtQuery {
+    
+//   }
+// `;
+
+const TImeline = props => {
+  // const intl = useIntl();
+  // const data = useStaticQuery(intl.locale === "pt" ? queryPt : queryEn);
   return (
     <FixedContainer>
       <MainTitle title="index.timeline.title" subtitle="index.timeline.subtitle" mb={4} />
       <Box pl={["3.4em", "5em"]} pr={["0", "5em"]}>
         <Wrapper gridTemplateColumns={["1fr", "1fr", "1fr 1fr"]} gridGap="4.75rem">
-          {data.timeline.edges.map(({ node }, i) => (
+          {props.data.timeline.edges.map(({ node }, i) => (
             <ItemCard
               gridRow={[`${i + 1} / ${i + 2}`]}
               gridColumn={[1, 1, (i % 2) + 1]}

@@ -1,0 +1,33 @@
+- name: Lara
+  image: ../images/bridesmaids/lara.jpeg
+  description: Hugo's older sister.
+- name: Laiz
+  image: ../images/bridesmaids/laiz.jpeg
+  description: Irmã do noivo, seu tamanho não representa sua grandeza. Companheira de Oktoberfest e de viagens pela Europa.  
+- name: Mariana
+  image: ../images/bridesmaids/mari.jpeg
+  description: Amiga da noiva desde sempre, moraram juntas em BH e se tornou grande amiga do casal. Conhece toda nossa história.
+- name: Rita
+  image: ../images/bridesmaids/rita.jpeg
+  description: Nos tempos da faculdade toda a sala do noivo conhecia a Rita, pelo menos de nome. Esposa do Murilo, mãe da Isabela e grandes amigos do casal.
+- name: Jéssica
+  image: ../images/bridesmaids/jessica.jpeg
+  description: Presente que BH trouxe para vida da noiva. Companheira demais! Representando nosso grupo amado, as salientes.
+- name: Ana Carolina
+  image: ../images/bridesmaids/ana.jpeg
+  description: Amizade forte da Lu desde o colégio, acompanha o casal desde o início! Daquelas que faz falta demais ter por perto.
+- name: Ana Claudia
+  image: ../images/bridesmaids/cau.jpeg
+  description: Cunhada amada, amizade que só cresce há mais de 10 anos. Amiga do casal e companheira de eurotrip!
+- name: Júlia
+  image: ../images/bridesmaids/julia.jpeg
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- name: Aline
+  image: ../images/bridesmaids/aline.jpeg
+  description: '"Madrinha" desde sempre, por ter se tornado grande amiga do noivo. Rio x Berlim não afastou essa amizade.'
+- name: Raïssa
+  image: ../images/bridesmaids/raissa.jpeg
+  description: Amiga de infância da noiva, irmã por escolha. Parceira de risadas e histórias inesquecíveis!
+- name: Adri
+  image: ../images/bridesmaids/adri.jpeg
+  description: Grande amiga colombiana que já é mais brasileira que muitos! Vibra só coisas boas e está sempre presente.

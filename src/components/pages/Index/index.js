@@ -37,13 +37,13 @@ const Index = props => {
             <Us />
           </Box>
           <TimelineBox id="historia" py={["4", "5"]} backgroundColor="lightColors.1">
-            <Timeline />
+            <Timeline {...props} />
           </TimelineBox>
           <Box id="padrinhos" py={["4", "5"]}>
-            <Groomsmen />
+            <Groomsmen {...props} />
           </Box>
           <Box id="madrinhas" py="5" backgroundColor="lightColors.1">
-            <Bridesmaids />
+            <Bridesmaids {...props} />
           </Box>
           <WhereBox id="onde" pt="5" pb="6">
             <Where />
