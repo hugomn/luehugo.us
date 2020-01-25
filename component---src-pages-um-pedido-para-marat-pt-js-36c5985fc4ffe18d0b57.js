@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[24],{ha2O:function(n,a,e){"use strict";e.r(a);var t=e("q1tI"),r=e.n(t),c=e("RVFz");a.default=function(){return r.a.createElement(c.a,{name:"marat"})}}}]);
-//# sourceMappingURL=component---src-pages-um-pedido-para-marat-pt-js-36c5985fc4ffe18d0b57.js.map

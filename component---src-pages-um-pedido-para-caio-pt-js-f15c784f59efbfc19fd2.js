@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{"O/Od":function(n,e,a){"use strict";a.r(e);var t=a("q1tI"),c=a.n(t),o=a("RVFz");e.default=function(){return c.a.createElement(o.a,{name:"caio"})}}}]);
-//# sourceMappingURL=component---src-pages-um-pedido-para-caio-pt-js-f15c784f59efbfc19fd2.js.map

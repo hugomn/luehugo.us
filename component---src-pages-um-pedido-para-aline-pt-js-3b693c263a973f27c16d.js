@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{mG5j:function(n,e,a){"use strict";a.r(e);var t=a("q1tI"),c=a.n(t),i=a("RVFz");e.default=function(){return c.a.createElement(i.a,{name:"aline"})}}}]);
-//# sourceMappingURL=component---src-pages-um-pedido-para-aline-pt-js-3b693c263a973f27c16d.js.map

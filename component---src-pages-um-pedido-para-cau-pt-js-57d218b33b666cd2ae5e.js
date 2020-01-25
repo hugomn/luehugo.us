@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{kJ1w:function(n,e,a){"use strict";a.r(e);var t=a("q1tI"),c=a.n(t),u=a("RVFz");e.default=function(){return c.a.createElement(u.a,{name:"cau"})}}}]);
-//# sourceMappingURL=component---src-pages-um-pedido-para-cau-pt-js-57d218b33b666cd2ae5e.js.map

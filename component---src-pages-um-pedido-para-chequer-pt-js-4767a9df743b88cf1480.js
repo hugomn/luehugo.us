@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{Obut:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),u=t.n(a),c=t("RVFz");n.default=function(){return u.a.createElement(c.a,{name:"chequer"})}}}]);
-//# sourceMappingURL=component---src-pages-um-pedido-para-chequer-pt-js-4767a9df743b88cf1480.js.map

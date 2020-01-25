@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[29],{KbJq:function(n,a,e){"use strict";e.r(a);var t=e("q1tI"),r=e.n(t),s=e("RVFz");a.default=function(){return r.a.createElement(s.a,{name:"raissa"})}}}]);
-//# sourceMappingURL=component---src-pages-um-pedido-para-raissa-pt-js-d7b47a5b1f9c6c56c271.js.map
