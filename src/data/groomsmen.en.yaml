@@ -1,33 +1,34 @@
 - name: Caio
   image: ../images/groomsmen/caio.jpeg
-  description: Cousin, almost a brother.
+  description: 
 - name: Chequer
   image: ../images/groomsmen/chequer.jpeg
-  description: Um dos melhores amigos da faculdade, companheiro dos luais na UFV e dos jogos do Mengão.
+  description: 
 - name: Rafa
   image: ../images/groomsmen/rafa.jpeg
-  description: Irmão e melhor amigo da noiva. Aquele companheiro tanto pra partida de tênis quanto pras maiores decisões da vida!
+  description: 
 - name: Mike 
   image: ../images/groomsmen/mike.jpeg
-  description: Amizade que BH trouxe. Companheiro de viagens incríveis. Acompanhou o casal desde o início.
+  description: 
 - name: Ricardo
   image: ../images/groomsmen/ricardo.jpeg
-  description: Presente de Viçosa. Grande amigo do noivo, que se tornou grande amigo do casal.
+  description: 
 - name: Leo
   image: ../images/groomsmen/leo.jpeg
-  description: Cunhado, companheiro de viagens e de alguns litros de cerveja na Oktoberfest.
+  description: 
 - name: Joninhas
   image: ../images/groomsmen/jonas.jpeg
-  description: Grande amizade iniciado num carnaval em Pompéu. Daqueles amigos pra qualquer situação. Sujo.
+  description: 
 - name: Marat
   image: ../images/groomsmen/marat.jpeg
-  description: Amigo do Opção, da época do pré-vestibular. Daqueles que faz falta em qualquer encontro.
+  description: 
 - name: Murilo
   image: ../images/groomsmen/murilo.jpeg
-  description: O amigo e companheiro de quarto, dos atrasos nas aulas de redes e de tantas outras coisas na UFV.
+  description: 
 - name: Guto
   image: ../images/groomsmen/guto.jpeg
-  description: Nosso afilhado que hoje mora na Austrália. Que adoraríamos morar um pouco mais perto!
+  description: 
 - name: Thiago
   image: ../images/groomsmen/thiago.jpeg
-  description: Grande amigo do casal em Berlim, companheiro de Störtebeker, representando a nossa galera de lá.
+  description: 
+  

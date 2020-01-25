@@ -11,7 +11,7 @@ const GiftCardList = props => {
       <StyledGrid gap="30px">
         {props.gifts.map(gift =>
           <Cell key={gift.name}>
-            <GiftCard gift={gift} {...props} />
+            <GiftCard gift={gift} {...props} onBuy={props.onBuy} />
           </Cell>
         )}
       </StyledGrid>

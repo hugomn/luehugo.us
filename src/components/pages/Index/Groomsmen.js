@@ -14,16 +14,17 @@ const Groomsmen = props => {
       <MainTitle title="index.groomsmen.title" subtitle="index.groomsmen.subtitle" mb={4} />
       <Flex justifyContent="center" flexWrap="wrap">
         {props.data.groomsmen.edges.map(({ node }, i) => (
-          <Box p={["1", "4"]} mb={[4]} key={node.name} flexBasis={["50%", "33%", "25%"]} data-sal="zoom-in" data-sal-delay={i * 100}>
+          <Box p={["1", "4"]} mb={[4]} key={node.name} flexBasis={["50%", "33%", "25%"]} data-sal="zoom-in" data-sal-delay={(i % 4) * 100}>
             <Box px="3">
               <Picture sizes={node.image.childImageSharp.sizes} />
             </Box>
             <Text fontFamily={Orator} fontSize={3} textAlign="center" color="brand" mt="4" mb="2">
               {node.name}
             </Text>
-            <Text textAlign="center" fontSize={1}>
-              {node.description}
-            </Text>
+            {node.description && 
+              <Text textAlign="center" fontSize={1}>
+                {node.description}
+              </Text>}
           </Box>
         ))}
       </Flex>

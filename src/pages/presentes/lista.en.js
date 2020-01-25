@@ -10,8 +10,8 @@ export default props => (
 );
 
 export const pageQuery = graphql`
-  query ListaPtQuery {
-    gifts: allGiftsPtYaml {
+  query ListaEnQuery {
+    gifts: allGiftsEnYaml {
       edges {
         node {
           id
@@ -22,10 +22,10 @@ export const pageQuery = graphql`
           total
           sold
           image {
-            childImageSharp{
-                sizes(maxWidth: 750) {
-                    ...GatsbyImageSharpSizes
-                }
+            childImageSharp {
+              sizes(maxWidth: 750) {
+                ...GatsbyImageSharpSizes
+              }
             }
           }
         }

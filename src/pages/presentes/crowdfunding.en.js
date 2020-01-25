@@ -10,7 +10,7 @@ export default props => (
 );
 
 export const pageQuery = graphql`
-  query CrowdfundingPtQuery {
+  query CrowdfundingEnQuery {
     site {
       siteMetadata {
         author {
@@ -27,7 +27,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    rewards: allRewardsPtYaml {
+    rewards: allRewardsEnYaml {
       edges {
         node {
           id

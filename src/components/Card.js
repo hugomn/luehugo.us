@@ -12,7 +12,7 @@ const Card = styled.div`
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
   &:hover {
-    box-shadow: 0px 0px 1px 2px ${props => props.theme.colors.brand};
+    box-shadow: ${props => (props.disabled ? "auto" : `0px 0px 1px 2px ${props.theme.colors.brand};`)};
   }
   ${flexbox}
   ${grid}

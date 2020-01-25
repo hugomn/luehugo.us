@@ -20,7 +20,7 @@ const Bridesmaids = props => {
             key={node.name}
             flexBasis={["50%", "33%", "25%"]}
             data-sal="zoom-in"
-            data-sal-delay={i * 100}
+            data-sal-delay={(i % 4) * 100}
           >
             <Box px="3">
               <Picture sizes={node.image.childImageSharp.sizes} />
@@ -28,9 +28,10 @@ const Bridesmaids = props => {
             <Text fontFamily={Orator} fontSize={3} textAlign="center" color="accentColors.0" mt="4" mb="2">
               {node.name}
             </Text>
-            <Text textAlign="center" fontSize={1}>
-              {node.description}
-            </Text>
+            {node.description && 
+              <Text textAlign="center" fontSize={1}>
+                {node.description}
+              </Text>}
           </Box>
         ))}
       </Flex>

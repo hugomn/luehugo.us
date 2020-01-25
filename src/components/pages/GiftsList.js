@@ -1,24 +1,33 @@
-import React from "react";
-import Layout from "../layout";
+import React, { useState } from "react";
 import Subtitle from "../Subtitle";
 import GiftCardList from "../GiftCardList";
 import { FixedContainer } from "../FixedContainer";
 import MainTitle from "../MainTitle";
+import { useIntl } from "react-intl";
+import PaymentModal from "../PaymentModal";
 
 const Gifts = props => {
-  const gifts = props.data.allGiftsYaml.edges.map(g => g.node);
-  return (
-    <Layout location={props.location} backgroundColor="lightColors.1">
-      <FixedContainer pt="4" pb="4">
-        <MainTitle title="gifts.title" subtitle="gifts.subtitle" />
-        <Subtitle mb={5}>
-          Como já temos nossa casinha em Berlim quase pronta e cabe pouca coisa na mala, pensamos que nossa lista de presentes poderia ser uma
-          mistura de experiências especiais que ainda não vivemos e algumas coisinhas que vão nos proporcionar momentos de lazer e relaxamento.
-        </Subtitle>
+  const intl = useIntl();
+  const gifts = props.data.gifts.edges.map(g => g.node);
 
-        <GiftCardList gifts={gifts} />
-      </FixedContainer>
-    </Layout>
+  const [modalOpen, setModalOpen] = useState(false);
+  const [gift, setGift] = useState(gifts[0]);
+  const handleBuy = gift => {
+    setGift(gift);
+    setModalOpen(true);
+  };
+  return (
+    <FixedContainer pt="4" pb="4">
+      <MainTitle title="index.gifts.title" subtitle="index.gifts.subtitle" />
+      <Subtitle mb={5}>{intl.formatMessage({ id: "gifts.description" })}</Subtitle>
+      <PaymentModal
+        open={modalOpen}
+        bbId={gift.bbId}
+        paypalId={gift.paypalId}
+        onClose={() => setModalOpen(false)}
+      />
+      <GiftCardList gifts={gifts} onBuy={handleBuy} />
+    </FixedContainer>
   );
 };
 

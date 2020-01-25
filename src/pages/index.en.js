@@ -19,7 +19,6 @@ export const pageQuery = graphql`
       edges {
         node {
           name
-          description
           image {
             childImageSharp {
               sizes(maxWidth: 750) {
@@ -34,7 +33,6 @@ export const pageQuery = graphql`
       edges {
         node {
           name
-          description
           image {
             childImageSharp {
               sizes(maxWidth: 750) {

@@ -1,101 +1,62 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import Layout from "../layout";
 import Subtitle from "../Subtitle";
 import styled, { keyframes } from "styled-components";
 import { flexbox, layout, space, typography, color } from "styled-system";
 import moment from "moment";
 import { FixedContainer } from "../FixedContainer";
 import MainTitle from "../MainTitle";
-import { FormattedNumber } from "react-intl";
-import Text from "../Text";
-import Modal from "react-responsive-modal";
+import { FormattedNumber, useIntl } from "react-intl";
 import RewardCardList from "../RewardCardList";
-import { Box } from "../Box";
-import { Grid } from "../Grid";
-import Link from "../Link";
-import PaypalButton from "../PaypalButton";
 import { media } from "../../constants/responsive";
+import PaymentModal from "../PaymentModal";
 
 const Crowdfunding = props => {
   const { wedding } = props.data.site.siteMetadata;
   const [modalOpen, setModalOpen] = useState(false);
   const days = moment(wedding.date).diff(new Date(), "days");
   const percentage = (wedding.fundingPledged / wedding.fundingGoal) * 100;
-  const rewards = props.data.allRewardsYaml.edges.map(g => g.node);
+  const rewards = props.data.rewards.edges.map(g => g.node);
   const [reward, setReward] = useState(rewards[0]);
+  const intl = useIntl();
   const handleContribute = reward => {
     setReward(reward);
     setModalOpen(true);
   };
   return (
-    <Layout location={props.location} backgroundColor="lightColors.1">
-      <FixedContainer pt="4" pb="5">
-        <MainTitle title="page.crowdfunding.title" subtitle="page.crowdfunding.subtitle" />
-        <Subtitle>
-          <i>Crowdfunding</i> (ou Financiamento Colaborativo) é uma nova abordagem em que diversas pessoas, participando
-          com pequenas contribuições, fazem um grande projeto acontecer. Considerando nosso contexto atual, e a nossa
-          vontade de fazer um evento inesquecível, decidimos abrir esse projeto para que nossos amigos nos ajudem a fazer
-          esse dia acontecer! Será um presente inesquecível pra nós!
-        </Subtitle>
-        <Container display="flex" flexDirection={["column", "row"]} justifyContent="space-around">
-          <Column flexBasis="33%">
-            <Number>{percentage}%</Number>
-            <p>alcançados</p>
-          </Column>
-          <Column flexBasis="33%">
-            <Number>
-              R$ <FormattedNumber value={wedding.fundingPledged} minimumFractionDigits={2} />
-            </Number>
-            <p>
-              de R$ <FormattedNumber value={wedding.fundingGoal} minimumFractionDigits={2} /> levantados
-            </p>
-          </Column>
-          <Column flexBasis="33%">
-            <Number>{days} dias</Number>
-            <p>para o grande dia</p>
-          </Column>
-        </Container>
-        <ProgressBarWrapper>
-          <ProgressBar percentage={percentage} />
-        </ProgressBarWrapper>
-        <H3 mb={4}>Escolha algum dos valores abaixo:</H3>
+    <FixedContainer pt="4" pb="5">
+      <MainTitle title="page.crowdfunding.title" subtitle="page.crowdfunding.subtitle" />
+      <Subtitle>{intl.formatMessage({ id: "crowdfunding.description" })}</Subtitle>
+      <Container display="flex" flexDirection={["column", "row"]} justifyContent="space-around">
+        <Column flexBasis="33%">
+          <Number>{percentage}%</Number>
+          <p>{intl.formatMessage({ id: "crowdfunding.pledged" })}</p>
+        </Column>
+        <Column flexBasis="33%">
+          <Number>
+            R$ <FormattedNumber value={wedding.fundingPledged} minimumFractionDigits={2} />
+          </Number>
+          <p>
+            {intl.formatMessage({ id: "crowdfunding.of" })} R${" "}
+            <FormattedNumber value={wedding.fundingGoal} minimumFractionDigits={2} />{" "}
+            {intl.formatMessage({ id: "crowdfunding.goal" })}
+          </p>
+        </Column>
+        <Column flexBasis="33%">
+          <Number>
+            {days} {intl.formatMessage({ id: "crowdfunding.days" })}
+          </Number>
+          <p>{intl.formatMessage({ id: "crowdfunding.days.description" })}</p>
+        </Column>
+      </Container>
+      <ProgressBarWrapper>
+        <ProgressBar percentage={percentage} />
+      </ProgressBarWrapper>
+      <H3 mb={4}>{intl.formatMessage({ id: "crowdfunding.choose.one.value" })}</H3>
 
-        <Modal open={modalOpen} onClose={() => setModalOpen(false)} center styles={{ modal: { borderRadius: "6px" } }}>
-          <H3 mb={4} pt={0} textAlign="center" color="dark.1">
-            Escolha uma forma de pagamento:
-          </H3>
-          {/* <Text>{reward.description}</Text> */}
-          <Grid gridTemplateColumns={["auto", "auto", "1fr 1fr"]} px={[2, 2]} gridGap={5} mb="4">
-            <Box px={[2, 2]} justifyContent="center" textAlign="center">
-              <Img src="/img/bb_logo.png" mt={4} />
-              <Text fontSize={2} color="dark.1" fontWeight="500" mt="2" mb="2">
-                Via transferência ou boleto
-              </Text>
-              <Text mb="5">Utilize o botão abaixo para contribuir via transferência bancária ou boleto.</Text>
-              <Link
-                target="_blank"
-                href={`https://www49.bb.com.br/pagar-receber/#/${reward.bbId}`}
-              >
-                Contribuir
-              </Link>
-            </Box>
-            <Box px={[2, 2]} justifyContent="center" textAlign="center">
-              <Img src="/img/paypal_logo.png" mt={4} />
-              <Text fontSize={2} color="dark.1" fontWeight="500" mt="2" mb="2" textAlign="center">
-                Via Cartão de Crédito
-              </Text>
-              <Text textAlign="center" mb="5">
-                Utilize o botão abaixo para contribuir via cartão de crédito (qualquer bandeira).
-              </Text>
-              <PaypalButton id={reward.paypalId} />
-            </Box>
-          </Grid>
-        </Modal>
-
-        <RewardCardList rewards={rewards} onContribute={handleContribute} />
-      </FixedContainer>
-    </Layout>
+      <PaymentModal open={modalOpen} bbId={reward.bbId} paypalId={reward.paypalId} onClose={() => setModalOpen(false)} />
+      <RewardCardList rewards={rewards} onContribute={handleContribute} />
+    </FixedContainer>
   );
 };
 
@@ -112,10 +73,6 @@ const Column = styled.section`
   padding: 0 10px;
   ${flexbox};
   ${layout};
-  ${space};
-`;
-
-const Img = styled.img`
   ${space};
 `;
 

@@ -8,8 +8,10 @@ import { layout, typography } from "styled-system";
 import { Box } from "./Box";
 import { Text } from "./Text";
 import Button from "./Button";
+import { useIntl } from "react-intl";
 
 const RewardCard = ({ reward, onContribute }) => {
+  const intl = useIntl();
   return (
     <CardWrapper>
       <Wrapper columns={1}>
@@ -35,7 +37,9 @@ const RewardCard = ({ reward, onContribute }) => {
               </Box>
             </Cell>
             <Footer>
-              <StyledButton onClick={() => onContribute(reward)}>Contribuir</StyledButton>
+              <StyledButton onClick={() => onContribute(reward)}>
+                {intl.formatMessage({ id: "gifts.action" })}
+              </StyledButton>
             </Footer>
           </ContentWrapper>
         </Cell>
