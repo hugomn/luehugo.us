@@ -17,14 +17,14 @@ const BtnLink = styled(Link)`
   transition: 0.3s;
   border-width: 0px;
   line-height: 24px;
-  cursor: pointer;
   ${space};
   ${width}
-  &:hover:enabled {
+  &:hover:not(:disabled) {
     background-color: ${({ secondary, theme }) =>
     secondary ? theme.colors.accentColors[3] : theme.colors.accentColors[2]};
     color: ${({ theme }) => theme.colors.white};
     transition: 0.3s;
+    cursor: pointer;
   }
   &:disabled {
     background-color: ${({ theme }) => theme.colors.lightColors[3]};
