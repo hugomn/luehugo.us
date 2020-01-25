@@ -1,17 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { graphql, withPrefix } from 'gatsby';
-import Helmet from 'react-helmet';
-import styled from 'styled-components';
-import EditBtn from '../components/EditBtn';
-import Tags from '../components/Tags';
-import { getStructuredData } from '../structuredData';
-import Comments from '../components/Comments';
-import PostCardList from '../components/PostCardList';
-import Layout from '../components/layout';
-import Img from 'gatsby-image';
-import ShareWidget from '../components/ShareWidget';
-import PostAuthor from '../components/PostAuthor';
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql, withPrefix } from "gatsby";
+import Helmet from "react-helmet";
+import styled from "styled-components";
+import EditBtn from "../components/EditBtn";
+import Tags from "../components/Tags";
+import { getStructuredData } from "../structuredData";
+import Comments from "../components/Comments";
+import PostCardList from "../components/PostCardList";
+import Layout from "../components/layout";
+import Img from "gatsby-image";
+import ShareWidget from "../components/ShareWidget";
+import PostAuthor from "../components/PostAuthor";
 
 const Post = styled.article`
   margin: ${props => props.theme.blog.post.margin};
@@ -92,7 +92,7 @@ const Content = styled.section`
     padding: ${({ theme }) => theme.scale(0)} ${({ theme }) => theme.scale(1)};    
     position: relative;
     text-align: left;
-    color: ${({ theme }) => theme.colors.lightGray};
+    color: ${({ theme }) => theme.colors.dark[2]};
   }
 
   blockquote > p:first-child {

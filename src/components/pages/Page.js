@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { getAuthor } from '../../data/authors';
-import { getStructuredDataForAuthor } from '../../structuredData';
-import styled from 'styled-components';
-import { FormattedMessage } from 'react-intl';
-import Helmet from 'react-helmet';
-import Layout from '../layout';
+import React from "react";
+import PropTypes from "prop-types";
+import { getAuthor } from "../../data/authors";
+import { getStructuredDataForAuthor } from "../../structuredData";
+import styled from "styled-components";
+import { FormattedMessage } from "react-intl";
+import Helmet from "react-helmet";
+import Layout from "../layout";
 
 const Wrapper = styled.article`
   margin: ${props => props.theme.page.margin};
@@ -40,8 +40,8 @@ const H1 = styled.h1`
   }
 `;
 
-const Page = (props) => {
-  const author = getAuthor('hugomn');
+const Page = props => {
+  const author = getAuthor("hugomn");
   author.description = props.i18n.description;
   const structuredData = getStructuredDataForAuthor(author);
 
@@ -53,20 +53,20 @@ const Page = (props) => {
           dangerouslySetInnerHTML={{ __html: structuredData }}
         />
         <FormattedMessage id={props.i18n.titleId}>
-          {(title) => (
+          {title => (
             <Header>
               <Helmet
                 title={title}
-                meta={[{ name: 'description', content: props.i18n.description }]}
+                meta={[{ name: "description", content: props.i18n.description }]}
               />
               <H1>
-                <span>{ title }</span>
+                <span>{title}</span>
               </H1>
             </Header>
           )}
         </FormattedMessage>
         <Content>
-          { props.i18n.content }
+          {props.i18n.content}
         </Content>
       </Wrapper>
     </Layout>

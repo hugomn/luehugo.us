@@ -1,4 +1,10 @@
-import { Link } from 'gatsby';
-import A from './A';
+import styled from "styled-components";
+import BtnLink from "./BtnLink";
 
-export default A.withComponent(Link);
+const Link = BtnLink.withComponent(styled.a`
+  width: calc(100% - 40px);
+  margin: auto 20px;
+  cursor: pointer;
+`);
+
+export default Link;

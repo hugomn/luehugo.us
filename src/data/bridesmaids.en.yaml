@@ -1,0 +1,33 @@
+- name: Lara
+  image: ../images/bridesmaids/lara.jpeg
+  description: 
+- name: Laiz
+  image: ../images/bridesmaids/laiz.jpeg
+  description:   
+- name: Mariana
+  image: ../images/bridesmaids/mari.jpeg
+  description: 
+- name: Rita
+  image: ../images/bridesmaids/rita.jpeg
+  description: 
+- name: Jéssica
+  image: ../images/bridesmaids/jessica.jpeg
+  description: 
+- name: Ana Carolina
+  image: ../images/bridesmaids/ana.jpeg
+  description: 
+- name: Ana Claudia
+  image: ../images/bridesmaids/cau.jpeg
+  description: 
+- name: Júlia
+  image: ../images/bridesmaids/julia.jpeg
+  description: 
+- name: Aline
+  image: ../images/bridesmaids/aline.jpeg
+  description: 
+- name: Raïssa
+  image: ../images/bridesmaids/raissa.jpeg
+  description: 
+- name: Adri
+  image: ../images/bridesmaids/adri.jpeg
+  description: 

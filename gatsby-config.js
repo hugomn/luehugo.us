@@ -44,7 +44,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "UA-16818992-1"
+        trackingId: "UA-156799163-1"
       }
     },
     {
@@ -54,7 +54,7 @@ module.exports = {
         short_name: "Hugo Nogueira",
         icons: [
           {
-            src: "/logo.svg",
+            src: "/img/logo.svg",
             sizes: "any",
             type: "image/svg+xml"
           }
@@ -107,6 +107,50 @@ module.exports = {
         prefixDefault: false
       }
     },
-    "gatsby-plugin-styled-components"
+    "gatsby-plugin-styled-components",
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Allura`,
+            subsets: [`latin`],
+            variants: [`400`]
+          },
+          {
+            family: `Poppins`,
+            subsets: [`latin`, `latin-ext`],
+            variants: [`300`, `400`, `500`, `700`]
+          }
+        ]
+      }
+    },
+    {
+      resolve: `gatsby-transformer-yaml-plus`,
+      options: {
+        enableRemark: true,
+        markdownPreface: "md//"
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data`,
+        name: "yaml"
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+        name: "images"
+      }
+    },
+    {
+      resolve: `gatsby-plugin-scroll-reveal`,
+      options: {
+        disable: true
+      }
+    }
   ]
 };

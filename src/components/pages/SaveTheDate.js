@@ -9,13 +9,13 @@ const SaveTheDate = props => {
   return (
     <MainContainer>
       <Helmet defaultTitle={title}>
-        <meta name="author" content={`Hugo Nogueira`} />
+        <meta name="author" content="Hugo Nogueira" />
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://www.luehugo.us`} />
-        <meta property="og:image" content={`https://www.luehugo.us/favicon.png`} />
+        <meta property="og:url" content="https://www.luehugo.us" />
+        <meta property="og:image" content="https://www.luehugo.us/favicon.png" />
       </Helmet>
       <Envelope>
         <CardContainer align="center">

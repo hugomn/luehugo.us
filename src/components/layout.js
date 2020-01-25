@@ -2,8 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import FixedContainer from "../components/FixedContainer";
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import styled, { createGlobalStyle, ThemeProvider, css } from "styled-components";
 import { StaticQuery, graphql, withPrefix } from "gatsby";
 import { IntlProvider, FormattedMessage } from "react-intl";
 import en from "../data/messages/en";
@@ -11,37 +10,39 @@ import pt from "../data/messages/pt";
 import theme from "../themes/theme";
 import { getLangs, getUrlForLang, getCurrentLangKey, isHomePage } from "ptz-i18n";
 import Helmet from "react-helmet";
+import { color } from "styled-system";
 
 const messages = { en, pt };
 
-const Container = styled(FixedContainer)`
-  padding: ${props => props.theme.padding};
-  margin: ${props => props.theme.margin};
-`;
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")("a[href*=\"#\"]");
+}
 
 const Layout = props => {
-  const { children, location } = props;
+  const { backgroundColor, children, location } = props;
   const url = location.pathname;
-  const isHome = isHomePage(url);
   const { langs, defaultLangKey } = props.data.site.siteMetadata.languages;
+  // const isHome = isHomePage(url, false, langs);
   const langKey = getCurrentLangKey(langs, defaultLangKey, url);
-  const homeLink = `/${langKey !== "en" ? langKey : ""}`;
-  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)).map(item => ({ ...item, link: item.link.replace(`/${defaultLangKey}/`, "/") }));
+  const homeLink = `/${langKey !== "pt" ? langKey : ""}`;
+  console.log("[dev:hugo] homeLink", homeLink.replace(/\/$/, ""));
+  console.log("[dev:hugo] url", url.replace(/\/$/, ""));
+  const isHome = homeLink.replace(/\/$/, "") === url.replace(/\/$/, "");
+  console.log("[dev:hugo] isHome", isHome);
+  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)).map(item => ({
+    ...item,
+    link: item.link.replace(`/${defaultLangKey}/`, "/")
+  }));
   const { menu, author, sourceCodeLink, siteUrl, description } = props.data.site.siteMetadata;
 
   return (
     <ThemeProvider theme={theme}>
-      <IntlProvider
-        locale={langKey}
-        messages={messages[langKey]}
-      >
+      <IntlProvider locale={langKey} messages={messages[langKey]}>
         <BodyContainer>
           <FormattedMessage id="title">
             {txt => (
-              <Helmet
-                defaultTitle={txt}
-                titleTemplate={`%s | ${txt}`}
-              >
+              <Helmet defaultTitle={txt} titleTemplate={`%s | ${txt}`}>
                 <meta name="author" content={author.name} />
                 <meta name="description" content={description} />
                 <meta property="og:title" content={txt} />
@@ -58,22 +59,9 @@ const Layout = props => {
               </Helmet>
             )}
           </FormattedMessage>
-          <Header
-            isHome={isHome}
-            homeLink={homeLink}
-            url={url}
-            menu={menu}
-          />
-          <Container>
-            <main>
-              {children}
-            </main>
-          </Container>
-          <Footer
-            author={author}
-            langs={langsMenu}
-            sourceCodeLink={sourceCodeLink}
-          />
+          <Header isHome={isHome} url={url} menu={menu} langs={langsMenu} />
+          <Main backgroundColor={backgroundColor}>{children}</Main>
+          <Footer author={author} langs={langsMenu} sourceCodeLink={sourceCodeLink} />
           <GlobalStyle />
         </BodyContainer>
       </IntlProvider>
@@ -81,9 +69,20 @@ const Layout = props => {
   );
 };
 
+const bodyStyle = css`
+  color: ${props => props.theme.color};
+  font-family: ${props => props.theme.fonts.Poppins};
+  font-feature-settings: 'calt' 1, 'clig' 1, 'dlig' 1, 'kern' 1, 'liga' 1, 'salt' 1;
+  font-weight: 300;
+  line-height: ${props => props.theme.lineHeight};
+`;
+
 const GlobalStyle = createGlobalStyle`
+  body {
+    ${bodyStyle}
+  }
   a {
-    color: ${props => props.theme.a.color};
+    color: ${props => props.theme.a.color.light};
     text-decoration: ${props => props.theme.a.textDecoration};
     transition: all 0.2s;
     :hover {
@@ -94,8 +93,11 @@ const GlobalStyle = createGlobalStyle`
   b, strong {
     font-weight: bold;
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: ${props => props.theme.fonts.SansSerif};
+  h1, h2 {
+    font-family: ${props => props.theme.fonts.Allura};
+  }
+  h3, h4, h5, h6 {
+    font-family: ${props => props.theme.fonts.Poppins};
   }
   h1{
     margin:${props => props.theme.h1.margin};
@@ -113,12 +115,14 @@ const GlobalStyle = createGlobalStyle`
     margin:${props => props.theme.h3.margin};
     padding:${props => props.theme.h3.padding};
     font-size:${props => props.theme.h3.fontSize};
+    font-weight: 500;
     line-height: 1.4;
   }
   h4{
     margin:${props => props.theme.h4.margin};
     padding:${props => props.theme.h4.padding};
     font-size:${props => props.theme.h4.fontSize};
+    font-weight: 500;
     line-height: 1.4;
   }
   h5{
@@ -159,17 +163,24 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const Main = styled.main`
+  padding: ${props => props.theme.padding};
+  flex-grow: 1;
+  ${color}
+`;
+
 const BodyContainer = styled.div`
-  font-family: ${props => props.theme.fonts.System};
-  color: ${props => props.theme.color};
+  ${bodyStyle}
   background-color: ${props => props.theme.bg};
-  top: 0;
-  right: 0;
-  left: 0;
   bottom: 0;
+  left: 0;
   min-height: 100%;
   overflow-x: hidden;
-  font-feature-settings: "calt" 1, "clig" 1, "dlig" 1, "kern" 1, "liga" 1, "salt" 1;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 `;
 
 export default props => (
@@ -195,7 +206,6 @@ export default props => (
             sourceCodeLink
             menu {
               label
-              link
               slug
             }
           }
@@ -210,6 +220,5 @@ Layout.propTypes = {
   children: PropTypes.object.isRequired,
   data: PropTypes.object.isRequired,
   location: PropTypes.object.isRequired,
+  // ...backgroundColor.propTypes
 };
-
-

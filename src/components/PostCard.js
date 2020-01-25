@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Link from './Link';
-import styled from 'styled-components';
-import { Grid, Cell } from 'styled-css-grid';
-import Img from 'gatsby-image';
-import Author from './PostAuthor';
-import { media } from '../constants/responsive';
+import React from "react";
+import PropTypes from "prop-types";
+import Link from "./Link";
+import styled from "styled-components";
+import { Grid, Cell } from "styled-css-grid";
+import Img from "gatsby-image";
+import Author from "./PostAuthor";
+import { media } from "../constants/responsive";
 
 
 const GridContainer = styled(Grid)`
@@ -21,7 +21,7 @@ const Wrapper = styled(GridContainer)`
     ${props => props.imageOnTop
     ? ` grid-template-rows: repeat(2,1fr);
         grid-template-columns: 1fr;`
-    : ''};
+    : ""};
   `}
 `;
 
@@ -82,7 +82,7 @@ const PostCard = ({ post, author, imageOnTop }) => {
         </Link>
       </Cell>
       <Cell>
-        <GridContainer columns={1} rows={'1fr auto'}>
+        <GridContainer columns={1} rows={"1fr auto"}>
           <Body>
             <Title>
               <TitleLink to={post.fields.slug}>

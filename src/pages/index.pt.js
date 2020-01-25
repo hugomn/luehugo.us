@@ -1,18 +1,49 @@
 import React from "react";
-import SaveTheDate from "../components/pages/SaveTheDate";
+import Index from "../components/pages/Index";
 import { graphql } from "gatsby";
 
-export default props => <SaveTheDate {...props} />;
+export default props => <Index {...props} />;
 
 export const pageQuery = graphql`
-  query {
-    file(relativePath: { eq: "images/card_pt.png" }) {
-      childImageSharp {
-        sizes(maxWidth: 1200, quality: 90) {
-          ...GatsbyImageSharpSizes
+  query IndexPt {
+    timeline: allTimelinePtYaml {
+      edges {
+        node {
+          name
+          date(formatString: "MMMM [de] YYYY", locale: "pt-BR")
+          description
         }
       }
-      publicURL
+    }
+    groomsmen: allGroomsmenPtYaml(sort: { fields: name }) {
+      edges {
+        node {
+          name
+          description
+          image {
+            childImageSharp {
+              sizes(maxWidth: 750) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
+        }
+      }
+    }
+    bridesmaids: allBridesmaidsPtYaml(sort: { fields: name }) {
+      edges {
+        node {
+          name
+          description
+          image {
+            childImageSharp {
+              sizes(maxWidth: 750) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
+        }
+      }
     }
   }
 `;
