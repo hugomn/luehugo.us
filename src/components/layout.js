@@ -26,8 +26,7 @@ const Layout = props => {
   // const isHome = isHomePage(url, false, langs);
   const langKey = getCurrentLangKey(langs, defaultLangKey, url);
   const homeLink = `/${langKey !== "pt" ? langKey : ""}`;
-  const isHome = homeLink === url;
-  console.log("[dev:hugo] isHome", isHome);
+  const isHome = homeLink === url.replace(/\/$/, "");
   const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)).map(item => ({
     ...item,
     link: item.link.replace(`/${defaultLangKey}/`, "/")
