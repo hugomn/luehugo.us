@@ -41,15 +41,15 @@ const Layout = props => {
             {txt => (
               <Helmet defaultTitle={txt} titleTemplate={`%s | ${txt}`}>
                 <meta name="author" content={author.name} />
-                <meta name="description" content={description} />
+                <meta name="description" content={description[langKey]} />
                 <meta property="og:title" content={txt} />
-                <meta property="og:description" content={description} />
+                <meta property="og:description" content={description[langKey]} />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={url} />
                 <meta property="og:image" content={`${siteUrl}${withPrefix("/avatar.jpg")}`} />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={txt} />
-                <meta name="twitter:description" content={description} />
+                <meta name="twitter:description" content={description[langKey]} />
                 <meta name="twitter:site" content={`@${author.twitter}`} />
                 <meta name="twitter:author" content={`@${author.twitter}`} />
                 <meta name="twitter:image" content={`${siteUrl}${withPrefix("/avatar.jpg")}`} />
@@ -187,7 +187,10 @@ export default props => (
         site {
           siteMetadata {
             siteUrl
-            description
+            description {
+              en
+              pt
+            }
             languages {
               defaultLangKey
               langs

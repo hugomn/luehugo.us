@@ -77,8 +77,8 @@ module.exports = {
   "gifts.description":
     "Como já temos nossa casinha em Berlim quase pronta e cabe pouca coisa na mala, pensamos que nossa lista de presentes poderia ser uma mistura de experiências especiais que ainda não vivemos e algumas coisinhas que vão nos proporcionar momentos de lazer e relaxamento.",
   "gifts.buy": "Comprar",
-  "gifts.items.of": "items de",
-  "gifts.items.missing": "faltam {total} items",
+  "gifts.items.of": "itens de",
+  "gifts.items.missing": "faltam {total} itens",
   "gifts.action": "Comprar",
   "gifts.soldout": "Esgotado"
 };

@@ -2,8 +2,11 @@ const languages = require("./languages");
 
 module.exports = {
   siteUrl: "https://www.luehugo.us",
-  description:
-    "Queridos amigos! Esperamos vocês no nosso dia especial: 2 de maio de 2020! Reserve essa data e venha comemorar conosco! ❤️",
+  description: {
+    pt:
+      "Queridos amigos! Esperamos vocês no nosso dia especial: 2 de maio de 2020! Reserve essa data e venha comemorar conosco! 🧡",
+    en: "Dear friends! We look forward to having you with us in our great day! May 2nd, 2020! 🧡"
+  },
   author: {
     name: "Hugo Nogueira",
     bio:
