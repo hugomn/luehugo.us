@@ -4,12 +4,12 @@
 - name: Laiz
   image: ../images/bridesmaids/laiz.jpeg
   description: Irmã do noivo, seu tamanho não representa sua grandeza. Companheira de Oktoberfest e de viagens pela Europa.  
-- name: Mariana
+- name: Mari
   image: ../images/bridesmaids/mari.jpeg
   description: Amiga da noiva desde sempre, moraram juntas em BH e se tornou grande amiga do casal. Conhece toda nossa história.
 - name: Rita
   image: ../images/bridesmaids/rita.jpeg
-  description: Nos tempos da faculdade toda a sala do noivo conhecia a Rita, pelo menos de nome. Esposa do Murilo, mãe da Isabela e grandes amigos do casal.
+  description: Nos tempos da faculdade toda a sala do noivo conhecia a Rita, pelo menos de nome. Esposa do Murilo, mãe da Isabela e uma amiga especial.
 - name: Jéssica
   image: ../images/bridesmaids/jessica.jpeg
   description: Presente que BH trouxe para vida da noiva. Companheira demais! Representando nosso grupo amado, as salientes.
