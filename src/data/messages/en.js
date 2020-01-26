@@ -30,7 +30,7 @@ module.exports = {
     "Our celebration and reception will be held at <b>Bosque São Pedro</b> (Rua Dimas Bergo Xisto, 396 - São Pedro, Juiz de Fora). The ceremony will be at 4 pm in a grassy area. Remember to ensure comfortable shoes.",
   "where.action": "See on map",
   "index.rsvp.description":
-    "Having you with us that day will be a great joy! Please confirm your presence by April 18, 2020.",
+    "Having you with us in our special day will be a great joy! Please confirm your presence by April 18, 2020.",
   "index.rsvp.action": "Confirm presence",
   "index.gifts.title": "Gifts",
   "index.gifts.subtitle": "We appreciate your kindness",
