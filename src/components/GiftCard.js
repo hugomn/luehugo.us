@@ -9,11 +9,11 @@ import { useIntl } from "react-intl";
 import Button from "./Button";
 
 const GiftCard = ({ gift, onBuy }) => {
-  const intl = useIntl();
+  const { formatMessage: f } = useIntl();
   const soldOut = gift.total <= gift.sold;
   return (
     <CardWrapper disabled={soldOut}>
-      <Wrapper columns={1} rows="200px auto">
+      <Wrapper columns={1} rows="250px auto">
         <Cell>
           <Image soldOut={soldOut} sizes={gift.image.childImageSharp.sizes} />
         </Cell>
@@ -24,14 +24,16 @@ const GiftCard = ({ gift, onBuy }) => {
                 {gift.name}
               </Title>
               <Text fontSize={1}>
-                {gift.total} {intl.formatMessage({ id: "gifts.items.of" })} <Price>R$ {gift.price}</Price>
+                {f({ id: "gifts.items.of" }, { count: gift.total })} <Price>R$ {gift.price}</Price>
               </Text>
               <Text fontSize={1} mb={3}>
-                {intl.formatMessage({ id: soldOut ? "gifts.soldout" : "gifts.items.missing" }, { total: gift.total - gift.sold })}
+                {f({ id: soldOut ? "gifts.soldout" : "gifts.items.missing" }, { count: gift.total - gift.sold })}
               </Text>
             </Body>
             <Footer>
-              <StyledButton disabled={soldOut} onClick={() => onBuy(gift)}>{intl.formatMessage({ id: "gifts.action" })}</StyledButton>
+              <StyledButton disabled={soldOut} onClick={() => onBuy(gift)}>
+                {f({ id: "gifts.action" })}
+              </StyledButton>
             </Footer>
           </ContentWrapper>
         </Cell>

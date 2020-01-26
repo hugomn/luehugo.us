@@ -22,7 +22,7 @@ module.exports = {
   "page.crowdfunding.title": "Financiamento colaborativo",
   "page.crowdfunding.subtitle": "Nosso sonho compartilhado",
   "us.statement.hugo":
-    "Ele é uma pessoal incrível em tantas formas, que me faz sentir amada e afortunada todos os dias! É difícil às vezes acreditar que estou prestes a casar com o grande amor da minha vida!",
+    "Ele é uma pessoa incrível em tantas formas, que me faz sentir amada e afortunada todos os dias! É difícil às vezes acreditar que estou prestes a casar com o grande amor da minha vida!",
   "us.statement.lunara":
     "Ela tem todas as nuances de uma pessoa ímpar, intensa e leve. Encanta e cativa com sua empatia, amizade e inteligência. Me proporciona uma felicidade que nunca imaginei ser possível.",
   "where.description":
@@ -66,19 +66,19 @@ module.exports = {
   "crowdfunding.days": "dias",
   "crowdfunding.days.description": "para o grande dia",
   "crowdfunding.choose.one.value": "Escolha alguma dos valores abaixo:",
-  "crowdfunding.choose.payment": "Escolha uma forma de pagamento:",
-  "crowdfunding.transfer.title": "Via transferência ou boleto",
-  "crowdfunding.transfer.description": "Utilize o botão abaixo para contribuir via transferência bancária ou boleto.",
-  "crowdfunding.transfer.action": "Contribuir",
-  "crowdfunding.cc.title": "Via Cartão de Crédito",
-  "crowdfunding.cc.description": "Utilize o botão abaixo para contribuir via cartão de crédito (qualquer bandeira).",
-  "crowdfunding.cc.action": "Contribuir",
+  "payment.choose.payment": "Escolha uma forma de pagamento:",
+  "payment.transfer.title": "Via transferência ou boleto",
+  "payment.transfer.description": "Utilize o botão abaixo para pagar via transferência bancária ou boleto.",
+  "payment.transfer.action": "Pagar",
+  "payment.cc.title": "Via Cartão de Crédito",
+  "payment.cc.description": "Utilize o botão abaixo para pagar via cartão de crédito (qualquer bandeira).",
+  "payment.cc.action": "Pagar",
   "crowdfunding.action": "Contribuir",
   "gifts.description":
-    "Como já temos nossa casinha em Berlim quase pronta e cabe pouca coisa na mala, pensamos que nossa lista de presentes poderia ser uma mistura de experiências especiais que ainda não vivemos e algumas coisinhas que vão nos proporcionar momentos de lazer e relaxamento.",
+    "Nossa casa em Berlim já está quase pronta, e não conseguimos levar nada na mala. Então nossa lista de presentes é um mix que vai desde experiências que nós dois ainda não vivemos e vão gerar ótimos momentos de lazer e relaxamento até itens para complementar no nosso lar!",
   "gifts.buy": "Comprar",
-  "gifts.items.of": "itens de",
-  "gifts.items.missing": "faltam {total} itens",
+  "gifts.items.of": "{count, plural, one {# item} other {# itens}} de",
+  "gifts.items.missing": "{count, plural, one {falta # item} other {faltam # itens}}",
   "gifts.action": "Comprar",
   "gifts.soldout": "Esgotado"
 };

@@ -23,7 +23,7 @@ module.exports = {
   "page.crowdfunding.title": "Crowdfunding",
   "page.crowdfunding.subtitle": "Our dream shared",
   "us.statement.hugo":
-    "He is an incredible person in every form, and it makes me fell loved and luck every day! It's hard to bealieve I'm about to marry the great love of my life",
+    "He is an incredible person in every form, and it makes me fell loved and lucky every day! It's hard to bealieve I'm about to marry the great love of my life",
   "us.statement.lunara":
     "She has all the nuances of a unique, intense and light person. Enchants and captivates with her empathy, kindness and intelligence. She gives me a happiness that I never imagined possible.",
   "where.description":
@@ -64,19 +64,19 @@ module.exports = {
   "crowdfunding.days": "days",
   "crowdfunding.days.description": "for our great day",
   "crowdfunding.choose.one.value": "Please choose one of the values below:",
-  "crowdfunding.choose.payment": "Please choose one payment method:",
-  "crowdfunding.transfer.title": "Via transfer or bill of exchange (BR only)",
-  "crowdfunding.transfer.description": "Click the button below to contribute using a brazilian bank transfer",
-  "crowdfunding.transfer.action": "Contribute",
-  "crowdfunding.cc.title": "Via Credit Card",
-  "crowdfunding.cc.description": "Click the button below to contribute using a credit card.",
-  "crowdfunding.cc.action": "Contribute",
+  "payment.choose.payment": "Please choose one payment method:",
+  "payment.transfer.title": "Via transfer or bill of exchange (BR only)",
+  "payment.transfer.description": "Click the button below to pay using a brazilian bank transfer",
+  "payment.transfer.action": "Pay",
+  "payment.cc.title": "Via Credit Card",
+  "payment.cc.description": "Click the button below to pay using a credit card.",
+  "payment.cc.action": "Pay",
   "crowdfunding.action": "Contribute",
   "gifts.description":
     "As we already have our little cozy space in Berlin almost ready and there is not much space in the suitcase, we thought that our list of gifts could be a mixture of special experiences that we have not yet lived and some little things that will provide us with moments of leisure and relaxation.",
   "gifts.buy": "Buy",
-  "gifts.items.of": "items of",
-  "gifts.items.missing": "{total} missing",
+  "gifts.items.of": "{count, plural, one {# item} other {# items}} de",
+  "gifts.items.missing": "{count, plural, one {# missing} other {# missing}}",
   "gifts.action": "Buy",
   "gifts.soldout": "Sold Out"
 };

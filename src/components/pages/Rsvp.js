@@ -15,7 +15,7 @@ import { useIntl } from "react-intl";
 
 const Rsvp = props => {
   const intl = useIntl();
-  const { confirmation } = props;
+  const { confirmation, langKey } = props;
   return (
     <FixedContainer pt="4" pb="5">
       <MainTitle title="index.rsvp.title" subtitle="index.rsvp.subtitle" />
@@ -25,7 +25,7 @@ const Rsvp = props => {
             <span dangerouslySetInnerHTML={{ __html: intl.formatHTMLMessage({ id: "rsvp.confirmation.message" }) }} />
           </Subtitle>
           <Box textAlign="center" mt={4}>
-            <BtnLink mt={4} to={intl.locale === "pt" ? "/rsvp" : "/en/rsvp"}>
+            <BtnLink mt={4} to={langKey === "pt" ? "/rsvp" : "/en/rsvp"}>
               {intl.formatMessage({ id: "rsvp.confirmation.action" })}
             </BtnLink>
           </Box>
@@ -39,7 +39,7 @@ const Rsvp = props => {
               name="rsvp"
               method="POST"
               data-netlify="true"
-              action={intl.locale === "pt" ? "/rsvp/sucesso" : "/en/rsvp/success"}
+              action={langKey === "pt" ? "/rsvp/sucesso" : "/en/rsvp/success"}
             >
               <Flex flexDirection="column">
                 <Input type="hidden" name="form-name" value="rsvp" />
@@ -130,6 +130,7 @@ const Input = styled.input`
 
 Rsvp.propTypes = {
   confirmation: PropTypes.bool,
+  langKey: PropTypes.string,
   location: PropTypes.object.isRequired
 };
 

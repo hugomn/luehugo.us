@@ -16,28 +16,28 @@ const PaymentModal = props => {
   return (
     <Modal open={open} onClose={onClose} center styles={{ modal: { borderRadius: "6px" } }}>
       <H3 mb={4} pt={0} textAlign="center" color="dark.1">
-        {intl.formatMessage({ id: "crowdfunding.choose.payment" })}
+        {intl.formatMessage({ id: "payment.choose.payment" })}
       </H3>
       <Grid gridTemplateColumns={["auto", "auto", "1fr 1fr"]} px={[2, 2]} gridGap={5} mb="4">
         <Box px={[2, 2]} justifyContent="center" textAlign="center">
           <Img src="/img/bb_logo.png" mt={4} />
           <Text fontSize={2} color="dark.1" fontWeight="500" mt="2" mb="2">
-            {intl.formatMessage({ id: "crowdfunding.transfer.title" })}
+            {intl.formatMessage({ id: "payment.transfer.title" })}
           </Text>
-          <Text mb="5">{intl.formatMessage({ id: "crowdfunding.transfer.description" })}</Text>
+          <Text mb="5">{intl.formatMessage({ id: "payment.transfer.description" })}</Text>
           <Link target="_blank" href={`https://www49.bb.com.br/pagar-receber/#/${bbId}`}>
-            {intl.formatMessage({ id: "crowdfunding.transfer.action" })}
+            {intl.formatMessage({ id: "payment.transfer.action" })}
           </Link>
         </Box>
         <Box px={[2, 2]} justifyContent="center" textAlign="center">
           <Img src="/img/paypal_logo.png" mt={4} />
           <Text fontSize={2} color="dark.1" fontWeight="500" mt="2" mb="2" textAlign="center">
-            {intl.formatMessage({ id: "crowdfunding.cc.title" })}
+            {intl.formatMessage({ id: "payment.cc.title" })}
           </Text>
           <Text textAlign="center" mb="5">
-            {intl.formatMessage({ id: "crowdfunding.cc.description" })}
+            {intl.formatMessage({ id: "payment.cc.description" })}
           </Text>
-          <PaypalButton id={paypalId}>{intl.formatMessage({ id: "crowdfunding.cc.action" })}</PaypalButton>
+          <PaypalButton id={paypalId}>{intl.formatMessage({ id: "payment.cc.action" })}</PaypalButton>
         </Box>
       </Grid>
     </Modal>
