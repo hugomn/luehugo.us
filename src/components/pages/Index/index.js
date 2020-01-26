@@ -62,7 +62,7 @@ const Index = props => {
 
 const TimelineBox = styled(Box)`
   background-image: url('/img/timeline_bg.jpg');
-  background-position: right top;
+  background-position: right bottom;
   background-repeat: no-repeat;
 `;
 

@@ -57,7 +57,7 @@ module.exports = {
     "<b>Thanks for you confirmation!</b><br /> We look forward to having you with us! <br /> If you wish, confirm more guests below:",
   "rsvp.confirmation.action": "Confirm another guest",
   "crowdfunding.description":
-    "Crowdfunding is a new approach in which several people, participating with small contributions, make a big project happen. Considering our current context, and our desire to make our day unforgettable, we decided to open this project so that our friends help us to make that day happen! It will be an unforgettable gift for us!",
+    "Crowdfunding is a new approach in which several people, participating with small contributions, make a big project happen. Considering our current context, and our desire to make our day unforgettable, we decided to open own crowdfunding so that our friends can help us make our dream come true! It will be an unforgettable gift for us!",
   "crowdfunding.pledged": "pledged",
   "crowdfunding.of": "of",
   "crowdfunding.goal": "goal",
