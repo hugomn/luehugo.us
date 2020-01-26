@@ -264,13 +264,6 @@
   price: 100
   total: 1
   sold: 0
-- name: Metal watering can H&M Home
-  image: ../images/gifts/regador.jpg
-  bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiMzFhNGI0ZTctODZkYy00NGZhLTkyNjktNjU2MjJlMTVmNzI3In0=
-  paypalId: MQGVJHEPLVCDA
-  price: 110
-  total: 1
-  sold: 0
 - name: Set of 6 golden rimmed champagne glasses
   image: ../images/gifts/tacas.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiZThlZWI2YTItMTk5Yi00MDE5LTliMzgtZTU3MGI0NjQyZTkyIn0=
