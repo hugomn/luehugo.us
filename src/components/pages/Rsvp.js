@@ -32,7 +32,9 @@ const Rsvp = props => {
         </>
       ) : (
         <>
-          <Subtitle>{intl.formatMessage({ id: "rsvp.description" })}</Subtitle>
+          <Subtitle>
+            <span dangerouslySetInnerHTML={{ __html: intl.formatHTMLMessage({ id: "rsvp.description" }) }} />
+          </Subtitle>
           <Card p={["18px", 5]} mt={[4, 5]} mx={[1, 3, 5, 7]} textAlign="center">
             <Form
               className="email-form"

@@ -43,7 +43,7 @@ module.exports = {
   "index.gifts.list.title": "Registry",
   "index.gifts.list.description": "Do you want to give us an experience or something we don't have in our house yet?",
   "index.gifts.list.action": "See gifts list",
-  "rsvp.description": "Please enter your data below to confirm your presence",
+  "rsvp.description": "Please enter your data below to confirm your presence <br /> (Please enter one name at a time.)",
   "rsvp.form.name.label": "Name",
   "rsvp.form.name.placeholder": "Enter your full name",
   "rsvp.form.email.label": "E-mail",
@@ -75,7 +75,7 @@ module.exports = {
   "gifts.description":
     "As we already have our little cozy space in Berlin almost ready and there is not much space in the suitcase, we thought that our list of gifts could be a mixture of special experiences that we have not yet lived and some little things that will provide us with moments of leisure and relaxation.",
   "gifts.buy": "Buy",
-  "gifts.items.of": "{count, plural, one {# item} other {# items}} de",
+  "gifts.items.of": "{count, plural, one {# item} other {# items}} costing",
   "gifts.items.missing": "{count, plural, one {# missing} other {# missing}}",
   "gifts.action": "Buy",
   "gifts.soldout": "Sold Out"
