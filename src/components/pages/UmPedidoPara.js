@@ -22,7 +22,9 @@ const padrinhos = {
   rafa: { gender: "M", name: "Rafa", videoId: "xtSOE4XupOE" },
   raissa: { gender: "F", name: "Raíssa", videoId: "BZjfxrje0BU" },
   ricardo: { gender: "M", name: "Ricardo", videoId: "xhIMhHx9J-M" },
-  rita: { gender: "F", name: "Rita", videoId: "pj0t4ZN00Do" }
+  rita: { gender: "F", name: "Rita", videoId: "pj0t4ZN00Do" },
+  thiago: { gender: "M", name: "Thiago", videoId: "iIrIRH4430k" },
+  adriana: { gender: "F", name: "Adriana", videoId: "iIrIRH4430k" }
 };
 
 const UmPedidoPara = ({ name }) => {
