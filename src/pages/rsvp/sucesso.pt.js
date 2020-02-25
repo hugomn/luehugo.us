@@ -4,6 +4,6 @@ import Layout from "../../components/layout";
 
 export default props => (
   <Layout location={props.location} backgroundColor="lightColors.1">
-    <Rsvp {...props} confirmation />
+    <Rsvp {...props} langKey="pt" confirmation />
   </Layout>
 );
