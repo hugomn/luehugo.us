@@ -46,7 +46,7 @@ module.exports = {
     "Quer nos presentear com uma experiência ou algo que ainda não temos em nossa casinha?",
   "index.gifts.list.action": "Ver lista de presentes",
   "rsvp.description": "Digite seus dados e confirme sua presença abaixo. <br /> (Por favor, digite um nome por vez)",
-  "rsvp.form.name.label": "Nome",
+  "rsvp.form.name.label": "Nome completo",
   "rsvp.form.name.placeholder": "Digite seu nome completo",
   "rsvp.form.email.label": "E-mail",
   "rsvp.form.email.placeholder": "Digite seu email",
