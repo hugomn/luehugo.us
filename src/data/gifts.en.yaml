@@ -192,8 +192,8 @@
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiMDY0YWZhMTQtYTVjZi00MmFiLWEyY2QtZDc2NGRjM2U4OWYzIn0=
   paypalId: AR7QG7DTLR5N4
   price: 90
-  total: 1
-  sold: 0
+  total: 2
+  sold: 1
 - name: H&M Home coffee tables
   image: ../images/gifts/mesa_cafe.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiZmNiOGM2ZWYtYTc4Zi00OGEwLWI4YTYtMDRkNzNlMWI2OWVhIn0=
@@ -221,7 +221,7 @@
   paypalId: EV9YHQGPYQBHN
   price: 80
   total: 1
-  sold: 0
+  sold: 1
 - name: Velvet bedspread H&M home
   image: ../images/gifts/colcha.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiODhhMWVmZWEtZDVjMy00MzIyLWE3MDMtM2U3MmVlNmQwNTJjIn0=
@@ -270,4 +270,4 @@
   paypalId: CCWVCNPM958AN
   price: 250
   total: 1
-  sold: 0
+  sold: 1
