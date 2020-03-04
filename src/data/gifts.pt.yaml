@@ -192,8 +192,8 @@
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiMDY0YWZhMTQtYTVjZi00MmFiLWEyY2QtZDc2NGRjM2U4OWYzIn0=
   paypalId: AR7QG7DTLR5N4
   price: 90
-  total: 1
-  sold: 0
+  total: 2
+  sold: 1
 - name: Mesas de café H&M Home
   image: ../images/gifts/mesa_cafe.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiZmNiOGM2ZWYtYTc4Zi00OGEwLWI4YTYtMDRkNzNlMWI2OWVhIn0=
@@ -221,7 +221,7 @@
   paypalId: EV9YHQGPYQBHN
   price: 80
   total: 1
-  sold: 0
+  sold: 1
 - name: Colcha de veludo cama H&M home
   image: ../images/gifts/colcha.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiODhhMWVmZWEtZDVjMy00MzIyLWE3MDMtM2U3MmVlNmQwNTJjIn0=
