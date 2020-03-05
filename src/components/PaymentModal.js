@@ -28,11 +28,10 @@ const PaymentModal = props => {
   const intl = useIntl();
   const formRef = useRef(null);
   const handleSubmit = event => {
-    console.log(event);
     // const data = new FormData(event.target);
     // console.log(data);
     // console.log(formRef.current.action);
-    event.preventDefault();
+    // event.preventDefault();
     var data = getFormData(formRef.current);
     console.log(data);
     // const response = await fetch(formRef.current.action, {
@@ -50,13 +49,13 @@ const PaymentModal = props => {
     // });
     // console.log(response.json());
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contributions", ...data })
-    })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
+    // fetch("/", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: encode({ "form-name": "contributions", ...data })
+    // })
+    //   .then(() => alert("Success!"))
+    //   .catch(error => alert(error));
   };
   return (
     <Modal
