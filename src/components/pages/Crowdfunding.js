@@ -78,6 +78,7 @@ const Crowdfunding = props => {
         open={modalOpen}
         // bbId={reward.bbId}
         // paypalId={reward.paypalId}
+
         reward={reward}
         onClose={() => setModalOpen(false)}
       />
