@@ -31,7 +31,7 @@ const PaymentModal = props => {
     // const data = new FormData(event.target);
     // console.log(data);
     // console.log(formRef.current.action);
-    // event.preventDefault();
+    event.preventDefault();
     var data = getFormData(formRef.current);
     console.log(data);
     // const response = await fetch(formRef.current.action, {
@@ -49,13 +49,13 @@ const PaymentModal = props => {
     // });
     // console.log(response.json());
 
-    // fetch("/", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //   body: encode({ "form-name": "contributions", ...data })
-    // })
-    //   .then(() => alert("Success!"))
-    //   .catch(error => alert(error));
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contributions", ...data })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
   };
   return (
     <Modal
@@ -77,7 +77,6 @@ const PaymentModal = props => {
         ref={formRef}
       >
         <Flex flexDirection="column">
-          <Input type="hidden" name="form-name" value="contributions" />
           <Label htmlFor="name" fontWeight="500">
             {intl.formatMessage({ id: "rsvp.form.name.label" })}:
           </Label>
