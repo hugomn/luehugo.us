@@ -1,11 +1,13 @@
-- description: Qualquer ajuda é mega bem-vinda. Você estará ajudando a contribuir com o nosso grande dia, realizando nosso sonho.
-  image: 
+- id: crowdfunding-100
+  description: Qualquer ajuda é mega bem-vinda. Você estará ajudando a contribuir com o nosso grande dia, realizando nosso sonho.
+  image:
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiYmMzMTYwMDMtMDE2YS00ZDcxLWExMjAtNTdkNDEwYzVhZDFhIn0=
   paypalId: TEBDXBDM8WM2A
   price: 100
   total: 100
   sold: 0
-- description: md//Muito obrigado! Além de comemorar conosco, você receberá como agradecimento um **adesivo exclusivo do casamento** criado pela **Lu**.
+- id: crowdfunding-200
+  description: md//Muito obrigado! Além de comemorar conosco, você receberá como agradecimento um **adesivo exclusivo do casamento** criado pela **Lu**.
   image: ../images/rewards/sticker.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiMmEyZDkwNTQtYTJmZi00NTNhLTgwYTItZWI0OTg3ZmU1NTlhIn0=
   paypalId: B25E292ZFW4Y4
@@ -37,6 +39,6 @@
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiZTI0M2FiMDctNzhlYy00YjlhLTg0ZDYtOGYyZTBkZThkYjUxIn0=
   paypalId: D5VHBYQFHKWE8
   image:
-  price: 
+  price:
   total: 100
   sold: 0

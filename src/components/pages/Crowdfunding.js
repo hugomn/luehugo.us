@@ -79,7 +79,7 @@ const Crowdfunding = props => {
         // bbId={reward.bbId}
         // paypalId={reward.paypalId}
 
-        reward={reward}
+        contribution={reward}
         onClose={() => setModalOpen(false)}
       />
       <RewardCardList rewards={rewards} onContribute={handleContribute} />
