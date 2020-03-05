@@ -5,6 +5,7 @@ import { FixedContainer } from "../FixedContainer";
 import MainTitle from "../MainTitle";
 import { useIntl } from "react-intl";
 import PaymentModal from "../PaymentModal";
+import slugify from "slugify";
 
 const Gifts = props => {
   const intl = useIntl();
@@ -24,9 +25,10 @@ const Gifts = props => {
       </Subtitle>
       <PaymentModal
         open={modalOpen}
-        // bbId={gift.bbId}
-        // paypalId={gift.paypalId}
-        contribution={gift}
+        contribution={{
+          ...gift,
+          id: `gift-${slugify(gift.name).toLowerCase()}`
+        }}
         onClose={() => setModalOpen(false)}
       />
       <GiftCardList gifts={gifts} onBuy={handleBuy} />
