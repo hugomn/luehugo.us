@@ -15,7 +15,9 @@ const Crowdfunding = props => {
   const { wedding } = props.data.site.siteMetadata;
   const [modalOpen, setModalOpen] = useState(false);
   const days = moment(wedding.date).diff(new Date(), "days");
-  const percentage = (wedding.fundingPledged / wedding.fundingGoal) * 100;
+  const percentage = Math.round(
+    (wedding.fundingPledged / wedding.fundingGoal) * 100
+  );
   const rewards = props.data.rewards.edges.map(g => g.node);
   const [reward, setReward] = useState(rewards[0]);
   const intl = useIntl();
@@ -25,20 +27,36 @@ const Crowdfunding = props => {
   };
   return (
     <FixedContainer pt="4" pb="5">
-      <MainTitle title="page.crowdfunding.title" subtitle="page.crowdfunding.subtitle" />
-      <Subtitle>{intl.formatMessage({ id: "crowdfunding.description" })}</Subtitle>
-      <Container display="flex" flexDirection={["column", "row"]} justifyContent="space-around">
+      <MainTitle
+        title="page.crowdfunding.title"
+        subtitle="page.crowdfunding.subtitle"
+      />
+      <Subtitle>
+        {intl.formatMessage({ id: "crowdfunding.description" })}
+      </Subtitle>
+      <Container
+        display="flex"
+        flexDirection={["column", "row"]}
+        justifyContent="space-around"
+      >
         <Column flexBasis="33%">
           <Number>{percentage}%</Number>
           <p>{intl.formatMessage({ id: "crowdfunding.pledged" })}</p>
         </Column>
         <Column flexBasis="33%">
           <Number>
-            R$ <FormattedNumber value={wedding.fundingPledged} minimumFractionDigits={2} />
+            R${" "}
+            <FormattedNumber
+              value={wedding.fundingPledged}
+              minimumFractionDigits={2}
+            />
           </Number>
           <p>
             {intl.formatMessage({ id: "crowdfunding.of" })} R${" "}
-            <FormattedNumber value={wedding.fundingGoal} minimumFractionDigits={2} />{" "}
+            <FormattedNumber
+              value={wedding.fundingGoal}
+              minimumFractionDigits={2}
+            />{" "}
             {intl.formatMessage({ id: "crowdfunding.goal" })}
           </p>
         </Column>
@@ -52,9 +70,17 @@ const Crowdfunding = props => {
       <ProgressBarWrapper>
         <ProgressBar percentage={percentage} />
       </ProgressBarWrapper>
-      <H3 mb={4}>{intl.formatMessage({ id: "crowdfunding.choose.one.value" })}</H3>
+      <H3 mb={4}>
+        {intl.formatMessage({ id: "crowdfunding.choose.one.value" })}
+      </H3>
 
-      <PaymentModal open={modalOpen} bbId={reward.bbId} paypalId={reward.paypalId} onClose={() => setModalOpen(false)} />
+      <PaymentModal
+        open={modalOpen}
+        // bbId={reward.bbId}
+        // paypalId={reward.paypalId}
+        reward={reward}
+        onClose={() => setModalOpen(false)}
+      />
       <RewardCardList rewards={rewards} onContribute={handleContribute} />
     </FixedContainer>
   );

@@ -12,6 +12,8 @@ import BtnLink from "../BtnLink";
 import { media } from "../../constants/responsive";
 import { Box } from "../Box";
 import { useIntl } from "react-intl";
+import { Input } from "../Input";
+import { Label } from "../Label";
 
 const Rsvp = props => {
   const intl = useIntl();
@@ -98,42 +100,9 @@ const Form = styled.form`
   width: 100%;
 `;
 
-const Label = styled.label`
-  ${typography}
-  margin-bottom: 8px;
-  font-size: ${({ theme: t }) => t.scale(-1)};
-  ${media.md`
-    font-size: ${({ theme: t }) => t.scale(0)};
-  `}
-`;
-
-const Input = styled.input`
-  font-size: ${({ theme: t }) => t.scale(-1)};
-  padding: 12px 10px;
-  border-radius: 4px;
-  border: 1px solid ${({ theme: t }) => t.colors.lightColors[3]};
-  font-family: ${({ theme: t }) => t.fonts.Poppins};
-  color: ${({ theme: t }) => t.colors.dark[1]};
-  ${space}
-  &::placeholder {
-    color: ${({ theme: t }) => t.colors.lightColors[3]};
-  }
-  &:focus,
-  &:active {
-    outline: none;
-    border: 1px solid ${props => props.theme.colors.brand};
-    box-shadow: 0px 0px 1px 0px ${props => props.theme.colors.brand};
-  }
-  ${media.md`
-    font-size: ${({ theme: t }) => t.scale(0.2)};
-    padding: 18px 12px;
-  `}
-`;
-
 Rsvp.propTypes = {
   confirmation: PropTypes.bool,
   langKey: PropTypes.string,
-  location: PropTypes.object.isRequired
 };
 
 export default Rsvp;
