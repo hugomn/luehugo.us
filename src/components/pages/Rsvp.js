@@ -24,7 +24,13 @@ const Rsvp = props => {
       {confirmation ? (
         <>
           <Subtitle>
-            <span dangerouslySetInnerHTML={{ __html: intl.formatHTMLMessage({ id: "rsvp.confirmation.message" }) }} />
+            <span
+              dangerouslySetInnerHTML={{
+                __html: intl.formatHTMLMessage({
+                  id: "rsvp.confirmation.message"
+                })
+              }}
+            />
           </Subtitle>
           <Box textAlign="center" mt={4}>
             <BtnLink mt={4} to={langKey === "pt" ? "/rsvp" : "/en/rsvp"}>
@@ -35,9 +41,18 @@ const Rsvp = props => {
       ) : (
         <>
           <Subtitle>
-            <span dangerouslySetInnerHTML={{ __html: intl.formatHTMLMessage({ id: "rsvp.description" }) }} />
+            <span
+              dangerouslySetInnerHTML={{
+                __html: intl.formatHTMLMessage({ id: "rsvp.description" })
+              }}
+            />
           </Subtitle>
-          <Card p={["18px", 5]} mt={[4, 5]} mx={[1, 3, 5, 7]} textAlign="center">
+          <Card
+            p={["18px", 5]}
+            mt={[4, 5]}
+            mx={[1, 3, 5, 7]}
+            textAlign="center"
+          >
             <Form
               className="email-form"
               name="rsvp"
@@ -53,7 +68,9 @@ const Rsvp = props => {
                 <Input
                   type="text"
                   name="name"
-                  placeholder={intl.formatMessage({ id: "rsvp.form.name.placeholder" })}
+                  placeholder={intl.formatMessage({
+                    id: "rsvp.form.name.placeholder"
+                  })}
                   id="name"
                   required
                   mb="4"
@@ -64,29 +81,41 @@ const Rsvp = props => {
                 <Input
                   type="email"
                   name="email"
-                  placeholder={intl.formatMessage({ id: "rsvp.form.email.placeholder" })}
+                  placeholder={intl.formatMessage({
+                    id: "rsvp.form.email.placeholder"
+                  })}
                   id="email"
                   required
                   mb="4"
                 />
-                <Label htmlFor="song">{intl.formatMessage({ id: "rsvp.form.song.label" })}</Label>
+                <Label htmlFor="song">
+                  {intl.formatMessage({ id: "rsvp.form.song.label" })}
+                </Label>
                 <Input
                   type="text"
                   name="song"
-                  placeholder={intl.formatMessage({ id: "rsvp.form.song.placeholder" })}
+                  placeholder={intl.formatMessage({
+                    id: "rsvp.form.song.placeholder"
+                  })}
                   id="song"
                   mb="4"
                 />
-                <Label htmlFor="comment">{intl.formatMessage({ id: "rsvp.form.comment.label" })}</Label>
+                <Label htmlFor="comment">
+                  {intl.formatMessage({ id: "rsvp.form.comment.label" })}
+                </Label>
                 <Input
                   type="text"
                   name="comment"
-                  placeholder={intl.formatMessage({ id: "rsvp.form.comment.placeholder" })}
+                  placeholder={intl.formatMessage({
+                    id: "rsvp.form.comment.placeholder"
+                  })}
                   id="comment"
                   required
                   mb="5"
                 />
-                <Button type="submit">{intl.formatMessage({ id: "rsvp.form.confirm" })}</Button>
+                <Button type="submit">
+                  {intl.formatMessage({ id: "rsvp.form.confirm" })}
+                </Button>
               </Flex>
             </Form>
           </Card>
@@ -102,7 +131,7 @@ const Form = styled.form`
 
 Rsvp.propTypes = {
   confirmation: PropTypes.bool,
-  langKey: PropTypes.string,
+  langKey: PropTypes.string
 };
 
 export default Rsvp;

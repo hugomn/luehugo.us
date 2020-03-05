@@ -14,6 +14,8 @@ import { Input } from "./Input";
 import { Label } from "./Label";
 import Button from "./Button";
 
+import getFormData from "get-form-data";
+
 const PaymentModal = props => {
   const { reward, onClose, open } = props;
   // const { bbId, paypalId } = reward;
@@ -25,6 +27,8 @@ const PaymentModal = props => {
     // console.log(data);
     // console.log(formRef.current.action);
     event.preventDefault();
+    var data = getFormData(formRef.current);
+    console.log(data);
     const response = await fetch(formRef.current.action, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
@@ -36,10 +40,9 @@ const PaymentModal = props => {
       },
       redirect: "follow", // manual, *follow, error
       referrerPolicy: "no-referrer", // no-referrer, *client
-      body: JSON.stringify({ name: "Hugo Gift" }) // body data type must match "Content-Type" header
+      body: JSON.stringify(data) // body data type must match "Content-Type" header
     });
     console.log(response.json());
-    // return response.json();
   };
   return (
     <Modal
@@ -61,7 +64,7 @@ const PaymentModal = props => {
         ref={formRef}
       >
         <Flex flexDirection="column">
-          <Input type="hidden" name="form-name" value="rsvp" />
+          <Input type="hidden" name="form-name" value="contributions" />
           <Label htmlFor="name" fontWeight="500">
             {intl.formatMessage({ id: "rsvp.form.name.label" })}:
           </Label>
