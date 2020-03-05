@@ -16,12 +16,18 @@ import Button from "./Button";
 
 import getFormData from "get-form-data";
 
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
 const PaymentModal = props => {
   const { reward, onClose, open } = props;
   // const { bbId, paypalId } = reward;
   const intl = useIntl();
   const formRef = useRef(null);
-  const handleSubmit = async event => {
+  const handleSubmit = event => {
     console.log(event);
     // const data = new FormData(event.target);
     // console.log(data);
@@ -29,20 +35,28 @@ const PaymentModal = props => {
     event.preventDefault();
     var data = getFormData(formRef.current);
     console.log(data);
-    const response = await fetch(formRef.current.action, {
-      method: "POST", // *GET, POST, PUT, DELETE, etc.
-      mode: "cors", // no-cors, *cors, same-origin
-      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: "same-origin", // include, *same-origin, omit
-      headers: {
-        "Content-Type": "application/json"
-        // 'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      redirect: "follow", // manual, *follow, error
-      referrerPolicy: "no-referrer", // no-referrer, *client
-      body: JSON.stringify(data) // body data type must match "Content-Type" header
-    });
-    console.log(response.json());
+    // const response = await fetch(formRef.current.action, {
+    //   method: "POST", // *GET, POST, PUT, DELETE, etc.
+    //   mode: "cors", // no-cors, *cors, same-origin
+    //   cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    //   credentials: "same-origin", // include, *same-origin, omit
+    //   headers: {
+    //     "Content-Type": "application/json"
+    //     // 'Content-Type': 'application/x-www-form-urlencoded',
+    //   },
+    //   redirect: "follow", // manual, *follow, error
+    //   referrerPolicy: "no-referrer", // no-referrer, *client
+    //   body: JSON.stringify(data) // body data type must match "Content-Type" header
+    // });
+    // console.log(response.json());
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contributions", ...data })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
   };
   return (
     <Modal
