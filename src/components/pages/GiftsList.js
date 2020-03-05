@@ -19,11 +19,14 @@ const Gifts = props => {
   return (
     <FixedContainer pt="4" pb="4">
       <MainTitle title="index.gifts.title" subtitle="index.gifts.subtitle" />
-      <Subtitle mb={5}>{intl.formatMessage({ id: "gifts.description" })}</Subtitle>
+      <Subtitle mb={5}>
+        {intl.formatMessage({ id: "gifts.description" })}
+      </Subtitle>
       <PaymentModal
         open={modalOpen}
-        bbId={gift.bbId}
-        paypalId={gift.paypalId}
+        // bbId={gift.bbId}
+        // paypalId={gift.paypalId}
+        contribution={gift}
         onClose={() => setModalOpen(false)}
       />
       <GiftCardList gifts={gifts} onBuy={handleBuy} />
