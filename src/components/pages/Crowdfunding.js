@@ -11,11 +11,6 @@ import RewardCardList from "../RewardCardList";
 import { media } from "../../constants/responsive";
 import PaymentModal from "../PaymentModal";
 
-import { Flex } from "../Flex";
-import { Input } from "../Input";
-import { Label } from "../Label";
-import Button from "../Button";
-
 const Crowdfunding = props => {
   const { wedding } = props.data.site.siteMetadata;
   const [modalOpen, setModalOpen] = useState(false);
@@ -86,35 +81,6 @@ const Crowdfunding = props => {
         reward={reward}
         onClose={() => setModalOpen(false)}
       />
-      <form
-        className="email-form"
-        name="contributions"
-        method="POST"
-        data-netlify="true"
-        action="/rsvp/sucesso"
-        // onSubmit={handleSubmit}
-        // ref={formRef}
-      >
-        <Flex flexDirection="column">
-          <Input type="hidden" name="form-name" value="contributions" />
-          <Label htmlFor="name" fontWeight="500">
-            {intl.formatMessage({ id: "rsvp.form.name.label" })}:
-          </Label>
-          <Input
-            type="text"
-            name="name"
-            placeholder={intl.formatMessage({
-              id: "rsvp.form.name.placeholder"
-            })}
-            id="name"
-            required
-            mb="4"
-          />
-          <Button type="submit">
-            {intl.formatMessage({ id: "rsvp.form.confirm" })}
-          </Button>
-        </Flex>
-      </form>
       <RewardCardList rewards={rewards} onContribute={handleContribute} />
     </FixedContainer>
   );
