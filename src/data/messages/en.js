@@ -27,7 +27,7 @@ module.exports = {
   "us.statement.lunara":
     "She has all the nuances of a unique, intense and light person. Enchants and captivates with her empathy, kindness and intelligence. She gives me a happiness that I never imagined possible.",
   "where.description":
-    "Our celebration and reception will be held at <b>Bosque São Pedro</b> (Rua Dimas Bergo Xisto, 396 - São Pedro, Juiz de Fora). The ceremony will be at 4 pm in a grassy area. Remember to ensure comfortable shoes.",
+    "Our celebration and reception will be held at <b>Bosque São Pedro</b> (Address: Rua Dimas Bergo Xisto, 396 - São Pedro) in the city Juiz de Fora / Minas Gerais State in Brazil. The ceremony will be at 4 pm in a grassy area. Remember to ensure comfortable shoes.",
   "where.action": "See on map",
   "index.rsvp.description":
     "Having you with us in our special day will be a great joy! Please confirm your presence by February 10, 2021.",
