@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Modal from "react-responsive-modal";
 import styled from "styled-components";
-import Img from "gatsby-image";
+import Layout from "../../layout";
 import { color, typography, width } from "styled-system";
 import { Orator } from "../../../constants/fonts";
 import { media } from "../../../constants/responsive";
@@ -15,15 +15,18 @@ import Rsvp from "./Rsvp";
 import Where from "./Where";
 import Gifts from "./Gifts";
 import BtnLink from "../../BtnLink";
-import { useIntl } from "react-intl";
 
 const Index = props => {
-  const intl = useIntl();
-  const { formatMessage, locale } = intl;
-  const url = `${locale !== "pt" ? "/" + locale : ""}/adiamento`;
-  const [open, setOpen] = useState(true);
+  const { lang } = props;
+  const url = `${lang !== "pt" ? "/" + lang : ""}/adiamento`;
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setOpen(true);
+    }, 500);
+  }, []);
   return (
-    <>
+    <Layout location={props.location}>
       <VideoContainer>
         <TitleContainer color="white" fontFamily={Orator} fontSize={[45, 65, 85, 105]}>
           <DateBox>
@@ -67,18 +70,18 @@ const Index = props => {
         center
         styles={{ modal: { borderRadius: "6px" } }}
       >
-        <AnnouncementImg width={[300, 450, 550]} sizes={props.data.announcement.childImageSharp.sizes} />
+        <AnnouncementImg width={[300, 450, 550]} src={`/img/announcement_${lang}.jpg`} mt={4} />
         <ButtonContainer>
           <BtnLink mt={3} px={4} to={url}>
-            {formatMessage({ id: "index.announcement.action" })}
+            test
           </BtnLink>
         </ButtonContainer>
       </Modal>
-    </>
+    </Layout>
   );
 };
 
-const AnnouncementImg = styled(Img)`
+const AnnouncementImg = styled.img`
   margin: 20px;
   ${width}
 `;
