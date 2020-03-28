@@ -1,8 +1,9 @@
 import React from "react";
 import Index from "../components/pages/Index";
 import { graphql } from "gatsby";
+import Layout from "../components/layout";
 
-export default props => <Index {...props} />;
+export default props => <Layout location={props.location}><Index {...props} /></Layout>;
 
 export const pageQuery = graphql`
   query IndexEn {
@@ -42,6 +43,14 @@ export const pageQuery = graphql`
           }
         }
       }
+    }
+    announcement: file(relativePath: { eq: "images/announcement_en.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 1200, quality: 90) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+      publicURL
     }
   }
 `;

@@ -45,6 +45,7 @@ module.exports = {
   "index.gifts.list.description":
     "Quer nos presentear com uma experiência ou algo que ainda não temos em nossa casinha?",
   "index.gifts.list.action": "Ver lista de presentes",
+  "index.announcement.action": "Ver nota completa",
   "rsvp.description": "Por favor, preencha o formulário abaixo com o nome completo de um convidado por vez para confirmar sua presença. <br /> Você poderá confirmar outros, mas lembre-se de enviar um nome completo por vez.",
   "rsvp.form.name.label": "Nome completo",
   "rsvp.form.name.placeholder": "Digite seu nome completo",
@@ -88,5 +89,8 @@ module.exports = {
   "gifts.items.of": "{count, plural, one {# item} other {# itens}} de",
   "gifts.items.missing": "{count, plural, one {falta # item} other {faltam # itens}}",
   "gifts.action": "Comprar",
-  "gifts.soldout": "Esgotado"
+  "gifts.soldout": "Esgotado",
+  "announcement.title": "Comunicado",
+  "announcement.subtitle": "Adiamento do nosso dia",
+  "announcement.body": "Queridos,<br /><br />Em virtude dos recentes desenvolvimentos do Corona vírus, eu e a Lu decidimos adiar nosso casamento para o dia 27 de Fevereiro de 2021, mesmo horário, mesmo local. Estamos muito preocupados com a saúde e a segurança das mais de 200 pessoas que mais amamaos nesse mundo e com quem gostaríamos de estar juntos no dia 2 de maio próximo. 😔 <br /><br />Não seria nem um pouco prudente seguirmos com essa data, e por isso optamos por adiar nosso casamento para um momento em que, segundo previsões, o vírus já tenha sido controlado e o risco de contaminação em aglomerações diminuído substancialmente. Escolhemos a nova data pensando também em todos aqueles que já possuem passagens e hotéis reservados, pois acreditamos que as companhias aéreas e hotéis serão mais flexíveis. <br /><br />Sabemos que é trabalhoso alterar todos os planos, e sentimos muitíssimo por todo o transtorno. Mas a saúde dos nossos familiares e amigos, das pessoas que convivem com cada um de vocês, assim como de toda a coletividade, deve estar em primeiro lugar. 🙏🏻 <br /><br />Estamos certos de que esse momento logo passará e pedimos para que todos se mantenham saudáveis. Estamos acompanhando de perto a situação da pandemia no Brasil e em todo o noticiário mundial. É fundamental que evitemos aglomerações nesse momento, e o foco agora deve ser evitar a proliferação acelerada do vírus. Agradecemos o carinho e a compreensão e contem conosco pro que precisarem. ❤️ <br /><br />Nosso grande dia vai ter que esperar um poquinho, mas temos certeza que será especial do mesmo jeito. E pra isso, queremos a sua presença no dia 27/02/2021. <br /><br />Por favor, responda o RSVP para a nova data até o dia 10/02. <br /><br />Até breve! Lu & Hugo 👰🏼🤵🏽🧡"
 };

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-import Layout from "../../layout";
+import Modal from "react-responsive-modal";
 import styled from "styled-components";
-import { color, typography } from "styled-system";
+import Img from "gatsby-image";
+import { color, typography, width } from "styled-system";
 import { Orator } from "../../../constants/fonts";
 import { media } from "../../../constants/responsive";
 import { Box } from "../../Box";
@@ -13,52 +14,74 @@ import Bridesmaids from "./Bridesmaids";
 import Rsvp from "./Rsvp";
 import Where from "./Where";
 import Gifts from "./Gifts";
+import BtnLink from "../../BtnLink";
+import { useIntl } from "react-intl";
 
 const Index = props => {
+  const intl = useIntl();
+  const { formatMessage, locale } = intl;
+  const url = `${locale !== "pt" ? "/" + locale : ""}/adiamento`;
+  const [open, setOpen] = useState(true);
   return (
-    <Layout location={props.location}>
-      <>
-        <VideoContainer>
-          <TitleContainer color="white" fontFamily={Orator} fontSize={[45, 65, 85, 105]}>
-            <DateBox>
+    <>
+      <VideoContainer>
+        <TitleContainer color="white" fontFamily={Orator} fontSize={[45, 65, 85, 105]}>
+          <DateBox>
               27
-              <br />
+            <br />
               02
-              <br />
+            <br />
               21
-            </DateBox>
-          </TitleContainer>
-          <Video playsInline autoPlay muted loop id="myVideo">
-            <source src="/video.mp4" type="video/mp4" />
-          </Video>
-        </VideoContainer>
-        <Container>
-          <Box id="os-noivos" py={["4", "5"]}>
-            <Us />
-          </Box>
-          <TimelineBox id="historia" py={["4", "5"]} backgroundColor="lightColors.1">
-            <Timeline {...props} />
-          </TimelineBox>
-          <Box id="padrinhos" py={["4", "5"]}>
-            <Groomsmen {...props} />
-          </Box>
-          <Box id="madrinhas" py="5" backgroundColor="lightColors.1">
-            <Bridesmaids {...props} />
-          </Box>
-          <WhereBox id="onde" pt="5" pb="6">
-            <Where />
-          </WhereBox>
-          <RsvpBox id="rsvp" pt={["5", "6"]} pb={["6", "7"]}>
-            <Rsvp />
-          </RsvpBox>
-          <Box id="presentes" py="5" backgroundColor="lightColors.1">
-            <Gifts />
-          </Box>
-        </Container>
-      </>
-    </Layout>
+          </DateBox>
+        </TitleContainer>
+        <Video playsInline autoPlay muted loop id="myVideo">
+          <source src="/video.mp4" type="video/mp4" />
+        </Video>
+      </VideoContainer>
+      <Container>
+        <Box id="os-noivos" py={["4", "5"]}>
+          <Us />
+        </Box>
+        <TimelineBox id="historia" py={["4", "5"]} backgroundColor="lightColors.1">
+          <Timeline {...props} />
+        </TimelineBox>
+        <Box id="padrinhos" py={["4", "5"]}>
+          <Groomsmen {...props} />
+        </Box>
+        <Box id="madrinhas" py="5" backgroundColor="lightColors.1">
+          <Bridesmaids {...props} />
+        </Box>
+        <WhereBox id="onde" pt="5" pb="6">
+          <Where />
+        </WhereBox>
+        <RsvpBox id="rsvp" pt={["5", "6"]} pb={["6", "7"]}>
+          <Rsvp />
+        </RsvpBox>
+        <Box id="presentes" py="5" backgroundColor="lightColors.1">
+          <Gifts />
+        </Box>
+      </Container>
+      <Modal
+        open={open}
+        onClose={() => setOpen(false)}
+        center
+        styles={{ modal: { borderRadius: "6px" } }}
+      >
+        <AnnouncementImg width={[300, 450, 550]} sizes={props.data.announcement.childImageSharp.sizes} />
+        <ButtonContainer>
+          <BtnLink mt={3} px={4} to={url}>
+            {formatMessage({ id: "index.announcement.action" })}
+          </BtnLink>
+        </ButtonContainer>
+      </Modal>
+    </>
   );
 };
+
+const AnnouncementImg = styled(Img)`
+  margin: 20px;
+  ${width}
+`;
 
 const TimelineBox = styled(Box)`
   background-image: url('/img/timeline_bg.jpg');
@@ -140,6 +163,11 @@ const Video = styled.video`
 
 const Container = styled.div`
   margin-top: calc(100vh - ${({ theme }) => theme.header.height}px);
+`;
+
+const ButtonContainer = styled.div`
+  width: 100%;
+  text-align: center;
 `;
 
 Index.propTypes = {
