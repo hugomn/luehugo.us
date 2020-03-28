@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Modal from "react-responsive-modal";
 import styled from "styled-components";
 import Layout from "../../layout";
-import { color, typography, width } from "styled-system";
+import { color, typography, width, space } from "styled-system";
 import { Orator } from "../../../constants/fonts";
 import { media } from "../../../constants/responsive";
 import { Box } from "../../Box";
@@ -15,6 +15,7 @@ import Rsvp from "./Rsvp";
 import Where from "./Where";
 import Gifts from "./Gifts";
 import BtnLink from "../../BtnLink";
+import { FormattedMessage } from "react-intl";
 
 const Index = props => {
   const { lang } = props;
@@ -68,12 +69,12 @@ const Index = props => {
         open={open}
         onClose={() => setOpen(false)}
         center
-        styles={{ modal: { borderRadius: "6px" } }}
+        styles={{ modal: { borderRadius: "6px", padding: "1.2rem 0" } }}
       >
-        <AnnouncementImg width={[300, 450, 550]} src={`/img/announcement_${lang}.jpg`} mt={4} />
+        <AnnouncementImg width={[300, 450, 550]} src={`/img/announcement_${lang}.jpg`} m={[0, 20]} mt={0} />
         <ButtonContainer>
           <BtnLink mt={3} px={4} to={url}>
-            test
+            <FormattedMessage id="index.announcement.action">{txt => txt}</FormattedMessage>
           </BtnLink>
         </ButtonContainer>
       </Modal>
@@ -82,7 +83,7 @@ const Index = props => {
 };
 
 const AnnouncementImg = styled.img`
-  margin: 20px;
+  ${space}
   ${width}
 `;
 
