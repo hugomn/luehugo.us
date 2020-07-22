@@ -1,7 +1,7 @@
 - name: Relaxing massage
   image: ../images/gifts/massage.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiM2MwYmRhN2EtZGRlMi00YTExLWFhNWUtNjk2YWNmMGNkMThlIn0=
-  paypalId:  JJGB9L9M98XW
+  paypalId: JJGB9L9M98XW
   price: 270
   total: 2
   sold: 1
@@ -10,7 +10,7 @@
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiOTU4ODcxNWItYzAzMC00NzA4LWE4ZDYtODI3OGQwMGY2ZTAwIn0=
   paypalId: X3H5RK4JWGCVY
   price: 110
-  total: 2  
+  total: 2
   sold: 0
 - name: Yoga session on the beach
   image: ../images/gifts/yoga.jpg
@@ -53,7 +53,7 @@
   paypalId: 3WUYSPTXJWWPS
   price: 230
   total: 2
-  sold: 0
+  sold: 1
 - name: Dinner for the couple
   image: ../images/gifts/jantarcasal.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiYzRmM2U2NTctMDQxYS00ZjEzLTk5ZjktZTQyNDA0MWE4MDNhIn0=
@@ -100,7 +100,7 @@
   image: ../images/gifts/almoco.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiZTdmNDBmNWYtYjg5MC00M2Q5LTg3ZGItODVlMWNjMzUxNWJmIn0=
   paypalId: BYXU2UMKYENGJ
-  price: 200  
+  price: 200
   total: 3
   sold: 0
 - name: Night in Mykonos (Greece)
