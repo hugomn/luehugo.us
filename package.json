@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Hugo Nogueira <hugomn@gmail.com>",
   "dependencies": {
-    "gatsby": "2.18.25",
+    "gatsby": "2.24.9",
     "gatsby-plugin-react-svg": "3.0.0",
     "gatsby-plugin-scroll-reveal": "0.0.4",
     "gatsby-remark-figure-caption": "^2.0.0",
