@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Link from '../../components/Link';
-import kebabCase from 'lodash/kebabCase';
-import styled from 'styled-components';
-import { FormattedMessage } from 'react-intl';
-import Helmet from 'react-helmet';
-import Layout from '../../components/layout';
+import React from "react";
+import PropTypes from "prop-types";
+import Link from "../../components/Link";
+import kebabCase from "lodash/kebabCase";
+import styled from "styled-components";
+import { FormattedMessage } from "react-intl";
+import Helmet from "react-helmet";
+import Layout from "../../components/layout";
 
 const Wrapper = styled.section`
   margin: ${props => props.theme.page.margin};
@@ -48,18 +48,18 @@ const H1 = styled.h1`
   }
 `;
 
-const Tags = (props) => {
+const Tags = props => {
   const allTags = props.data.allMarkdownRemark.group;
 
   return (
     <Layout location={props.location}>
       <Wrapper>
         <FormattedMessage id="tags">
-          {(txt) => (
+          {txt => (
             <Header>
               <Helmet
                 title={txt}
-                meta={[{ name: 'description', content: txt }]}
+                meta={[{ name: "description", content: txt }]}
               />
               <H1>
                 <span>{txt}</span>
@@ -73,7 +73,7 @@ const Tags = (props) => {
               <Li key={tag.fieldValue}>
                 <Link
                   style={{
-                    textDecoration: 'none',
+                    textDecoration: "none",
                   }}
                   to={`/tags/${kebabCase(tag.fieldValue)}/`}
                 >

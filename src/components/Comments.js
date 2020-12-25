@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import ReactDisqusComments from 'react-disqus-comments';
-import styled from 'styled-components';
+import React from "react";
+import PropTypes from "prop-types";
+import ReactDisqusComments from "react-disqus-comments";
+import styled from "styled-components";
 
 class Comments extends React.PureComponent {
   static propTypes = {

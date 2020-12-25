@@ -1,7 +1,7 @@
-import React from 'react';
-import Icon from 'react-icon-base';
+import React from "react";
+import Icon from "react-icon-base";
 
-const Br = (props) => {
+const Br = props => {
   return (
     <Icon viewBox="0 0 640 480" {...props}>
       <g strokeWidth="1pt">

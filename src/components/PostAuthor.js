@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { Grid, Cell } from 'styled-css-grid';
-import Gravatar from 'react-gravatar';
-import Time from '../components/Time';
-import { formatReadingTime } from '../utils/helpers'
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import { Grid, Cell } from "styled-css-grid";
+import Gravatar from "react-gravatar";
+import Time from "../components/Time";
+import { formatReadingTime } from "../utils/helpers";
 
 const Wrapper = styled(Grid)`
   font-family: ${props => props.theme.blog.author.fontFamily};
@@ -42,18 +42,18 @@ const FollowButton = styled.a`
 
 const PostAuthor = ({ author, className, date, showFollow, timeToRead }) => {
   return (
-    <Wrapper columns={'50px 1fr'} className={className}>
+    <Wrapper columns="50px 1fr" className={className}>
       <Cell middle>
         <ProfilePicture email={author.email} alt={author.name} width={42} height={42} />
       </Cell>
       <Cell middle>
         <span>
           {author.name}
-          { showFollow 
+          {showFollow 
             ? <FollowButton href={`http://twitter.com/${author.twitter}`} target="_blank">
               <span>Follow</span>
             </FollowButton> 
-            : null }
+            : null}
         </span>
         <Date>
           <Time

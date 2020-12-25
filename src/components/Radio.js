@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { FormattedMessage } from 'react-intl';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import { FormattedMessage } from "react-intl";
 
 const Label = styled.label`
   cursor: 'pointer';
@@ -21,7 +21,7 @@ const Label = styled.label`
   text-align: center;
   transition: 0.2s;
 
-  ${(props) => props.checked
+  ${props => props.checked
     ? `
       color:  ${props.theme.colors.black};
       background-color: ${props.theme.colors.white};
@@ -54,7 +54,7 @@ class Radio extends React.PureComponent {
     checked: PropTypes.bool.isRequired
   }
 
-  onChange = (e) => {
+  onChange = e => {
     this.props.check(this.props.value);
   }
 
@@ -64,7 +64,7 @@ class Radio extends React.PureComponent {
         id={this.props.label}
         defaultMessage={this.props.label}
       >
-        {(txt) => (
+        {txt => (
           <Label checked={this.props.checked}>
             <Input
               type="radio"

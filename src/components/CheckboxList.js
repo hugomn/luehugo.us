@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import Checkbox from './Checkbox';
-import { FormattedMessage } from 'react-intl';
-import { pipe, not, any, contains } from 'ramda';
-import { InvisibleSpan } from './Invisible';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import Checkbox from "./Checkbox";
+import { FormattedMessage } from "react-intl";
+import { pipe, not, any, contains } from "ramda";
+import { InvisibleSpan } from "./Invisible";
 
 const Ul = styled.ul`
   padding: 0;
@@ -14,7 +14,7 @@ const Ul = styled.ul`
 `;
 
 const Li = styled.ul`
-  ${(props) => props.allItemsChecked
+  ${props => props.allItemsChecked
     ? `
     overflow: hidden;
     transform: scale(0);
@@ -47,7 +47,7 @@ const CheckboxList = ({ i18n, items, check, checkAll }) => {
     <fieldset>
       <legend>
         <FormattedMessage id={i18n.title}>
-          {(txt) => (
+          {txt => (
             <InvisibleSpan>
               {txt}
             </InvisibleSpan>

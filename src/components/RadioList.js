@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import Radio from './Radio';
-import { FormattedMessage } from 'react-intl';
-import { contains } from 'ramda';
-import { InvisibleSpan } from './Invisible';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import Radio from "./Radio";
+import { FormattedMessage } from "react-intl";
+import { contains } from "ramda";
+import { InvisibleSpan } from "./Invisible";
 
 const Ul = styled.ul`
     display: flex;
@@ -22,12 +22,12 @@ export const getCbListFromArray = (items, checkedItems) => {
   }));
 };
 
-const RadioList = (props) => {
+const RadioList = props => {
   return (
     <fieldset>
       <legend>
         <FormattedMessage id={props.i18n.title}>
-          {(txt) => (
+          {txt => (
             <InvisibleSpan>
               {txt}
             </InvisibleSpan>

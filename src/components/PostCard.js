@@ -82,7 +82,7 @@ const PostCard = ({ post, author, imageOnTop }) => {
         </Link>
       </Cell>
       <Cell>
-        <GridContainer columns={1} rows={"1fr auto"}>
+        <GridContainer columns={1} rows="1fr auto">
           <Body>
             <Title>
               <TitleLink to={post.fields.slug}>

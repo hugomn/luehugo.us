@@ -1,7 +1,7 @@
-import React from 'react';
-import Icon from 'react-icon-base';
+import React from "react";
+import Icon from "react-icon-base";
 
-const Us = (props) => {
+const Us = props => {
   return (
     <Icon viewBox="0 0 640 480" {...props}>
       <defs id="defs155">

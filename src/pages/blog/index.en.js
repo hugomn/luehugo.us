@@ -1,8 +1,8 @@
-import React from 'react';
-import Blog from '../../components/pages/Blog';
-import { graphql } from 'gatsby';
+import React from "react";
+import Blog from "../../components/pages/Blog";
+import { graphql } from "gatsby";
 
-export default (props) => <Blog {...props} />;
+export default props => <Blog {...props} />;
 
 export const pageQuery = graphql`
   query BlogEnQuery {

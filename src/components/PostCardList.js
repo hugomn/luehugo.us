@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import PostCard from './PostCard';
-import { Grid, Cell } from 'styled-css-grid';
+import React from "react";
+import PropTypes from "prop-types";
+import PostCard from "./PostCard";
+import { Grid, Cell } from "styled-css-grid";
 
-const PostCardList = (props) => {
+const PostCardList = props => {
   return (
     <nav>
       <Grid columns="repeat(auto-fit,minmax(260px,1fr))" gap="30px" alignContent="stretch">

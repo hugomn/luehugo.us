@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FaFacebook as FacebookIcon } from "react-icons/fa";
-import { FaTwitter as TwitterIcon } from "react-icons/fa";
-import { FaGoogle as GoogleIcon } from "react-icons/fa";
-import { FaLinkedin as LinkedinIcon } from "react-icons/fa";
+import { FaFacebook as FacebookIcon, FaTwitter as TwitterIcon, FaGoogle as GoogleIcon, FaLinkedin as LinkedinIcon } from "react-icons/fa";
+
+
+
 import styled from "styled-components";
 import { visible } from "../constants/responsive";
 import links from "../constants/socialLinks";

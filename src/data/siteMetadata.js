@@ -2,16 +2,17 @@ const languages = require("./languages");
 
 module.exports = {
   siteUrl: "https://www.luehugo.us",
-  description: {
-    pt:
-      "Queridos amigos! Esperamos vocês no nosso dia especial: 27 de fevereiro de 2021! Reserve essa data e venha comemorar conosco! 🧡",
-    en:
-      "Dear friends! We look forward to having you with us in our great day! February 27th, 2021! 🧡",
-  },
+  description: "Queridos amigos! Esperamos vocês no nosso dia especial: 27 de fevereiro de 2021! Reserve essa data e venha comemorar conosco! 🧡",
+  // description: {
+  //   pt:
+  //     "Queridos amigos! Esperamos vocês no nosso dia especial: 27 de fevereiro de 2021! Reserve essa data e venha comemorar conosco! 🧡",
+  //   en:
+  //     "Dear friends! We look forward to having you with us in our great day! February 27th, 2021! 🧡",
+  // },
   author: {
     name: "Hugo Nogueira",
     bio:
-      'Senior software engineer and agile manager. React, and Node.js enthusiast. <br/> Engineering Lead @ <a href="https://www.bcgdv.com">BCG Digital Ventures</a>. Berlin, Germany',
+      "Senior software engineer and agile manager. React, and Node.js enthusiast. <br/> Engineering Lead @ <a href=\"https://www.bcgdv.com\">BCG Digital Ventures</a>. Berlin, Germany",
     homeCity: "Berlin",
     email: "hugomn@gmail.com",
     twitter: "hugomn",

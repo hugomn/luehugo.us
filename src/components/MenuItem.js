@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import Link from 'gatsby';
-import { FormattedMessage } from 'react-intl';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import Link from "gatsby";
+import { FormattedMessage } from "react-intl";
 
 const MenuLink = styled(Link)`
     font-size: ${props => props.theme.menu.a.fontSize};
@@ -33,7 +33,7 @@ class MenuItem extends React.PureComponent {
     };
   }
 
-  open = (event) => {
+  open = event => {
     this.setState({
       isOpen: !this.state.isOpen
     });
@@ -44,7 +44,7 @@ class MenuItem extends React.PureComponent {
 
     const subItems = item.items
       ? (
-        <ul style={{ display: 'none' }} isOpen={this.state.isOpen}>
+        <ul style={{ display: "none" }} isOpen={this.state.isOpen}>
           {item.items.map(subItem => (
             <MenuItem item={subItem} />
           ))}
@@ -54,7 +54,7 @@ class MenuItem extends React.PureComponent {
     return (
       <li>
         <FormattedMessage id={item.label}>
-          {(label) =>
+          {label =>
             item.link
               ? (
                 <MenuA target="_blank" href={item.link}>
@@ -65,8 +65,7 @@ class MenuItem extends React.PureComponent {
                 <MenuLink selected={item.selected} to={item.slug} onClick={this.open}>
                   {label}
                 </MenuLink>
-              )
-          }
+              )}
         </FormattedMessage>
         {subItems}
       </li>

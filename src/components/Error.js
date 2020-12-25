@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Error = styled.p`
     background-color: ${({theme}) => theme.colors.red};

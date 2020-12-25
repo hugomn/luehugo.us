@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "author": "Hugo Nogueira <hugomn@gmail.com>",
   "dependencies": {
-    "gatsby": "2.24.9",
+    "gatsby": "2.25.0",
+    "gatsby-plugin-google-fonts": "1.0.1",
     "gatsby-plugin-react-svg": "3.0.0",
     "gatsby-plugin-scroll-reveal": "0.0.4",
     "gatsby-remark-figure-caption": "^2.0.0",
@@ -29,7 +30,6 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "prestart": "npm run lint",
     "start": "npm run develop",
     "lint": "./node_modules/.bin/eslint --fix --ext .js,.jsx --ignore-pattern public .",
     "build": "rm -rf public/*.html && gatsby build",
@@ -85,9 +85,7 @@
     "ptz-math": "^1.1.0",
     "ptz-validations": "^3.0.1",
     "ramda": "0.26.1",
-    "react-addons-perf": "^15.4.2",
     "react-disqus-comments": "^1.4.0",
-    "react-disqus-thread": "^0.4.0",
     "react-gravatar": "^2.6.3",
     "react-icons": "3.8.0",
     "react-intl": "3.11.0",
