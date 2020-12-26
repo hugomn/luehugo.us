@@ -3,12 +3,12 @@ const languages = require("./languages");
 module.exports = {
   siteUrl: "https://www.luehugo.us",
   description:
-    "Queridos amigos! Esperamos vocês no nosso dia especial: 27 de fevereiro de 2021! Reserve essa data e venha comemorar conosco! 🧡",
+    "Queridos amigos! Esperamos vocês no nosso dia especial: 15 de Abril de 2022! Reserve essa data e venha comemorar conosco! 🧡",
   // description: {
   //   pt:
-  //     "Queridos amigos! Esperamos vocês no nosso dia especial: 27 de fevereiro de 2021! Reserve essa data e venha comemorar conosco! 🧡",
+  //     "Queridos amigos! Esperamos vocês no nosso dia especial: 15 de Abril de 2022 de 2022! Reserve essa data e venha comemorar conosco! 🧡",
   //   en:
-  //     "Dear friends! We look forward to having you with us in our great day! February 27th, 2021! 🧡",
+  //     "Dear friends! We look forward to having you with us in our great day! April 15th, 2022! 🧡",
   // },
   author: {
     name: "Hugo Nogueira",
