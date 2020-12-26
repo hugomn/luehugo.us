@@ -31,11 +31,11 @@ const Index = props => {
       <VideoContainer>
         <TitleContainer color="white" fontFamily={Orator} fontSize={[45, 65, 85, 105]}>
           <DateBox>
-              27
+              15
             <br />
-              02
+              04
             <br />
-              21
+              22
           </DateBox>
         </TitleContainer>
         <Video playsInline autoPlay muted loop id="myVideo">

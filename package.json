@@ -30,6 +30,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
+    "prestart": "npm run lint",
     "start": "npm run develop",
     "lint": "./node_modules/.bin/eslint --fix --ext .js,.jsx --ignore-pattern public .",
     "build": "rm -rf public/*.html && gatsby build",
@@ -58,7 +59,6 @@
     "gatsby-plugin-i18n-tags": "1.0.0",
     "gatsby-plugin-manifest": "2.9.1",
     "gatsby-plugin-offline": "3.7.1",
-    "gatsby-plugin-prefetch-google-fonts": "1.4.3",
     "gatsby-plugin-react-helmet": "3.7.0",
     "gatsby-plugin-sharp": "2.11.2",
     "gatsby-plugin-sitemap": "2.9.0",
