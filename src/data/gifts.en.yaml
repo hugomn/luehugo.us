@@ -32,7 +32,7 @@
   paypalId: VP3RYEW576GBE
   price: 450
   total: 2
-  sold: 0
+  sold: 1
 - name: Boat trip through the Greek islands
   image: ../images/gifts/passeio_barco.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiZjE0MWVkODEtNTZhMS00Y2MzLThlNmItYmU2OGVmZGNiMjA5In0=
@@ -179,7 +179,7 @@
   paypalId: BEHQK78L8QYEC
   price: 140
   total: 1
-  sold: 0
+  sold: 1
 - name: Thick H&M jute rug - 140x200cm
   image: ../images/gifts/tapete_juta.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiODcxMGIyZTQtNzRiNy00NTljLTkzZGYtYjg4MDRhNDNkYzU0In0=

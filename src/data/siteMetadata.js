@@ -47,6 +47,6 @@ module.exports = {
   wedding: {
     date: "2022-04-15",
     fundingGoal: 25000,
-    fundingPledged: 14420 + 230 + 230 /* Katie */,
+    fundingPledged: 14420 + 230 + 230 /* Katie */ + 140 + 450 /* Claudia */,
   },
 };
