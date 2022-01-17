@@ -15,7 +15,7 @@ import { useIntl } from "react-intl";
 import { Input } from "../Input";
 import { Label } from "../Label";
 
-const Rsvp = props => {
+const Rsvp = (props) => {
   const intl = useIntl();
   const { confirmation, langKey } = props;
   return (
@@ -27,8 +27,8 @@ const Rsvp = props => {
             <span
               dangerouslySetInnerHTML={{
                 __html: intl.formatHTMLMessage({
-                  id: "rsvp.confirmation.message"
-                })
+                  id: "rsvp.confirmation.message",
+                }),
               }}
             />
           </Subtitle>
@@ -43,7 +43,7 @@ const Rsvp = props => {
           <Subtitle>
             <span
               dangerouslySetInnerHTML={{
-                __html: intl.formatHTMLMessage({ id: "rsvp.description" })
+                __html: intl.formatHTMLMessage({ id: "rsvp.description" }),
               }}
             />
           </Subtitle>
@@ -69,7 +69,7 @@ const Rsvp = props => {
                   type="text"
                   name="name"
                   placeholder={intl.formatMessage({
-                    id: "rsvp.form.name.placeholder"
+                    id: "rsvp.form.name.placeholder",
                   })}
                   id="name"
                   required
@@ -82,22 +82,34 @@ const Rsvp = props => {
                   type="email"
                   name="email"
                   placeholder={intl.formatMessage({
-                    id: "rsvp.form.email.placeholder"
+                    id: "rsvp.form.email.placeholder",
                   })}
                   id="email"
                   required
                   mb="4"
                 />
-                <Label htmlFor="song">
-                  {intl.formatMessage({ id: "rsvp.form.song.label" })}
+                <Label htmlFor="phone" fontWeight="500">
+                  {intl.formatMessage({ id: "rsvp.form.phone.label" })}:
                 </Label>
                 <Input
-                  type="text"
-                  name="song"
+                  type="tel"
+                  name="phone"
                   placeholder={intl.formatMessage({
-                    id: "rsvp.form.song.placeholder"
+                    id: "rsvp.form.phone.placeholder",
                   })}
-                  id="song"
+                  id="phone"
+                  required
+                  mb="4"
+                />
+                <Label htmlFor="kids">
+                  {intl.formatMessage({ id: "rsvp.form.kids.label" })}
+                </Label>
+                <Input
+                  type="number"
+                  name="kids"
+                  id="kids"
+                  min="0"
+                  max="4"
                   mb="4"
                 />
                 <Label htmlFor="comment">
@@ -107,7 +119,7 @@ const Rsvp = props => {
                   type="text"
                   name="comment"
                   placeholder={intl.formatMessage({
-                    id: "rsvp.form.comment.placeholder"
+                    id: "rsvp.form.comment.placeholder",
                   })}
                   id="comment"
                   required
@@ -131,7 +143,7 @@ const Form = styled.form`
 
 Rsvp.propTypes = {
   confirmation: PropTypes.bool,
-  langKey: PropTypes.string
+  langKey: PropTypes.string,
 };
 
 export default Rsvp;

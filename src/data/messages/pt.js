@@ -46,13 +46,15 @@ module.exports = {
     "Quer nos presentear com uma experiência ou algo que ainda não temos em nossa casinha?",
   "index.gifts.list.action": "Ver lista de presentes",
   "index.announcement.action": "Ver nota completa",
-  "rsvp.description": "Por favor, preencha o formulário abaixo com o nome completo de um convidado por vez para confirmar sua presença. <br /> Você poderá confirmar outros, mas lembre-se de enviar um nome completo por vez.",
+  "rsvp.description":
+    "Por favor, preencha o formulário abaixo para confirmar sua presença. <br/><b>Importante</b>: confirme um convidado por vez. Crianças abaixo de 7 anos não precisam de confirmação.",
   "rsvp.form.name.label": "Nome completo",
   "rsvp.form.name.placeholder": "Digite seu nome completo",
   "rsvp.form.email.label": "E-mail",
   "rsvp.form.email.placeholder": "Digite seu email",
-  "rsvp.form.song.label": "Alguma música especial que gostaria de ouvir?",
-  "rsvp.form.song.placeholder": "Digite sua música favorita",
+  "rsvp.form.phone.label": "Telefone",
+  "rsvp.form.phone.placeholder": "Digite seu telefone",
+  "rsvp.form.kids.label": "Possui crianças menores de 7 anos? Quantas?",
   "rsvp.form.comment.label": "Algum comentário adicional?",
   "rsvp.form.comment.placeholder": "Deixe sua mensagem aos noivos",
   "rsvp.form.confirm": "Confirmar",
@@ -69,28 +71,34 @@ module.exports = {
   "crowdfunding.choose.one.value": "Escolha alguma dos valores abaixo:",
   "payment.choose.payment": "Escolha uma forma de pagamento:",
   "payment.transfer.title": "Via transferência ou boleto",
-  "payment.transfer.description": "Utilize o botão abaixo para pagar via transferência bancária ou boleto.",
+  "payment.transfer.description":
+    "Utilize o botão abaixo para pagar via transferência bancária ou boleto.",
   "payment.transfer.action": "Pagar",
   "payment.cc.title": "Via Cartão de Crédito",
-  "payment.cc.description": "Utilize o botão abaixo para pagar via cartão de crédito (qualquer bandeira).",
+  "payment.cc.description":
+    "Utilize o botão abaixo para pagar via cartão de crédito (qualquer bandeira).",
   "payment.cc.action": "Pagar",
-  "payment.form.title": "Antes de prosseguirmos, nos informe seus dados, e se quiser nos deixe uma mensagem! 🥰",
+  "payment.form.title":
+    "Antes de prosseguirmos, nos informe seus dados, e se quiser nos deixe uma mensagem! 🥰",
   "payment.form.name.label": "Nome completo",
   "payment.form.name.placeholder": "Digite seu nome completo",
   "payment.form.email.label": "E-mail",
   "payment.form.email.placeholder": "Digite seu email",
   "payment.form.message.label": "Deseja nos deixar uma mensagem? ❤️",
-  "payment.form.message.placeholder": "Deixe sua mensagem aos noivos. Vamos adorar!",
+  "payment.form.message.placeholder":
+    "Deixe sua mensagem aos noivos. Vamos adorar!",
   "payment.form.confirm": "Enviar e realizar pagamento",
   "crowdfunding.action": "Contribuir",
   "gifts.description":
     "Nossa casa em Berlim já está quase pronta, e não conseguimos levar nada na mala. Então nossa lista de presentes é um mix que vai desde experiências que nós dois ainda não vivemos e vão gerar ótimos momentos de lazer e relaxamento até itens para complementar no nosso lar!",
   "gifts.buy": "Comprar",
   "gifts.items.of": "{count, plural, one {# item} other {# itens}} de",
-  "gifts.items.missing": "{count, plural, one {falta # item} other {faltam # itens}}",
+  "gifts.items.missing":
+    "{count, plural, one {falta # item} other {faltam # itens}}",
   "gifts.action": "Comprar",
   "gifts.soldout": "Esgotado",
   "announcement.title": "Comunicado",
   "announcement.subtitle": "Adiamento do nosso dia",
-  "announcement.body": "Queridos,<br /><br />Em virtude dos recentes desenvolvimentos do coronavírus, nós decidimos adiar nosso casamento mais uma vez, agora para o dia 15 de Abril de 2022, mesmo horário, mesmo local. Estamos muito preocupados com a saúde e a segurança das mais de 200 pessoas que mais amamaos nesse mundo e com quem gostaríamos de estar juntos no nosso grande dia. 😔 <br /><br />Não seria nem um pouco prudente seguirmos com a data inicial, e por isso optamos por adiar nosso casamento para um momento em que, segundo previsões, o vírus já tenha sido controlado e o risco de contaminação em aglomerações diminuído substancialmente. Escolhemos a nova data pensando também em todos aqueles que já possuem passagens e hotéis reservados, pois acreditamos que as companhias aéreas e hotéis serão mais flexíveis. <br /><br />Sabemos que é trabalhoso alterar todos os planos, e sentimos muitíssimo por todo o transtorno. Mas a saúde dos nossos familiares e amigos, das pessoas que convivem com cada um de vocês, assim como de toda a coletividade, deve estar em primeiro lugar. 🙏🏻 <br /><br />Estamos certos de que esse momento logo passará e pedimos para que todos se mantenham saudáveis. Estamos acompanhando de perto a situação da pandemia no Brasil e em todo o noticiário mundial. É fundamental que evitemos aglomerações nesse momento, e o foco agora deve ser evitar a proliferação acelerada do vírus. Agradecemos o carinho e a compreensão e contem conosco pro que precisarem. ❤️ <br /><br />Nosso grande dia vai ter que esperar um poquinho, mas temos certeza que será especial do mesmo jeito. E pra isso, queremos a sua presença no dia 15/04/2022. <br /><br />Por favor, responda o RSVP para a nova data até o dia 28/02/2022. <br /><br />Até breve! Lu & Hugo 👰🏼🤵🏽🧡"
+  "announcement.body":
+    "Queridos,<br /><br />Em virtude dos recentes desenvolvimentos do coronavírus, nós decidimos adiar nosso casamento mais uma vez, agora para o dia 15 de Abril de 2022, mesmo horário, mesmo local. Estamos muito preocupados com a saúde e a segurança das mais de 200 pessoas que mais amamaos nesse mundo e com quem gostaríamos de estar juntos no nosso grande dia. 😔 <br /><br />Não seria nem um pouco prudente seguirmos com a data inicial, e por isso optamos por adiar nosso casamento para um momento em que, segundo previsões, o vírus já tenha sido controlado e o risco de contaminação em aglomerações diminuído substancialmente. Escolhemos a nova data pensando também em todos aqueles que já possuem passagens e hotéis reservados, pois acreditamos que as companhias aéreas e hotéis serão mais flexíveis. <br /><br />Sabemos que é trabalhoso alterar todos os planos, e sentimos muitíssimo por todo o transtorno. Mas a saúde dos nossos familiares e amigos, das pessoas que convivem com cada um de vocês, assim como de toda a coletividade, deve estar em primeiro lugar. 🙏🏻 <br /><br />Estamos certos de que esse momento logo passará e pedimos para que todos se mantenham saudáveis. Estamos acompanhando de perto a situação da pandemia no Brasil e em todo o noticiário mundial. É fundamental que evitemos aglomerações nesse momento, e o foco agora deve ser evitar a proliferação acelerada do vírus. Agradecemos o carinho e a compreensão e contem conosco pro que precisarem. ❤️ <br /><br />Nosso grande dia vai ter que esperar um poquinho, mas temos certeza que será especial do mesmo jeito. E pra isso, queremos a sua presença no dia 15/04/2022. <br /><br />Por favor, responda o RSVP para a nova data até o dia 28/02/2022. <br /><br />Até breve! Lu & Hugo 👰🏼🤵🏽🧡",
 };

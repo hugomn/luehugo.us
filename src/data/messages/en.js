@@ -41,16 +41,19 @@ module.exports = {
     "Do you want to give us a gift with your participation in our fundraising campaign?",
   "index.gifts.crowdfunding.action": "Joia the campaign",
   "index.gifts.list.title": "Registry",
-  "index.gifts.list.description": "Do you want to give us an experience or something we don't have in our house yet?",
+  "index.gifts.list.description":
+    "Do you want to give us an experience or something we don't have in our house yet?",
   "index.gifts.list.action": "See gifts list",
   "index.announcement.action": "View full note",
-  "rsvp.description": "Please enter your data below to confirm your presence <br /> (Please enter one name at a time.)",
+  "rsvp.description":
+    "Please enter your data below to confirm your attendance. <br/><b>Important</b>: please confirm one person at a time. Children under the age of 7 do not need confirmation.",
   "rsvp.form.name.label": "Name",
   "rsvp.form.name.placeholder": "Enter your full name",
   "rsvp.form.email.label": "E-mail",
   "rsvp.form.email.placeholder": "Enter your e-mail",
-  "rsvp.form.song.label": "Any special songs you woudl like to hear?",
-  "rsvp.form.song.placeholder": "Enter your favorite song",
+  "rsvp.form.phone.label": "Phone number",
+  "rsvp.form.phone.placeholder": "Enter your phone number",
+  "rsvp.form.kids.label": "Do you have children under 7 years old? How many?",
   "rsvp.form.comment.label": "Any additional comments?",
   "rsvp.form.comment.placeholder": "Leave your message for us",
   "rsvp.form.confirm": "Confirm",
@@ -67,12 +70,15 @@ module.exports = {
   "crowdfunding.choose.one.value": "Please choose one of the values below:",
   "payment.choose.payment": "Please choose one payment method:",
   "payment.transfer.title": "Via transfer or bill of exchange (BR only)",
-  "payment.transfer.description": "Click the button below to pay using a brazilian bank transfer",
+  "payment.transfer.description":
+    "Click the button below to pay using a brazilian bank transfer",
   "payment.transfer.action": "Pay",
   "payment.cc.title": "Via Credit Card",
-  "payment.cc.description": "Click the button below to pay using a credit card.",
+  "payment.cc.description":
+    "Click the button below to pay using a credit card.",
   "payment.cc.action": "Pay",
-  "payment.form.title": "Before we proceed, let us know your details, and if you want, leave us a message! 🥰",
+  "payment.form.title":
+    "Before we proceed, let us know your details, and if you want, leave us a message! 🥰",
   "payment.form.name.label": "Name",
   "payment.form.name.placeholder": "Enter your full name",
   "payment.form.email.label": "E-mail",
@@ -90,5 +96,6 @@ module.exports = {
   "gifts.soldout": "Sold Out",
   "announcement.title": "Announcemento",
   "announcement.subtitle": "Postponing our day",
-  "announcement.body": "Dear,<br /><br /> Due to the recent developments in the Coronavirus pandemic, we decided to postpone our wedding again to April 15th, 2022, the same time and at the same venue. We are concerned about the health and safety of the more than 200 people with whom we would like to be together on May 2nd. 😔 <br /><br />It would not be cautious to go forward with this date, so we decided to postpone our wedding until when, according to forecasts, the virus has already been controlled and the risk of contamination in agglomerations has decreased substantially. We chose the new date thinking about everyone who already has flight tickets and bookings scheduled, because we believe airlines and hotels will be more flexible. <br /><br />We understand that some changes will be required, and we are deeply sorry for all the inconvenience. But the health of our beloved family and friends, the people who live with each one of you, as well as the whole community, must come first. 🙏🏻 <br /><br />We are sure that this moment will soon pass and we ask that everyone stay healthy. We are closely watching the advance of the pandemic in Brazil and across the world news. It is essential that we avoid gatherings at this time, and the focus now should be to prevent the accelerated spread of the virus. We appreciate the understanding and please count on us for everything you may need. <br /><br />Our very special day will need to wait a bit, but we are sure it will be as special as the first one. And, for that, we need you with us on 04/15/2022! <br /><br />Please, don't forget to fill our new RSVP before 02/28/2022. <br /><br />See you soon! Lu & Hugo 👰🏼🤵🏽🧡"
+  "announcement.body":
+    "Dear,<br /><br /> Due to the recent developments in the Coronavirus pandemic, we decided to postpone our wedding again to April 15th, 2022, the same time and at the same venue. We are concerned about the health and safety of the more than 200 people with whom we would like to be together on May 2nd. 😔 <br /><br />It would not be cautious to go forward with this date, so we decided to postpone our wedding until when, according to forecasts, the virus has already been controlled and the risk of contamination in agglomerations has decreased substantially. We chose the new date thinking about everyone who already has flight tickets and bookings scheduled, because we believe airlines and hotels will be more flexible. <br /><br />We understand that some changes will be required, and we are deeply sorry for all the inconvenience. But the health of our beloved family and friends, the people who live with each one of you, as well as the whole community, must come first. 🙏🏻 <br /><br />We are sure that this moment will soon pass and we ask that everyone stay healthy. We are closely watching the advance of the pandemic in Brazil and across the world news. It is essential that we avoid gatherings at this time, and the focus now should be to prevent the accelerated spread of the virus. We appreciate the understanding and please count on us for everything you may need. <br /><br />Our very special day will need to wait a bit, but we are sure it will be as special as the first one. And, for that, we need you with us on 04/15/2022! <br /><br />Please, don't forget to fill our new RSVP before 02/28/2022. <br /><br />See you soon! Lu & Hugo 👰🏼🤵🏽🧡",
 };
