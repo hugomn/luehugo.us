@@ -31,7 +31,7 @@ module.exports = {
   "index.rsvp.title": "RSVP",
   "index.rsvp.subtitle": "Confirme sua presença",
   "index.rsvp.description":
-    "Ter você conosco nesse dia será uma grande alegria! Por favor, confirme sua presença até dia 28 de Fevereiro de 2022.",
+    "Ter você conosco nesse dia será uma grande alegria! Por favor, confirme sua presença até dia 15 de Março de 2022.",
   "index.rsvp.action": "Confirmar presença",
   "index.gifts.title": "Presentes",
   "index.gifts.subtitle": "Agradecemos o carinho",

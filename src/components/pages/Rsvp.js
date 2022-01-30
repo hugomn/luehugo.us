@@ -6,10 +6,8 @@ import { FixedContainer } from "../FixedContainer";
 import styled from "styled-components";
 import Card from "../Card";
 import { Flex } from "../Flex";
-import { typography, space } from "styled-system";
 import Button from "../Button";
 import BtnLink from "../BtnLink";
-import { media } from "../../constants/responsive";
 import { Box } from "../Box";
 import { useIntl } from "react-intl";
 import { Input } from "../Input";
@@ -18,6 +16,11 @@ import { Label } from "../Label";
 const Rsvp = (props) => {
   const intl = useIntl();
   const { confirmation, langKey } = props;
+  console.log("[dev:hugo]: langKey", langKey);
+  console.log(
+    "[dev:hugo]: route",
+    langKey === "pt" ? "/rsvp/sucesso" : "/en/rsvp/success"
+  );
   return (
     <FixedContainer pt="4" pb="5">
       <MainTitle title="index.rsvp.title" subtitle="index.rsvp.subtitle" />
@@ -58,7 +61,7 @@ const Rsvp = (props) => {
               name="rsvp"
               method="POST"
               data-netlify="true"
-              action={langKey === "pt" ? "/rsvp/sucesso" : "/en/rsvp/success"}
+              action={langKey === "en" ? "/en/rsvp/success" : "/rsvp/sucesso"}
             >
               <Flex flexDirection="column">
                 <Input type="hidden" name="form-name" value="rsvp" />
