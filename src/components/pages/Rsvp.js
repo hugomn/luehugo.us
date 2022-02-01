@@ -61,7 +61,7 @@ const Rsvp = (props) => {
               name="rsvp"
               method="POST"
               data-netlify="true"
-              action={langKey === "en" ? "/en/rsvp/success" : "/rsvp/sucesso"}
+              action="/rsvp/sucesso"
             >
               <Flex flexDirection="column">
                 <Input type="hidden" name="form-name" value="rsvp" />
