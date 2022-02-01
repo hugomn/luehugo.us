@@ -16,11 +16,6 @@ import { Label } from "../Label";
 const Rsvp = (props) => {
   const intl = useIntl();
   const { confirmation, langKey } = props;
-  console.log("[dev:hugo]: langKey", langKey);
-  console.log(
-    "[dev:hugo]: route",
-    langKey === "pt" ? "/rsvp/sucesso" : "/en/rsvp/success"
-  );
   return (
     <FixedContainer pt="4" pb="5">
       <MainTitle title="index.rsvp.title" subtitle="index.rsvp.subtitle" />
