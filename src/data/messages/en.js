@@ -69,9 +69,12 @@ module.exports = {
   "crowdfunding.days.description": "for our great day",
   "crowdfunding.choose.one.value": "Please choose one of the values below:",
   "payment.choose.payment": "Please choose one payment method:",
-  "payment.transfer.title": "Via transfer or bill of exchange (BR only)",
-  "payment.transfer.description":
-    "Click the button below to pay using a brazilian bank transfer",
+  "payment.pix.title": "Direct pix transfer",
+  "payment.pix.description":
+    "Pix for <b>hello@hugo.im</b> or generate QR code (BR only).",
+  "payment.pix.action": "Generate QR Code",
+  "payment.transfer.title": "Brazilian Bank transfer",
+  "payment.transfer.description": "Pay using a bank transfer (Brazil only)",
   "payment.transfer.action": "Pay",
   "payment.cc.title": "Via Credit Card",
   "payment.cc.description":

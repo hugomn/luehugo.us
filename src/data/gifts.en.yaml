@@ -1,3 +1,24 @@
+- name: Diving class in Crete
+  image: ../images/gifts/mergulho.jpg
+  bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiMGNhMDEwNTMtNWZlYi00OWQ1LTk5ODQtNjQzN2VjZTBlZTJlIn0=
+  paypalId: 3WUYSPTXJWWPS
+  price: 230
+  total: 2
+  sold: 2
+- name: Trip to the Delphi Ruins
+  image: ../images/gifts/ruinas.jpg
+  bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiMDc0NWI3MzUtOTIwNC00OTRlLTkwZGEtZjJiMWQwMjA3MTdjIn0=
+  paypalId: 3NNWTA69L3D6S
+  price: 100
+  total: 2
+  sold: 2
+- name: H&M sofa blanket
+  image: ../images/gifts/manta.jpg
+  bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiM2EyOTVjOTQtNmY4OC00YmIzLWJlYWQtOGFlY2I0OTFhM2FlIn0=
+  paypalId: BEHQK78L8QYEC
+  price: 140
+  total: 1
+  sold: 1
 - name: Relaxing massage
   image: ../images/gifts/massage.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiM2MwYmRhN2EtZGRlMi00YTExLWFhNWUtNjk2YWNmMGNkMThlIn0=
@@ -47,13 +68,6 @@
   price: 170
   total: 2
   sold: 0
-- name: Diving class in Crete
-  image: ../images/gifts/mergulho.jpg
-  bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiMGNhMDEwNTMtNWZlYi00OWQ1LTk5ODQtNjQzN2VjZTBlZTJlIn0=
-  paypalId: 3WUYSPTXJWWPS
-  price: 230
-  total: 2
-  sold: 2
 - name: Dinner for the couple
   image: ../images/gifts/jantarcasal.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiYzRmM2U2NTctMDQxYS00ZjEzLTk5ZjktZTQyNDA0MWE4MDNhIn0=
@@ -82,13 +96,6 @@
   price: 230
   total: 2
   sold: 0
-- name: Trip to the Delphi Ruins
-  image: ../images/gifts/ruinas.jpg
-  bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiMDc0NWI3MzUtOTIwNC00OTRlLTkwZGEtZjJiMWQwMjA3MTdjIn0=
-  paypalId: 3NNWTA69L3D6S
-  price: 100
-  total: 2
-  sold: 2
 - name: Climbing class
   image: ../images/gifts/escalada.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiNjAxYmY3YjYtNjM5Yi00OTNjLWE0YzEtZTU4ZjIyYmRkNDJhIn0=
@@ -173,13 +180,6 @@
   price: 110
   total: 2
   sold: 0
-- name: H&M sofa blanket
-  image: ../images/gifts/manta.jpg
-  bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiM2EyOTVjOTQtNmY4OC00YmIzLWJlYWQtOGFlY2I0OTFhM2FlIn0=
-  paypalId: BEHQK78L8QYEC
-  price: 140
-  total: 1
-  sold: 1
 - name: Thick H&M jute rug - 140x200cm
   image: ../images/gifts/tapete_juta.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiODcxMGIyZTQtNzRiNy00NTljLTkzZGYtYjg4MDRhNDNkYzU0In0=
