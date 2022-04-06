@@ -31,8 +31,8 @@
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiOTU4ODcxNWItYzAzMC00NzA4LWE4ZDYtODI3OGQwMGY2ZTAwIn0=
   paypalId: X3H5RK4JWGCVY
   price: 110
-  total: 2
-  sold: 0
+  total: 4
+  sold: 4
 - name: Sessão de Yoga na praia
   image: ../images/gifts/yoga.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiMWRjNWI3NjUtODA1Zi00ZjI0LThkNTMtZTA4ZDA2NTNjODZiIn0=
@@ -46,7 +46,7 @@
   paypalId: S4RGLE2FXCJCW
   price: 200
   total: 2
-  sold: 0
+  sold: 1
 - name: Viagem para Santorini
   image: ../images/gifts/viagem_santorini.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiMWMxYjUxZDctMWJiNC00MDFlLTliNmMtNGYwZTk5ZjI1NzZhIn0=
@@ -67,7 +67,7 @@
   paypalId: DECGRM4WUSBU8
   price: 170
   total: 2
-  sold: 0
+  sold: 1
 - name: Jantar do casal
   image: ../images/gifts/jantarcasal.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiYzRmM2U2NTctMDQxYS00ZjEzLTk5ZjktZTQyNDA0MWE4MDNhIn0=
@@ -95,14 +95,14 @@
   paypalId: EK4ZCAPF7U4DC
   price: 230
   total: 2
-  sold: 0
+  sold: 1
 - name: Aula de escalada
   image: ../images/gifts/escalada.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiNjAxYmY3YjYtNjM5Yi00OTNjLWE0YzEtZTU4ZjIyYmRkNDJhIn0=
   paypalId: 3J2ZWDTAGNHJN
   price: 300
   total: 2
-  sold: 0
+  sold: 1
 - name: Almoço durante a viagem
   image: ../images/gifts/almoco.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiZTdmNDBmNWYtYjg5MC00M2Q5LTg3ZGItODVlMWNjMzUxNWJmIn0=
@@ -158,14 +158,14 @@
   paypalId: L4EXLHX3H5TGQ
   price: 200
   total: 1
-  sold: 0
+  sold: 1
 - name: Roupão H&M em linho pros noivos
   image: ../images/gifts/roupao.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiNzdmYjg3NjItZTM4MC00MzZmLThkYmYtOTc0YTVlMDFmOTQ2In0=
   paypalId: FLJJ4FX65N3CE
   price: 150
   total: 2
-  sold: 0
+  sold: 2
 - name: Cesto de arrumação em algodão
   image: ../images/gifts/cesto.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiZjFlNTYzOGYtNDYyMS00YTE0LWJiOGMtMzI0YjljNDk4NWI0In0=
@@ -207,7 +207,7 @@
   paypalId: Q8EHHQWXBGH6S
   price: 110
   total: 1
-  sold: 0
+  sold: 1
 - name: Tapete para lateral da banheira
   image: ../images/gifts/tapete_banheira.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiOTcwODdiYjYtNTdhNy00ODZmLWFhNzEtMmI0YWIyNmNhNTVmIn0=
