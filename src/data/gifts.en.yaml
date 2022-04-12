@@ -59,15 +59,15 @@
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiZjE0MWVkODEtNTZhMS00Y2MzLThlNmItYmU2OGVmZGNiMjA5In0=
   paypalId: HJSB6YX9KRM42
   price: 500
-  total: 1
-  sold: 0
+  total: 2
+  sold: 2
 - name: Breakfast in Santorini
   image: ../images/gifts/cafe_da_manha.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiYjkxODdmNzUtYzIzNi00NzcwLThlY2EtNGY3YmY5MTBmYTA3In0=
   paypalId: DECGRM4WUSBU8
   price: 170
   total: 2
-  sold: 1
+  sold: 2
 - name: Dinner for the couple
   image: ../images/gifts/jantarcasal.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiYzRmM2U2NTctMDQxYS00ZjEzLTk5ZjktZTQyNDA0MWE4MDNhIn0=
@@ -88,14 +88,14 @@
   paypalId: E64AWNRM5Z7EG
   price: 100
   total: 2
-  sold: 0
+  sold: 2
 - name: Greek wine tasting
   image: ../images/gifts/degustacao.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiYmU3MjYyZGUtMTk1Zi00NWU2LWFmNTQtMGEyMTlmMWE4ODg5In0=
   paypalId: EK4ZCAPF7U4DC
   price: 230
   total: 2
-  sold: 1
+  sold: 2
 - name: Climbing class
   image: ../images/gifts/escalada.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiNjAxYmY3YjYtNjM5Yi00OTNjLWE0YzEtZTU4ZjIyYmRkNDJhIn0=
@@ -116,7 +116,7 @@
   paypalId: GQPAZFRY2VMNC
   price: 400
   total: 3
-  sold: 0
+  sold: 1
 - name: Philips coffee machine
   image: ../images/gifts/cafeteira.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiZDJhZDdkYmMtYWNlYy00NjY0LWE2NzQtZGEzZDNmNWJhYTZhIn0=
@@ -242,7 +242,7 @@
   paypalId: UTRYZUEFSVQ62
   price: 120
   total: 1
-  sold: 0
+  sold: 1
 - name: Ceramic set
   image: ../images/gifts/conjunto_ceramica.jpg
   bbId: cm49eyJvcHIiOiJwZyIsImlkIjoiOGQ0YmVlYTgtZTJjZC00ZjdhLTg3ZjMtODBjYzYzNDk1N2VhIn0=
