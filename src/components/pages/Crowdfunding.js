@@ -62,7 +62,7 @@ const Crowdfunding = props => {
         </Column>
         <Column flexBasis="33%">
           <Number>
-            {days} {intl.formatMessage({ id: "crowdfunding.days" })}
+            {days + 1} {intl.formatMessage({ id: "crowdfunding.days" })}
           </Number>
           <p>{intl.formatMessage({ id: "crowdfunding.days.description" })}</p>
         </Column>

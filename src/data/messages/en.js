@@ -65,7 +65,7 @@ module.exports = {
   "crowdfunding.pledged": "pledged",
   "crowdfunding.of": "of",
   "crowdfunding.goal": "goal",
-  "crowdfunding.days": "days",
+  "crowdfunding.days": "day",
   "crowdfunding.days.description": "for our great day",
   "crowdfunding.choose.one.value": "Please choose one of the values below:",
   "payment.choose.payment": "Please choose one payment method:",
