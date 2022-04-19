@@ -11,17 +11,17 @@ import RewardCardList from "../RewardCardList";
 import { media } from "../../constants/responsive";
 import PaymentModal from "../PaymentModal";
 
-const Crowdfunding = props => {
+const Crowdfunding = (props) => {
   const { wedding } = props.data.site.siteMetadata;
   const [modalOpen, setModalOpen] = useState(false);
   const days = moment(wedding.date).diff(new Date(), "days");
   const percentage = Math.round(
     (wedding.fundingPledged / wedding.fundingGoal) * 100
   );
-  const rewards = props.data.rewards.edges.map(g => g.node);
+  const rewards = props.data.rewards.edges.map((g) => g.node);
   const [reward, setReward] = useState(rewards[0]);
   const intl = useIntl();
-  const handleContribute = reward => {
+  const handleContribute = (reward) => {
     setReward(reward);
     setModalOpen(true);
   };
@@ -39,11 +39,11 @@ const Crowdfunding = props => {
         flexDirection={["column", "row"]}
         justifyContent="space-around"
       >
-        <Column flexBasis="33%">
+        <Column flexBasis="50%">
           <Number>{percentage}%</Number>
           <p>{intl.formatMessage({ id: "crowdfunding.pledged" })}</p>
         </Column>
-        <Column flexBasis="33%">
+        <Column flexBasis="50%">
           <Number>
             R${" "}
             <FormattedNumber
@@ -60,12 +60,12 @@ const Crowdfunding = props => {
             {intl.formatMessage({ id: "crowdfunding.goal" })}
           </p>
         </Column>
-        <Column flexBasis="33%">
+        {/* <Column flexBasis="33%">
           <Number>
             {days + 1} {intl.formatMessage({ id: "crowdfunding.days" })}
           </Number>
           <p>{intl.formatMessage({ id: "crowdfunding.days.description" })}</p>
-        </Column>
+        </Column> */}
       </Container>
       <ProgressBarWrapper>
         <ProgressBar percentage={percentage} />
@@ -110,13 +110,13 @@ const H3 = styled.h3`
 `;
 
 const Number = styled.h3`
-  font-size: ${props => props.theme.scale(3)};
+  font-size: ${(props) => props.theme.scale(3)};
   ${media.sm`
-    font-size: ${props => props.theme.scale(5)};
+    font-size: ${(props) => props.theme.scale(5)};
   `}
 `;
 
-const expand = props => keyframes`
+const expand = (props) => keyframes`
   from {
     width: 0%;
   }
@@ -135,7 +135,7 @@ const move = keyframes`
 `;
 
 const ProgressBarWrapper = styled.div`
-  background-color: ${props => props.theme.colors.lightColors[2]};
+  background-color: ${(props) => props.theme.colors.lightColors[2]};
   height: 32px;
   margin: 45px 30px 20px;
   border-radius: 25px;
@@ -145,14 +145,14 @@ const ProgressBarWrapper = styled.div`
 
 const ProgressBar = styled.div`
   height: 100%;
-  max-width: ${props => props.percentage}%;
+  max-width: ${(props) => props.percentage}%;
   animation: ${expand} 1s ease-in-out 1;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  background-color: ${props => props.theme.colors.brand};
-  background-image: ${props =>
+  background-color: ${(props) => props.theme.colors.brand};
+  background-image: ${(props) =>
     `linear-gradient(center bottom, ${props.theme.colors.brand} 37%, ${props.theme.colors.brand} 69%);`};
   position: relative;
   overflow: hidden;
@@ -186,7 +186,7 @@ const ProgressBar = styled.div`
 `;
 
 Crowdfunding.propTypes = {
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
 };
 
 export default Crowdfunding;
