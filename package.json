@@ -8,6 +8,7 @@
     "gatsby-plugin-google-fonts": "1.0.1",
     "gatsby-plugin-react-svg": "3.0.0",
     "gatsby-plugin-scroll-reveal": "0.0.7",
+    "gatsby-recipes": "^1.4.0",
     "gatsby-remark-figure-caption": "^2.0.0",
     "gatsby-transformer-yaml-plus": "0.2.2",
     "get-form-data": "3.0.0",
@@ -40,7 +41,11 @@
     "serve": "npm run build && gatsby serve"
   },
   "devDependencies": {
-    "@babel/core": "7.12.10",
+    "@babel/core": "^7.26.0",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-private-methods": "^7.18.6",
+    "@babel/plugin-transform-classes": "^7.25.9",
+    "@babel/preset-env": "^7.26.0",
     "babel-eslint": "10.0.3",
     "babel-jest": "24.9.0",
     "babel-preset-gatsby": "0.9.1",

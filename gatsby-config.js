@@ -125,7 +125,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/data`,
-        // name: "yaml", // THIS PROBABLY FIXED THE allRewardsEnYaml PROBLEM
+        name: "yaml", // THIS PROBABLY FIXED THE allRewardsEnYaml PROBLEM
       },
     },
     {
